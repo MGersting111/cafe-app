@@ -105,3 +105,322 @@ Processing by ArtikelsController#index as HTML
 Completed 200 OK in 193ms (Views: 183.7ms | ActiveRecord: 4.5ms | Allocations: 118400)
 
 
+Started GET "/artikels/2" for 127.0.0.1 at 2023-09-04 12:12:50 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArtikelsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArtikel Load (0.8ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:63:in `set_artikel'
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/show.html.erb within layouts/application
+  Rendered artikels/_artikel.html.erb (Duration: 0.3ms | Allocations: 281)
+  Rendered artikels/show.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1936)
+  Rendered layout layouts/application.html.erb (Duration: 26.0ms | Allocations: 37028)
+Completed 200 OK in 55ms (Views: 27.9ms | ActiveRecord: 6.3ms | Allocations: 62425)
+
+
+Started DELETE "/artikels/2" for 127.0.0.1 at 2023-09-04 12:12:55 +0200
+Processing by ArtikelsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"2"}
+  [1m[36mArtikel Load (0.2ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:63:in `set_artikel'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/artikels_controller.rb:52:in `destroy'
+  [1m[36mArtikel Destroy (1.7ms)[0m  [1m[31mDELETE FROM "artikels" WHERE "artikels"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/artikels_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/artikels_controller.rb:52:in `destroy'
+Redirected to http://127.0.0.1:3000/artikels
+Completed 302 Found in 6ms (ActiveRecord: 3.2ms | Allocations: 2575)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-04 12:12:55 +0200
+Processing by ArtikelsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.2ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1220)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 3449)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.2ms | Allocations: 3912)
+
+
+Started GET "/artikels/new" for 127.0.0.1 at 2023-09-04 12:12:59 +0200
+Processing by ArtikelsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/new.html.erb within layouts/application
+  Rendered artikels/_form.html.erb (Duration: 12.8ms | Allocations: 3150)
+  Rendered artikels/new.html.erb within layouts/application (Duration: 14.2ms | Allocations: 3466)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 5682)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.0ms | Allocations: 6101)
+
+
+Started POST "/artikels" for 127.0.0.1 at 2023-09-04 12:13:18 +0200
+Processing by ArtikelsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "artikel"=>{"name"=>"Cappuchino", "id_kategorie"=>"1", "preis"=>"3"}, "commit"=>"Create Artikel"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/artikels_controller.rb:27:in `block in create'
+  [1m[36mArtikel Create (1.9ms)[0m  [1m[32mINSERT INTO "artikels" ("name", "id_kategorie", "preis", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Cappuchino"], ["id_kategorie", 1], ["preis", 3], ["created_at", "2023-09-04 10:13:18.884128"], ["updated_at", "2023-09-04 10:13:18.884128"]]
+  ↳ app/controllers/artikels_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/artikels_controller.rb:27:in `block in create'
+Redirected to http://127.0.0.1:3000/artikels/3
+Completed 302 Found in 12ms (ActiveRecord: 2.6ms | Allocations: 3083)
+
+
+Started GET "/artikels/3" for 127.0.0.1 at 2023-09-04 12:13:18 +0200
+Processing by ArtikelsController#show as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mArtikel Load (0.4ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:63:in `set_artikel'
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/show.html.erb within layouts/application
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 597)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 2805)
+Completed 200 OK in 9ms (Views: 6.4ms | ActiveRecord: 0.4ms | Allocations: 3595)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-04 12:13:20 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1006)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 3235)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.3ms | Allocations: 3569)
+
+
+Started GET "/artikels/new" for 127.0.0.1 at 2023-09-04 12:15:01 +0200
+Processing by ArtikelsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/new.html.erb within layouts/application
+  Rendered artikels/_form.html.erb (Duration: 3.1ms | Allocations: 1186)
+  Rendered artikels/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1271)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 3486)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 3816)
+
+
+Started POST "/artikels" for 127.0.0.1 at 2023-09-04 12:15:26 +0200
+Processing by ArtikelsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "artikel"=>{"name"=>"NiklasCockTail", "id_kategorie"=>"2", "preis"=>"99"}, "commit"=>"Create Artikel"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/artikels_controller.rb:27:in `block in create'
+  [1m[36mArtikel Create (0.4ms)[0m  [1m[32mINSERT INTO "artikels" ("name", "id_kategorie", "preis", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "NiklasCockTail"], ["id_kategorie", 2], ["preis", 99], ["created_at", "2023-09-04 10:15:26.805795"], ["updated_at", "2023-09-04 10:15:26.805795"]]
+  ↳ app/controllers/artikels_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/artikels_controller.rb:27:in `block in create'
+Redirected to http://127.0.0.1:3000/artikels/4
+Completed 302 Found in 6ms (ActiveRecord: 0.9ms | Allocations: 2176)
+
+
+Started GET "/artikels/4" for 127.0.0.1 at 2023-09-04 12:15:26 +0200
+Processing by ArtikelsController#show as TURBO_STREAM
+  Parameters: {"id"=>"4"}
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:63:in `set_artikel'
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/show.html.erb within layouts/application
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 589)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2796)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.3ms | Allocations: 3584)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-04 12:15:29 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.2ms | Allocations: 21)
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1125)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 3353)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.3ms | Allocations: 3680)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2953311040616065710)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateArtikelkategories (20230904101647)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE "artikelkategories" ("id" bigserial primary key, "kategorie" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230904101647"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(2953311040616065710)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users" for 127.0.0.1 at 2023-09-04 12:17:28 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/artikelkategorie" for 127.0.0.1 at 2023-09-04 12:17:37 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/artikelkategorie"):
+  
+Started GET "/artikelkategories" for 127.0.0.1 at 2023-09-04 12:17:54 +0200
+Processing by ArtikelkategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikelkategories/index.html.erb within layouts/application
+  [1m[36mArtikelkategorie Load (1.0ms)[0m  [1m[34mSELECT "artikelkategories".* FROM "artikelkategories"[0m
+  ↳ app/views/artikelkategories/index.html.erb:6
+  Rendered artikelkategories/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1058)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 15026)
+Completed 200 OK in 19ms (Views: 13.3ms | ActiveRecord: 1.0ms | Allocations: 16774)
+
+
+Started GET "/artikelkategories/new" for 127.0.0.1 at 2023-09-04 12:17:56 +0200
+Processing by ArtikelkategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikelkategories/new.html.erb within layouts/application
+  Rendered artikelkategories/_form.html.erb (Duration: 2.6ms | Allocations: 1195)
+  Rendered artikelkategories/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1508)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 3723)
+Completed 200 OK in 21ms (Views: 8.9ms | ActiveRecord: 3.7ms | Allocations: 17303)
+
+
+Started POST "/artikelkategories" for 127.0.0.1 at 2023-09-04 12:18:00 +0200
+Processing by ArtikelkategoriesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "artikelkategorie"=>{"kategorie"=>"Snacks"}, "commit"=>"Create Artikelkategorie"}
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms | Allocations: 800)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: artikelkategory
+Did you mean?  artikelkategorie):
+  
+app/controllers/artikelkategories_controller.rb:68:in `artikelkategory_params'
+app/controllers/artikelkategories_controller.rb:24:in `create'
+Started GET "/artikelkategories/new" for 127.0.0.1 at 2023-09-04 12:18:01 +0200
+Processing by ArtikelkategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikelkategories/new.html.erb within layouts/application
+  Rendered artikelkategories/_form.html.erb (Duration: 0.6ms | Allocations: 750)
+  Rendered artikelkategories/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 835)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 3050)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 3376)
+
+
+Started GET "/artikelkategories" for 127.0.0.1 at 2023-09-04 12:18:05 +0200
+Processing by ArtikelkategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikelkategories/index.html.erb within layouts/application
+  [1m[36mArtikelkategorie Load (0.4ms)[0m  [1m[34mSELECT "artikelkategories".* FROM "artikelkategories"[0m
+  ↳ app/views/artikelkategories/index.html.erb:6
+  Rendered artikelkategories/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 724)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 2952)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.4ms | Allocations: 3279)
+
+
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE DATABASE "cafe_app_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE DATABASE "cafe_app_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2953311040616065710)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2953311040616065710)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikel Create (0.6ms)[0m  [1m[32mINSERT INTO "artikels" ("name", "id_kategorie", "preis", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Kaffee-Niklas-Crema"], ["id_kategorie", 1], ["preis", 4], ["created_at", "2023-09-04 10:21:43.811971"], ["updated_at", "2023-09-04 10:21:43.811971"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.8ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Snacks"], ["created_at", "2023-09-04 10:21:43.819832"], ["updated_at", "2023-09-04 10:21:43.819832"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.1ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Heißgetränke"], ["created_at", "2023-09-04 10:21:43.821903"], ["updated_at", "2023-09-04 10:21:43.821903"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.1ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Kaltgetränke"], ["created_at", "2023-09-04 10:21:43.823096"], ["updated_at", "2023-09-04 10:21:43.823096"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/artikelkategories" for 127.0.0.1 at 2023-09-04 12:21:49 +0200
+Processing by ArtikelkategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikelkategories/index.html.erb within layouts/application
+  [1m[36mArtikelkategorie Load (0.3ms)[0m  [1m[34mSELECT "artikelkategories".* FROM "artikelkategories"[0m
+  ↳ app/views/artikelkategories/index.html.erb:6
+  Rendered artikelkategories/_artikelkategorie.html.erb (Duration: 0.7ms | Allocations: 185)
+  Rendered artikelkategories/_artikelkategorie.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered artikelkategories/_artikelkategorie.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered artikelkategories/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 2726)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 16368)
+Completed 200 OK in 17ms (Views: 11.3ms | ActiveRecord: 4.3ms | Allocations: 17726)
+
+
+Started GET "/artikels/new" for 127.0.0.1 at 2023-09-04 12:23:46 +0200
+Processing by ArtikelsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/new.html.erb within layouts/application
+  Rendered artikels/_form.html.erb (Duration: 1.4ms | Allocations: 1714)
+  Rendered artikels/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 2036)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 15756)
+Completed 200 OK in 22ms (Views: 11.0ms | ActiveRecord: 4.8ms | Allocations: 21135)
+
+
+Started POST "/artikels" for 127.0.0.1 at 2023-09-04 12:24:04 +0200
+Processing by ArtikelsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "artikel"=>{"name"=>"Test", "id_kategorie"=>"4", "preis"=>"8"}, "commit"=>"Create Artikel"}
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 6452)
+
+
+  
+NameError (Rails couldn't find a valid model for Artikelkategories association. Please provide the :class_name option on the association declaration. If :class_name is already provided, make sure it's an ActiveRecord::Base subclass.):
+  
+app/controllers/artikels_controller.rb:27:in `block in create'
+app/controllers/artikels_controller.rb:26:in `create'
+Started GET "/artikels" for 127.0.0.1 at 2023-09-04 12:24:07 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.9ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 1.1ms | Allocations: 240)
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 7.5ms | Allocations: 1915)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 4158)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.9ms | Allocations: 4605)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-04 12:24:07 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.2ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1243)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 3471)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.2ms | Allocations: 3796)
+
+
+Started GET "/artikels/new" for 127.0.0.1 at 2023-09-04 12:24:10 +0200
+Processing by ArtikelsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/new.html.erb within layouts/application
+  Rendered artikels/_form.html.erb (Duration: 2.3ms | Allocations: 1198)
+  Rendered artikels/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1283)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3498)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 3828)
+
+
+Started POST "/artikels" for 127.0.0.1 at 2023-09-04 12:24:30 +0200
+Processing by ArtikelsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "artikel"=>{"name"=>"Orangensaft", "id_kategorie"=>"3", "preis"=>"7"}, "commit"=>"Create Artikel"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2312)
+
+
+  
+NameError (Rails couldn't find a valid model for Artikelkategories association. Please provide the :class_name option on the association declaration. If :class_name is already provided, make sure it's an ActiveRecord::Base subclass.):
+  
+app/controllers/artikels_controller.rb:27:in `block in create'
+app/controllers/artikels_controller.rb:26:in `create'
