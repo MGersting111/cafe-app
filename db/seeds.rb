@@ -8,7 +8,4 @@
 
 artikel = Artikel.create([{name: "Kaffee-Niklas-Crema", id_kategorie: 1, preis: 4}])
 
-<<<<<<< HEAD
-=======
 artikelkategorie = Artikelkategorie.create([{kategorie: "Snacks"}, {kategorie: "Kaltgetränke"}, {kategorie: "Heißgetränke"}])
->>>>>>> refs/remotes/origin/main
