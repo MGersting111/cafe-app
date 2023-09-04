@@ -1,0 +1,32 @@
+<%= form_with(model: artikel) do |form| %>
+  <% if artikel.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(artikel.errors.count, "error") %> prohibited this artikel from being saved:</h2>
+
+      <ul>
+        <% artikel.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :id_kategorie, style: "display: block" %>
+    <%= form.number_field :id_kategorie %>
+  </div>
+
+  <div>
+    <%= form.label :preis, style: "display: block" %>
+    <%= form.number_field :preis %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
