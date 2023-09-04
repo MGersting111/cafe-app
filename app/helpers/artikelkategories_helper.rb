@@ -1,0 +1,2 @@
+module ArtikelkategoriesHelper
+end

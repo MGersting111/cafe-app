@@ -1,0 +1,22 @@
+<%= form_with(model: artikelkategory) do |form| %>
+  <% if artikelkategory.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(artikelkategory.errors.count, "error") %> prohibited this artikelkategory from being saved:</h2>
+
+      <ul>
+        <% artikelkategory.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :kategorie, style: "display: block" %>
+    <%= form.text_field :kategorie %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
