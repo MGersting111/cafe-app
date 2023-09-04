@@ -9,3 +9,5 @@
 artikel = Artikel.create([{name: "Kaffee-Niklas-Crema", id_kategorie: 1, preis: 4}])
 
 artikelkategorie = Artikelkategorie.create([{kategorie: "Snacks"}, {kategorie: "Heißgetränke"}, {kategorie: "Kaltgetränke"}])
+
+#NIKLASISTDA
