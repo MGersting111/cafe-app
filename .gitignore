@@ -28,4 +28,8 @@
 /public/assets
 
 # Ignore master key for decrypting credentials and more.
+<<<<<<< HEAD
 /config/master.key
+=======
+/config/master.key
+>>>>>>> refs/remotes/origin/main
