@@ -1,10 +1,11 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @artikelkategory %>
+<%= render @artikelkategorie %>
 
 <div>
-  <%= link_to "Edit this artikelkategorie", edit_artikelkategory_path(@artikelkategory) %> |
-  <%= link_to "Back to artikelkategories", artikelkategories_path %>
+  <%= link_to "Editieren", edit_artikelkategory_path(@artikelkategorie) %> |
+  <%= link_to "Zurück", artikelkategories_path %> |
+  <%= link_to "Anzeigen", artikelkategory_artikels_path(@artikelkategorie)%>
 
-  <%= button_to "Destroy this artikelkategorie", @artikelkategory, method: :delete %>
+  <%= button_to "Löschen", @artikelkategorie, method: :delete %>
 </div>

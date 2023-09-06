@@ -1,32 +1,34 @@
-<%= form_with(model: artikel) do |form| %>
-  <% if artikel.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(artikel.errors.count, "error") %> prohibited this artikel from being saved:</h2>
+<%
+  if artikelkategorie
+    path = artikel.id ? artikelkategory_artikel_path(artikelkategorie, artikel) : artikelkategory_artikels_path(artikelkategorie)
+    http_method = artikel.id ? :patch : :post
+  else
+    path = artikels_path
+    http_method = :post
+  end
+%>
+<%= form_for(artikel, url: path, method: http_method) do |fb| %>
 
-      <ul>
-        <% artikel.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <%=
+    if artikelkategorie
+      fb.hidden_field :artikelkategorie_id
+    else
+      data = Artikelkategorie.all.pluck(:kategorie, :id)
+      fb.select :artikelkategorie_id, options_for_select(data)
+    end
+  %>
 
   <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+    <%= fb.label :name, style: "display: block" %>
+    <%= fb.text_field :name %>
   </div>
 
   <div>
-    <%= form.label :id_kategorie, style: "display: block" %>
-    <%= form.number_field :id_kategorie %>
+    <%= fb.label :preis, style: "display: block" %>
+    <%= fb.number_field :preis, step: :any %>
   </div>
 
   <div>
-    <%= form.label :preis, style: "display: block" %>
-    <%= form.number_field :preis %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+    <%= fb.submit %>
   </div>
 <% end %>
