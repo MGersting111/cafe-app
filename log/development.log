@@ -2510,3 +2510,1547 @@ Processing by ArtikelsController#index as HTML
 Completed 200 OK in 26ms (Views: 17.3ms | ActiveRecord: 3.5ms | Allocations: 21882)
 
 
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 15:52:22 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (1.4ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:3
+  [1m[36mBestellungArtikel Load (0.7ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:8
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 18.0ms | Allocations: 30746)
+  Rendered layout layouts/application.html.erb (Duration: 35.3ms | Allocations: 65883)
+Completed 200 OK in 53ms (Views: 26.5ms | ActiveRecord: 11.0ms | Allocations: 79017)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 15:52:23 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.6ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.8ms | Allocations: 266)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 28.5ms | Allocations: 21057)
+  Rendered layout layouts/application.html.erb (Duration: 28.7ms | Allocations: 21130)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 4.6ms | Allocations: 24629)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `add_path' for #<ActionView::Base:0x0000000000d1b0>
+Did you mean?  audio_path):
+     8:     <p>
+     9:       <%= link_to "Show this artikel", artikel %>
+    10:     </p>
+    11:     <%= link_to "Add", add_path%>
+    12:   <% end %>
+    13: </div>
+    14: 
+  
+app/views/artikels/index.html.erb:11
+app/views/artikels/index.html.erb:6
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 15:52:50 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.9ms | Allocations: 239)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1557)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 4105)
+Completed 200 OK in 14ms (Views: 11.5ms | ActiveRecord: 0.3ms | Allocations: 5238)
+
+
+Started GET "/add" for 127.0.0.1 at 2023-09-06 15:52:52 +0200
+Processing by ArtikelsController#add as HTML
+Redirected to http://127.0.0.1:3000/artikels
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 398)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 15:52:52 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 943)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 3172)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.3ms | Allocations: 3507)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 15:53:03 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.2ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 39)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2891)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 16612)
+Completed 200 OK in 15ms (Views: 10.3ms | ActiveRecord: 2.6ms | Allocations: 20191)
+
+
+Started GET "/artikelds/add" for 127.0.0.1 at 2023-09-06 15:53:06 +0200
+Processing by ArtikelsController#add as HTML
+Redirected to http://127.0.0.1:3000/artikels
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 354)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 15:53:06 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.4ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.2ms | Allocations: 21)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 910)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 3138)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.4ms | Allocations: 3465)
+
+
+Started GET "/artikelds/add" for 127.0.0.1 at 2023-09-06 15:53:06 +0200
+Processing by ArtikelsController#add as HTML
+Redirected to http://127.0.0.1:3000/artikels
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 330)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 15:53:06 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 924)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 3153)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.3ms | Allocations: 3487)
+
+
+Started GET "/artikelds/add" for 127.0.0.1 at 2023-09-06 15:53:07 +0200
+Processing by ArtikelsController#add as HTML
+Redirected to http://127.0.0.1:3000/artikels
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 346)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 15:53:07 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.2ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 926)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 3154)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms | Allocations: 3481)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:01:12 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.7ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 18.4ms | Allocations: 6609)
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 6681)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 7.9ms | Allocations: 10208)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"add", :controller=>"artikels"}, missing required keys: [:id]
+Did you mean?  artikels_add_url):
+     8:     <p>
+     9:       <%= link_to "Show this artikel", artikel %>
+    10:     </p>
+    11:     <%= link_to "Add", artikels_add_path%>
+    12:   <% end %>
+    13: </div>
+    14: 
+  
+app/views/artikels/index.html.erb:11
+app/views/artikels/index.html.erb:6
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:01:42 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.8ms | Allocations: 239)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1559)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 15525)
+Completed 200 OK in 18ms (Views: 15.9ms | ActiveRecord: 0.3ms | Allocations: 16650)
+
+
+Started GET "/add/3" for 127.0.0.1 at 2023-09-06 16:01:45 +0200
+Processing by ArtikelsController#add as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:68:in `set_artikel'
+Redirected to http://127.0.0.1:3000/artikels
+Completed 302 Found in 25ms (ActiveRecord: 0.5ms | Allocations: 5731)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:01:45 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 915)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 3143)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.3ms | Allocations: 3471)
+
+
+Started GET "/add/3" for 127.0.0.1 at 2023-09-06 16:01:45 +0200
+Processing by ArtikelsController#add as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:68:in `set_artikel'
+Redirected to http://127.0.0.1:3000/artikels
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 807)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:01:45 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 925)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 3153)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.3ms | Allocations: 3480)
+
+
+Started GET "/add/3" for 127.0.0.1 at 2023-09-06 16:01:46 +0200
+Processing by ArtikelsController#add as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArtikel Load (0.4ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:68:in `set_artikel'
+Redirected to http://127.0.0.1:3000/artikels
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms | Allocations: 815)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:01:46 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.4ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 933)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 3161)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.4ms | Allocations: 3488)
+
+
+Started GET "/add/3" for 127.0.0.1 at 2023-09-06 16:01:46 +0200
+Processing by ArtikelsController#add as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArtikel Load (0.4ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:68:in `set_artikel'
+Redirected to http://127.0.0.1:3000/artikels
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms | Allocations: 810)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:01:46 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.4ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 923)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 3151)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.4ms | Allocations: 3478)
+
+
+Started GET "/add/3" for 127.0.0.1 at 2023-09-06 16:01:46 +0200
+Processing by ArtikelsController#add as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArtikel Load (0.4ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:68:in `set_artikel'
+Redirected to http://127.0.0.1:3000/artikels
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms | Allocations: 809)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:01:46 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.4ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.2ms | Allocations: 21)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 921)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 3149)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.4ms | Allocations: 3476)
+
+
+Started GET "/add/3" for 127.0.0.1 at 2023-09-06 16:01:46 +0200
+Processing by ArtikelsController#add as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:68:in `set_artikel'
+Redirected to http://127.0.0.1:3000/artikels
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 805)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:01:46 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.5ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 921)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3149)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.5ms | Allocations: 3476)
+
+
+Started GET "/add/3" for 127.0.0.1 at 2023-09-06 16:01:47 +0200
+Processing by ArtikelsController#add as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArtikel Load (0.2ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:68:in `set_artikel'
+Redirected to http://127.0.0.1:3000/artikels
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 801)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:01:47 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 917)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 3145)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.3ms | Allocations: 3472)
+
+
+Started GET "/add/3" for 127.0.0.1 at 2023-09-06 16:01:47 +0200
+Processing by ArtikelsController#add as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArtikel Load (0.2ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:68:in `set_artikel'
+Redirected to http://127.0.0.1:3000/artikels
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:01:47 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 915)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 3143)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.3ms | Allocations: 3470)
+
+
+Started GET "/add/3" for 127.0.0.1 at 2023-09-06 16:01:47 +0200
+Processing by ArtikelsController#add as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:68:in `set_artikel'
+Redirected to http://127.0.0.1:3000/artikels
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms | Allocations: 813)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:01:47 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 917)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 3145)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.3ms | Allocations: 3472)
+
+
+Started GET "/add/3" for 127.0.0.1 at 2023-09-06 16:01:47 +0200
+Processing by ArtikelsController#add as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:68:in `set_artikel'
+Redirected to http://127.0.0.1:3000/artikels
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms | Allocations: 811)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:01:47 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 923)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 3151)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.3ms | Allocations: 3478)
+
+
+Started GET "/add/3" for 127.0.0.1 at 2023-09-06 16:01:47 +0200
+Processing by ArtikelsController#add as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArtikel Load (0.2ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:68:in `set_artikel'
+Redirected to http://127.0.0.1:3000/artikels
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms | Allocations: 803)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:01:47 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 931)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 3159)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.3ms | Allocations: 3486)
+
+
+Started GET "/add/3" for 127.0.0.1 at 2023-09-06 16:01:47 +0200
+Processing by ArtikelsController#add as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArtikel Load (0.2ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:68:in `set_artikel'
+Redirected to http://127.0.0.1:3000/artikels
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms | Allocations: 813)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:01:47 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 917)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 3145)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.3ms | Allocations: 3472)
+
+
+Started GET "/add/3" for 127.0.0.1 at 2023-09-06 16:01:48 +0200
+Processing by ArtikelsController#add as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:68:in `set_artikel'
+Redirected to http://127.0.0.1:3000/artikels
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms | Allocations: 801)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:01:48 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 929)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3157)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.3ms | Allocations: 3484)
+
+
+Started GET "/add/3" for 127.0.0.1 at 2023-09-06 16:01:48 +0200
+Processing by ArtikelsController#add as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:68:in `set_artikel'
+Redirected to http://127.0.0.1:3000/artikels
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms | Allocations: 801)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:01:48 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 931)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 3164)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.3ms | Allocations: 3492)
+
+
+Started GET "/add/3" for 127.0.0.1 at 2023-09-06 16:01:48 +0200
+Processing by ArtikelsController#add as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArtikel Load (0.2ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:68:in `set_artikel'
+Redirected to http://127.0.0.1:3000/artikels
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 811)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:01:48 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.2ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 919)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 3153)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.2ms | Allocations: 3480)
+
+
+Started GET "/add/3" for 127.0.0.1 at 2023-09-06 16:01:49 +0200
+Processing by ArtikelsController#add as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArtikel Load (0.2ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:68:in `set_artikel'
+Redirected to http://127.0.0.1:3000/artikels
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 815)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:01:49 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 919)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 3147)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.3ms | Allocations: 3474)
+
+
+Started GET "/add/3" for 127.0.0.1 at 2023-09-06 16:01:49 +0200
+Processing by ArtikelsController#add as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArtikel Load (0.2ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:68:in `set_artikel'
+Redirected to http://127.0.0.1:3000/artikels
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 797)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:01:49 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.4ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 923)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 3151)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.4ms | Allocations: 3478)
+
+
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 16:01:53 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.6ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:3
+  [1m[36mBestellungArtikel Load (0.9ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:8
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 23.4ms | Allocations: 4639)
+  Rendered layout layouts/application.html.erb (Duration: 26.5ms | Allocations: 6943)
+Completed 200 OK in 37ms (Views: 17.3ms | ActiveRecord: 11.8ms | Allocations: 10915)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:02:42 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 925)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 3153)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.3ms | Allocations: 3482)
+
+
+Started GET "/add/3" for 127.0.0.1 at 2023-09-06 16:02:47 +0200
+Processing by ArtikelsController#add as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:68:in `set_artikel'
+Redirected to http://127.0.0.1:3000/artikels
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 807)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:02:47 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 923)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 3151)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.3ms | Allocations: 3478)
+
+
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 16:02:51 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.3ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:3
+  [1m[36mBestellungArtikel Load (0.3ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:8
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1158)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 3386)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.6ms | Allocations: 3878)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:03:51 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 923)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 3151)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.3ms | Allocations: 3478)
+
+
+Started GET "/add/3" for 127.0.0.1 at 2023-09-06 16:03:53 +0200
+Processing by ArtikelsController#add as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArtikel Load (0.2ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:68:in `set_artikel'
+Redirected to http://127.0.0.1:3000/artikels
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 803)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:03:53 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.4ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 919)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 3147)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.4ms | Allocations: 3474)
+
+
+Started GET "/artikels/new" for 127.0.0.1 at 2023-09-06 16:03:56 +0200
+Processing by ArtikelsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/new.html.erb within layouts/application
+  Rendered artikels/_form.html.erb (Duration: 29.1ms | Allocations: 6941)
+  Rendered artikels/new.html.erb within layouts/application (Duration: 30.3ms | Allocations: 7254)
+  Rendered layout layouts/application.html.erb (Duration: 33.0ms | Allocations: 9470)
+Completed 200 OK in 35ms (Views: 33.5ms | ActiveRecord: 0.0ms | Allocations: 9880)
+
+
+Started POST "/artikels" for 127.0.0.1 at 2023-09-06 16:04:08 +0200
+Processing by ArtikelsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "artikel"=>{"name"=>"Niklas Orangensaft", "id_kategorie"=>"1", "preis"=>"50"}, "commit"=>"Create Artikel"}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/artikels_controller.rb:27:in `block in create'
+  [1m[36mArtikel Create (3.4ms)[0m  [1m[32mINSERT INTO "artikels" ("name", "id_kategorie", "preis", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Niklas Orangensaft"], ["id_kategorie", 1], ["preis", 50], ["created_at", "2023-09-06 14:04:08.287763"], ["updated_at", "2023-09-06 14:04:08.287763"]]
+  ↳ app/controllers/artikels_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/artikels_controller.rb:27:in `block in create'
+Redirected to http://127.0.0.1:3000/artikels/4
+Completed 302 Found in 11ms (ActiveRecord: 5.2ms | Allocations: 3364)
+
+
+Started GET "/artikels/4" for 127.0.0.1 at 2023-09-06 16:04:08 +0200
+Processing by ArtikelsController#show as TURBO_STREAM
+  Parameters: {"id"=>"4"}
+  [1m[36mArtikel Load (0.2ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:68:in `set_artikel'
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/show.html.erb within layouts/application
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 865)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3072)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.2ms | Allocations: 3990)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:04:11 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1074)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3302)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.3ms | Allocations: 3629)
+
+
+Started GET "/artikels/new" for 127.0.0.1 at 2023-09-06 16:04:13 +0200
+Processing by ArtikelsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/new.html.erb within layouts/application
+  Rendered artikels/_form.html.erb (Duration: 3.3ms | Allocations: 1187)
+  Rendered artikels/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1272)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 3487)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.0ms | Allocations: 3817)
+
+
+Started POST "/artikels" for 127.0.0.1 at 2023-09-06 16:04:29 +0200
+Processing by ArtikelsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "artikel"=>{"name"=>"Kakao", "id_kategorie"=>"2", "preis"=>"15"}, "commit"=>"Create Artikel"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/artikels_controller.rb:27:in `block in create'
+  [1m[36mArtikel Create (0.3ms)[0m  [1m[32mINSERT INTO "artikels" ("name", "id_kategorie", "preis", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Kakao"], ["id_kategorie", 2], ["preis", 15], ["created_at", "2023-09-06 14:04:29.265256"], ["updated_at", "2023-09-06 14:04:29.265256"]]
+  ↳ app/controllers/artikels_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/artikels_controller.rb:27:in `block in create'
+Redirected to http://127.0.0.1:3000/artikels/5
+Completed 302 Found in 6ms (ActiveRecord: 0.7ms | Allocations: 2227)
+
+
+Started GET "/artikels/5" for 127.0.0.1 at 2023-09-06 16:04:29 +0200
+Processing by ArtikelsController#show as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:68:in `set_artikel'
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/show.html.erb within layouts/application
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 598)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 2805)
+Completed 200 OK in 9ms (Views: 5.6ms | ActiveRecord: 0.3ms | Allocations: 3593)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:04:30 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1237)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 3465)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.3ms | Allocations: 3792)
+
+
+Started GET "/add/5" for 127.0.0.1 at 2023-09-06 16:04:41 +0200
+Processing by ArtikelsController#add as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mArtikel Load (0.2ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:68:in `set_artikel'
+Redirected to http://127.0.0.1:3000/artikels
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:04:41 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (1.0ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1251)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 3479)
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 1.0ms | Allocations: 3806)
+
+
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 16:04:43 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.3ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:3
+  [1m[36mBestellungArtikel Load (0.2ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:8
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1158)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 3386)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.5ms | Allocations: 3870)
+
+
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 16:12:00 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.8ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:3
+  [1m[36mBestellungArtikel Load (0.6ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:8
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 21.7ms | Allocations: 6687)
+  Rendered layout layouts/application.html.erb (Duration: 33.0ms | Allocations: 20443)
+Completed 200 OK in 38ms (Views: 25.0ms | ActiveRecord: 8.7ms | Allocations: 24499)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:12:02 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (1.0ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 2899)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 5207)
+Completed 200 OK in 18ms (Views: 12.3ms | ActiveRecord: 1.0ms | Allocations: 8549)
+
+
+Started GET "/add/4" for 127.0.0.1 at 2023-09-06 16:12:04 +0200
+Processing by ArtikelsController#add as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArtikel Load (0.2ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:68:in `set_artikel'
+Redirected to http://127.0.0.1:3000/artikels
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms | Allocations: 1422)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:12:04 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.4ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1233)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3461)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.4ms | Allocations: 3788)
+
+
+Started GET "/add/5" for 127.0.0.1 at 2023-09-06 16:12:06 +0200
+Processing by ArtikelsController#add as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:68:in `set_artikel'
+Redirected to http://127.0.0.1:3000/artikels
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 816)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:12:06 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.5ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.2ms | Allocations: 21)
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1241)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 3469)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.5ms | Allocations: 3796)
+
+
+Started GET "/add/3" for 127.0.0.1 at 2023-09-06 16:12:07 +0200
+Processing by ArtikelsController#add as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:68:in `set_artikel'
+Redirected to http://127.0.0.1:3000/artikels
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 814)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:12:07 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.4ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1239)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 3467)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.4ms | Allocations: 3794)
+
+
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 16:12:08 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.2ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:3
+  [1m[36mBestellungArtikel Load (0.2ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:8
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1160)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 3388)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.4ms | Allocations: 3885)
+
+
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 16:12:35 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.2ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:3
+  [1m[36mBestellungArtikel Load (0.3ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:8
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 20.3ms | Allocations: 4276)
+  Rendered layout layouts/application.html.erb (Duration: 36.8ms | Allocations: 17947)
+Completed 200 OK in 43ms (Views: 27.0ms | ActiveRecord: 10.7ms | Allocations: 21997)
+
+
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 16:12:47 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.3ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:3
+  [1m[36mBestellungArtikel Load (0.2ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:8
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 9.5ms | Allocations: 4273)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 18010)
+Completed 200 OK in 17ms (Views: 8.2ms | ActiveRecord: 6.5ms | Allocations: 22080)
+
+
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 16:12:55 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.2ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:3
+  [1m[36mBestellungArtikel Load (0.3ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:8
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 4254)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 17897)
+Completed 200 OK in 17ms (Views: 8.8ms | ActiveRecord: 6.7ms | Allocations: 21949)
+
+
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 16:13:00 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.2ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:3
+  [1m[36mBestellungArtikel Load (0.2ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:8
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 10.0ms | Allocations: 4253)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 17897)
+Completed 200 OK in 18ms (Views: 8.9ms | ActiveRecord: 6.6ms | Allocations: 21939)
+
+
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 16:13:36 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.3ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:3
+  [1m[36mBestellungArtikel Load (0.3ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:8
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 11.2ms | Allocations: 4253)
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 17997)
+Completed 200 OK in 23ms (Views: 12.8ms | ActiveRecord: 7.2ms | Allocations: 22037)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:13:37 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.4ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 10.3ms | Allocations: 3105)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 5413)
+Completed 200 OK in 21ms (Views: 13.4ms | ActiveRecord: 3.0ms | Allocations: 8755)
+
+
+Started GET "/add/3" for 127.0.0.1 at 2023-09-06 16:13:39 +0200
+Processing by ArtikelsController#add as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:68:in `set_artikel'
+Redirected to http://127.0.0.1:3000/artikels
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms | Allocations: 1384)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:13:39 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1250)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 3478)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.3ms | Allocations: 3805)
+
+
+Started GET "/add/3" for 127.0.0.1 at 2023-09-06 16:13:39 +0200
+Processing by ArtikelsController#add as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArtikel Load (0.4ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:68:in `set_artikel'
+Redirected to http://127.0.0.1:3000/artikels
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms | Allocations: 798)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:13:39 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.4ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1231)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 3459)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.4ms | Allocations: 3786)
+
+
+Started GET "/add/3" for 127.0.0.1 at 2023-09-06 16:13:40 +0200
+Processing by ArtikelsController#add as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:68:in `set_artikel'
+Redirected to http://127.0.0.1:3000/artikels
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 804)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:13:40 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.4ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.2ms | Allocations: 21)
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1243)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 3471)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.4ms | Allocations: 3798)
+
+
+Started GET "/add/4" for 127.0.0.1 at 2023-09-06 16:13:42 +0200
+Processing by ArtikelsController#add as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArtikel Load (0.2ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:68:in `set_artikel'
+Redirected to http://127.0.0.1:3000/artikels
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 818)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:13:42 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1235)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 3463)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.3ms | Allocations: 3790)
+
+
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 16:13:48 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.2ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:3
+  [1m[36mBestellungArtikel Load (0.2ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:8
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1160)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 3388)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.4ms | Allocations: 3883)
+
+
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 16:13:58 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.2ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:3
+  [1m[36mBestellungArtikel Load (0.1ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:8
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 4272)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 18017)
+Completed 200 OK in 18ms (Views: 10.7ms | ActiveRecord: 4.8ms | Allocations: 22077)
+
+
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 16:13:59 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.2ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:3
+  [1m[36mBestellungArtikel Load (0.2ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:8
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1158)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 3388)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.4ms | Allocations: 3898)
+
+
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 16:13:59 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.3ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:3
+  [1m[36mBestellungArtikel Load (0.2ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:8
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1158)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3392)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.5ms | Allocations: 3895)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:14:00 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.5ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 12.3ms | Allocations: 3099)
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 5402)
+Completed 200 OK in 24ms (Views: 15.9ms | ActiveRecord: 3.7ms | Allocations: 8736)
+
+
+Started GET "/add/3" for 127.0.0.1 at 2023-09-06 16:14:02 +0200
+Processing by ArtikelsController#add as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:68:in `set_artikel'
+Redirected to http://127.0.0.1:3000/artikels
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms | Allocations: 1403)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:14:02 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1251)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 3479)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.3ms | Allocations: 3806)
+
+
+Started GET "/add/5" for 127.0.0.1 at 2023-09-06 16:14:03 +0200
+Processing by ArtikelsController#add as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mArtikel Load (0.2ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:68:in `set_artikel'
+Redirected to http://127.0.0.1:3000/artikels
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 826)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:14:03 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1237)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 3465)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.3ms | Allocations: 3792)
+
+
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 16:14:04 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.3ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:3
+  [1m[36mBestellungArtikel Load (0.2ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:8
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1160)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 3388)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.5ms | Allocations: 3877)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:14:06 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.2ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1237)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3465)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.2ms | Allocations: 3792)
+
+
+Started GET "/artikels/4" for 127.0.0.1 at 2023-09-06 16:14:08 +0200
+Processing by ArtikelsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArtikel Load (0.2ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:68:in `set_artikel'
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/show.html.erb within layouts/application
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 583)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 2790)
+Completed 200 OK in 9ms (Views: 6.4ms | ActiveRecord: 0.2ms | Allocations: 3575)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:14:16 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.4ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1241)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 3469)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.4ms | Allocations: 3796)
+
+
+Started GET "/add/3" for 127.0.0.1 at 2023-09-06 16:14:17 +0200
+Processing by ArtikelsController#add as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArtikel Load (0.2ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:68:in `set_artikel'
+Redirected to http://127.0.0.1:3000/artikels
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 806)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:14:17 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1235)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 3463)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.3ms | Allocations: 3790)
+
+
+Started GET "/add/4" for 127.0.0.1 at 2023-09-06 16:14:19 +0200
+Processing by ArtikelsController#add as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArtikel Load (0.2ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:68:in `set_artikel'
+Redirected to http://127.0.0.1:3000/artikels
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 804)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:14:19 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.2ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1245)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3473)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.2ms | Allocations: 3800)
+
+
+Started GET "/add/4" for 127.0.0.1 at 2023-09-06 16:14:19 +0200
+Processing by ArtikelsController#add as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArtikel Load (0.2ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:68:in `set_artikel'
+Redirected to http://127.0.0.1:3000/artikels
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms | Allocations: 808)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:14:19 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.4ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1229)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3457)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.4ms | Allocations: 3784)
+
+
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 16:14:21 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.3ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:3
+  [1m[36mBestellungArtikel Load (0.2ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:8
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1158)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 3386)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.5ms | Allocations: 3882)
+
+
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 16:28:36 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (1.0ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:3
+  [1m[36mBestellungArtikel Load (0.8ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:8
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 20.1ms | Allocations: 6687)
+  Rendered layout layouts/application.html.erb (Duration: 29.8ms | Allocations: 20410)
+Completed 200 OK in 35ms (Views: 21.0ms | ActiveRecord: 9.6ms | Allocations: 24461)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:28:38 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.8ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 2885)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 5190)
+Completed 200 OK in 14ms (Views: 6.9ms | ActiveRecord: 0.8ms | Allocations: 8519)
+
+
+Started GET "/add/3" for 127.0.0.1 at 2023-09-06 16:28:40 +0200
+Processing by ArtikelsController#add as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArtikel Load (0.2ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:72:in `set_artikel'
+Redirected to http://127.0.0.1:3000/artikels
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms | Allocations: 1431)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:28:40 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1235)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 3464)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.3ms | Allocations: 3791)
+
+
+Started GET "/add/4" for 127.0.0.1 at 2023-09-06 16:28:41 +0200
+Processing by ArtikelsController#add as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:72:in `set_artikel'
+Redirected to http://127.0.0.1:3000/artikels
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 814)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:28:41 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1235)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 3470)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.3ms | Allocations: 3797)
+
+
+Started GET "/add/4" for 127.0.0.1 at 2023-09-06 16:28:42 +0200
+Processing by ArtikelsController#add as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:72:in `set_artikel'
+Redirected to http://127.0.0.1:3000/artikels
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 814)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:28:42 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1263)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 3496)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.3ms | Allocations: 3823)
+
+
+Started GET "/add/3" for 127.0.0.1 at 2023-09-06 16:28:43 +0200
+Processing by ArtikelsController#add as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:72:in `set_artikel'
+Redirected to http://127.0.0.1:3000/artikels
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 810)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:28:43 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.2ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1233)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 3461)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.2ms | Allocations: 3788)
+
+
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 16:28:45 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.3ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:3
+  [1m[36mBestellungArtikel Load (0.3ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:8
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1160)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 3388)
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 0.6ms | Allocations: 3907)
+
+
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 16:28:59 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.3ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:3
+  [1m[36mBestellungArtikel Load (0.2ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:8
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 25.5ms | Allocations: 4295)
+  Rendered layout layouts/application.html.erb (Duration: 34.1ms | Allocations: 18040)
+Completed 200 OK in 38ms (Views: 16.5ms | ActiveRecord: 18.2ms | Allocations: 22090)
+
+
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 16:29:05 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.2ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:3
+  [1m[36mBestellungArtikel Load (0.1ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:8
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 8.9ms | Allocations: 4259)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 17996)
+Completed 200 OK in 18ms (Views: 9.2ms | ActiveRecord: 6.1ms | Allocations: 22070)
+
+
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 16:29:37 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.2ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:3
+  [1m[36mBestellungArtikel Load (0.1ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:8
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 4253)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 17896)
+Completed 200 OK in 16ms (Views: 8.8ms | ActiveRecord: 5.0ms | Allocations: 21950)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:29:38 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 10.9ms | Allocations: 3094)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 5397)
+Completed 200 OK in 22ms (Views: 13.9ms | ActiveRecord: 2.7ms | Allocations: 8739)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:29:39 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1237)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 3465)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.3ms | Allocations: 3790)
+
+
+Started GET "/add/3" for 127.0.0.1 at 2023-09-06 16:29:42 +0200
+Processing by ArtikelsController#add as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArtikel Load (0.5ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:73:in `set_artikel'
+Redirected to http://127.0.0.1:3000/artikels
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms | Allocations: 1389)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:29:42 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1233)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 3461)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.3ms | Allocations: 3788)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:30:15 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (1.0ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.4ms | Allocations: 280)
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 13.2ms | Allocations: 18325)
+  Rendered layout layouts/application.html.erb (Duration: 30.6ms | Allocations: 53400)
+Completed 200 OK in 46ms (Views: 27.0ms | ActiveRecord: 6.2ms | Allocations: 63416)
+
+
+Started GET "/add/3" for 127.0.0.1 at 2023-09-06 16:30:16 +0200
+Processing by ArtikelsController#add as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArtikel Load (0.2ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:74:in `set_artikel'
+Redirected to http://127.0.0.1:3000/artikels
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms | Allocations: 2851)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 16:30:16 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered artikels/_artikel.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1229)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 3458)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.3ms | Allocations: 3787)
+
+

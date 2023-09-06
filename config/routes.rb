@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "add/:id", to:"artikels#add", as: "artikels_add"
   resources :artikelkategories
   resources :artikels
   resources :bestellungs

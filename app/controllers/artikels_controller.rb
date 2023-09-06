@@ -1,5 +1,5 @@
 class ArtikelsController < ApplicationController
-  before_action :set_artikel, only: %i[ show edit update destroy ]
+  before_action :set_artikel, only: %i[ show edit update destroy add]
 
   # GET /artikels or /artikels.json
   def index
@@ -55,6 +55,15 @@ class ArtikelsController < ApplicationController
       format.html { redirect_to artikels_url, notice: "Artikel was successfully destroyed." }
       format.json { head :no_content }
     end
+  end
+
+  def add
+    if session[:id] 
+      session[:id] << @artikel.id
+    else
+      session[:id] = [] 
+    end
+    redirect_to artikels_url
   end
 
   private
