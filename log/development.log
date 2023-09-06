@@ -353,6 +353,7 @@ Processing by ArtikelkategoriesController#index as HTML
 Completed 200 OK in 28ms (Views: 16.9ms | ActiveRecord: 2.3ms | Allocations: 20118)
 
 
+<<<<<<< HEAD
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2953311040616065710)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Migrating to CreateArtikelkategories (20230904122205)
@@ -803,5 +804,1683 @@ Processing by ArtikelkategoriesController#index as HTML
   Rendered artikelkategories/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1467)
   Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3697)
 Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.2ms | Allocations: 4024)
+=======
+Started GET "/artikelkategories" for 127.0.0.1 at 2023-09-04 14:32:33 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArtikelkategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikelkategories/index.html.erb within layouts/application
+  [1m[36mArtikelkategorie Load (0.7ms)[0m  [1m[34mSELECT "artikelkategories".* FROM "artikelkategories"[0m
+  ↳ app/views/artikelkategories/index.html.erb:6
+  Rendered artikelkategories/_artikelkategorie.html.erb (Duration: 0.7ms | Allocations: 213)
+  Rendered artikelkategories/_artikelkategorie.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered artikelkategories/_artikelkategorie.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered artikelkategories/index.html.erb within layouts/application (Duration: 37.0ms | Allocations: 17063)
+  Rendered layout layouts/application.html.erb (Duration: 99.1ms | Allocations: 51709)
+Completed 200 OK in 153ms (Views: 126.4ms | ActiveRecord: 4.2ms | Allocations: 60633)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-04 14:32:38 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.6ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 1.4ms | Allocations: 254)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 15.2ms | Allocations: 15940)
+  Rendered layout layouts/application.html.erb (Duration: 20.0ms | Allocations: 18246)
+Completed 200 OK in 28ms (Views: 19.7ms | ActiveRecord: 2.6ms | Allocations: 21341)
+
+
+Started GET "/" for 127.0.0.1 at 2023-09-06 10:23:30 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/sh33pnik/.rvm/gems/ruby-3.0.0/gems/railties-7.0.7.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/sh33pnik/.rvm/gems/ruby-3.0.0/gems/railties-7.0.7.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.2ms | Allocations: 733)
+Completed 200 OK in 46ms (Views: 26.2ms | ActiveRecord: 0.0ms | Allocations: 6778)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 10:23:37 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.9ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.8ms | Allocations: 275)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 48.4ms | Allocations: 17789)
+  Rendered layout layouts/application.html.erb (Duration: 98.5ms | Allocations: 52485)
+Completed 200 OK in 108ms (Views: 88.9ms | ActiveRecord: 11.7ms | Allocations: 56547)
+
+
+Started GET "/artikels/1" for 127.0.0.1 at 2023-09-06 10:23:40 +0200
+Processing by ArtikelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtikel Load (0.2ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:63:in `set_artikel'
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/show.html.erb within layouts/application
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 954)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 3164)
+Completed 200 OK in 11ms (Views: 5.0ms | ActiveRecord: 0.4ms | Allocations: 6007)
+
+
+Started GET "/artikels/1/edit" for 127.0.0.1 at 2023-09-06 10:23:41 +0200
+Processing by ArtikelsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtikel Load (0.2ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:63:in `set_artikel'
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/edit.html.erb within layouts/application
+  Rendered artikels/_form.html.erb (Duration: 9.3ms | Allocations: 3064)
+  Rendered artikels/edit.html.erb within layouts/application (Duration: 10.7ms | Allocations: 3434)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 5644)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.2ms | Allocations: 6504)
+
+
+Started PATCH "/artikels/1" for 127.0.0.1 at 2023-09-06 10:23:45 +0200
+Processing by ArtikelsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "artikel"=>{"name"=>"Kaffee-Niklas-Cremas", "id_kategorie"=>"1", "preis"=>"4"}, "commit"=>"Update Artikel", "id"=>"1"}
+  [1m[36mArtikel Load (0.2ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:63:in `set_artikel'
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/edit.html.erb within layouts/application
+  Rendered artikels/_form.html.erb (Duration: 1.9ms | Allocations: 1587)
+  Rendered artikels/edit.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1708)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 3918)
+Completed 422 Unprocessable Entity in 19ms (Views: 5.5ms | ActiveRecord: 0.2ms | Allocations: 10158)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 10:23:57 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.2ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 987)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 3217)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.2ms | Allocations: 3545)
+>>>>>>> origin/main
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2953311040616065710)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBestellungs (20230906090237)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE "bestellungs" ("id" bigserial primary key, "tischnummer" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230906090237"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateBestellungArtikels (20230906090618)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "bestellung_artikels" ("id" bigserial primary key, "id_bestellung" integer, "id_artikel" integer, "anzahl" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230906090618"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(2953311040616065710)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mArtikel Load (0.9ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  [1m[36mArtikelkategorie Load (1.1ms)[0m  [1m[34mSELECT "artikelkategories".* FROM "artikelkategories"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (1.4ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.2ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 2]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.2ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 3]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.1ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 4]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.2ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 5]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.2ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 6]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBestellung Load (0.8ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mArtikel Load (0.6ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  [1m[36mArtikelkategorie Load (0.3ms)[0m  [1m[34mSELECT "artikelkategories".* FROM "artikelkategories"[0m
+  [1m[36mBestellung Load (0.3ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (1.0ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Snacks"], ["created_at", "2023-09-06 09:11:28.694140"], ["updated_at", "2023-09-06 09:11:28.694140"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.3ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Kaltgetränke"], ["created_at", "2023-09-06 09:11:28.697027"], ["updated_at", "2023-09-06 09:11:28.697027"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.2ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Heißgetränke"], ["created_at", "2023-09-06 09:11:28.698324"], ["updated_at", "2023-09-06 09:11:28.698324"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.6ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 1], ["created_at", "2023-09-06 09:11:28.705857"], ["updated_at", "2023-09-06 09:11:28.705857"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.2ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 2], ["created_at", "2023-09-06 09:11:28.707748"], ["updated_at", "2023-09-06 09:11:28.707748"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.2ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 2], ["created_at", "2023-09-06 09:11:28.709150"], ["updated_at", "2023-09-06 09:11:28.709150"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mArtikel Load (0.6ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  [1m[36mArtikelkategorie Load (0.5ms)[0m  [1m[34mSELECT "artikelkategories".* FROM "artikelkategories"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.3ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 7]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.1ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 8]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.1ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 9]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBestellung Load (0.3ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.1ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.1ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 2]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.1ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 3]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mArtikel Load (0.7ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  [1m[36mArtikelkategorie Load (0.5ms)[0m  [1m[34mSELECT "artikelkategories".* FROM "artikelkategories"[0m
+  [1m[36mBestellung Load (0.4ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  [1m[36mBestellungArtikel Load (0.6ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.3ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Snacks"], ["created_at", "2023-09-06 09:14:12.970040"], ["updated_at", "2023-09-06 09:14:12.970040"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.1ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Kaltgetränke"], ["created_at", "2023-09-06 09:14:12.972063"], ["updated_at", "2023-09-06 09:14:12.972063"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.1ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Heißgetränke"], ["created_at", "2023-09-06 09:14:12.973323"], ["updated_at", "2023-09-06 09:14:12.973323"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.2ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 1], ["created_at", "2023-09-06 09:14:12.979086"], ["updated_at", "2023-09-06 09:14:12.979086"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.2ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 2], ["created_at", "2023-09-06 09:14:12.980488"], ["updated_at", "2023-09-06 09:14:12.980488"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.1ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 2], ["created_at", "2023-09-06 09:14:12.981788"], ["updated_at", "2023-09-06 09:14:12.981788"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellungArtikel Create (0.4ms)[0m  [1m[32mINSERT INTO "bestellung_artikels" ("id_bestellung", "id_artikel", "anzahl", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id_bestellung", 1], ["id_artikel", 2], ["anzahl", 4], ["created_at", "2023-09-06 09:14:12.988281"], ["updated_at", "2023-09-06 09:14:12.988281"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/users" for 127.0.0.1 at 2023-09-06 11:31:31 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users" for 127.0.0.1 at 2023-09-06 11:31:57 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/" for 127.0.0.1 at 2023-09-06 11:31:59 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/michagersting/.rvm/gems/ruby-3.0.0/gems/railties-7.0.7.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/michagersting/.rvm/gems/ruby-3.0.0/gems/railties-7.0.7.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.7ms | Allocations: 461)
+Completed 200 OK in 5ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 4034)
+
+
+Started GET "/artikelkategories" for 127.0.0.1 at 2023-09-06 11:32:09 +0200
+Processing by ArtikelkategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikelkategories/index.html.erb within layouts/application
+  [1m[36mArtikelkategorie Load (1.4ms)[0m  [1m[34mSELECT "artikelkategories".* FROM "artikelkategories"[0m
+  ↳ app/views/artikelkategories/index.html.erb:6
+  Rendered artikelkategories/_artikelkategorie.html.erb (Duration: 0.8ms | Allocations: 203)
+  Rendered artikelkategories/_artikelkategorie.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered artikelkategories/_artikelkategorie.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered artikelkategories/index.html.erb within layouts/application (Duration: 27.1ms | Allocations: 16421)
+  Rendered layout layouts/application.html.erb (Duration: 57.5ms | Allocations: 51610)
+Completed 200 OK in 66ms (Views: 50.4ms | ActiveRecord: 8.8ms | Allocations: 55474)
+
+
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 11:32:16 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/warenkorbs"):
+  
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 11:32:40 +0200
+Processing by WarenkorbsController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 6553)
+
+
+  
+NoMethodError (undefined method `al' for Bestellung:Class
+Did you mean?  all):
+  
+app/controllers/warenkorbs_controller.rb:3:in `index'
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 11:32:48 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.6ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:1
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 14029)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 27841)
+Completed 200 OK in 17ms (Views: 11.9ms | ActiveRecord: 3.3ms | Allocations: 31474)
+
+
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 11:33:09 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.4ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:1
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 727)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 3424)
+Completed 200 OK in 14ms (Views: 10.8ms | ActiveRecord: 0.4ms | Allocations: 4531)
+
+
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 11:33:41 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.3ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:1
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 744)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 3444)
+Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 0.3ms | Allocations: 4544)
+
+
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 11:37:35 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.2ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:1
+  [1m[36mBestellungArtikel Load (0.4ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:5
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 12.1ms | Allocations: 16944)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 31072)
+Completed 200 OK in 27ms (Views: 15.2ms | ActiveRecord: 6.1ms | Allocations: 38321)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mArtikel Load (0.7ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  [1m[36mArtikelkategorie Load (0.3ms)[0m  [1m[34mSELECT "artikelkategories".* FROM "artikelkategories"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (1.8ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 10]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.2ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 11]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.1ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 12]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBestellung Load (0.4ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.1ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 4]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.1ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 5]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.1ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 6]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBestellungArtikel Load (0.5ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellungArtikel Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bestellung_artikels" WHERE "bestellung_artikels"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (1.5ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Snacks"], ["created_at", "2023-09-06 09:38:59.951077"], ["updated_at", "2023-09-06 09:38:59.951077"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.2ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Kaltgetränke"], ["created_at", "2023-09-06 09:38:59.954267"], ["updated_at", "2023-09-06 09:38:59.954267"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.2ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Heißgetränke"], ["created_at", "2023-09-06 09:38:59.955756"], ["updated_at", "2023-09-06 09:38:59.955756"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.3ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 1], ["created_at", "2023-09-06 09:38:59.957259"], ["updated_at", "2023-09-06 09:38:59.957259"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.2ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 2], ["created_at", "2023-09-06 09:38:59.958878"], ["updated_at", "2023-09-06 09:38:59.958878"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.2ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 2], ["created_at", "2023-09-06 09:38:59.960508"], ["updated_at", "2023-09-06 09:38:59.960508"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 11:39:04 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.4ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:1
+  [1m[36mBestellungArtikel Load (0.3ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:5
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1074)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 3468)
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.7ms | Allocations: 3804)
+
+
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 11:39:12 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.3ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:1
+  [1m[36mBestellungArtikel Load (0.2ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:5
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1067)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 3451)
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 0.5ms | Allocations: 3787)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mArtikel Load (0.7ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  [1m[36mArtikelkategorie Load (0.4ms)[0m  [1m[34mSELECT "artikelkategories".* FROM "artikelkategories"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.3ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 13]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.1ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 14]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.1ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 15]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBestellung Load (0.4ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 7]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.1ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 8]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.1ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 9]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBestellungArtikel Load (0.6ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.5ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Snacks"], ["created_at", "2023-09-06 09:42:16.542552"], ["updated_at", "2023-09-06 09:42:16.542552"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.2ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Kaltgetränke"], ["created_at", "2023-09-06 09:42:16.544553"], ["updated_at", "2023-09-06 09:42:16.544553"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.2ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Heißgetränke"], ["created_at", "2023-09-06 09:42:16.545948"], ["updated_at", "2023-09-06 09:42:16.545948"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.3ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 1], ["created_at", "2023-09-06 09:42:16.547431"], ["updated_at", "2023-09-06 09:42:16.547431"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.2ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 2], ["created_at", "2023-09-06 09:42:16.548885"], ["updated_at", "2023-09-06 09:42:16.548885"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.2ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 2], ["created_at", "2023-09-06 09:42:16.550057"], ["updated_at", "2023-09-06 09:42:16.550057"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 11:42:20 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.5ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:1
+  [1m[36mBestellungArtikel Load (0.3ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:5
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1067)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 3461)
+Completed 200 OK in 15ms (Views: 11.6ms | ActiveRecord: 0.8ms | Allocations: 3797)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (5048.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cafe_app_development"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (36.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cafe_app_development"[0m
+  [1m[35m (26.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cafe_app_test"[0m
+  [1m[35m (116.1ms)[0m  [1m[35mCREATE DATABASE "cafe_app_development" ENCODING = 'unicode'[0m
+  [1m[35m (35.8ms)[0m  [1m[35mCREATE DATABASE "cafe_app_test" ENCODING = 'unicode'[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2953311040616065710)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateArtikels (20230904094621)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "artikels" ("id" bigserial primary key, "name" character varying, "id_kategorie" integer, "preis" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230904094621"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateArtikelkategories (20230904122205)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "artikelkategories" ("id" bigserial primary key, "kategorie" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230904122205"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateBestellungs (20230906090237)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "bestellungs" ("id" bigserial primary key, "tischnummer" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230906090237"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateBestellungArtikels (20230906090618)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "bestellung_artikels" ("id" bigserial primary key, "id_bestellung" integer, "id_artikel" integer, "anzahl" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230906090618"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-09-06 09:44:16.734452"], ["updated_at", "2023-09-06 09:44:16.734452"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2953311040616065710)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mArtikel Load (0.6ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  [1m[36mArtikelkategorie Load (0.4ms)[0m  [1m[34mSELECT "artikelkategories".* FROM "artikelkategories"[0m
+  [1m[36mBestellung Load (0.5ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  [1m[36mBestellungArtikel Load (0.5ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.8ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Snacks"], ["created_at", "2023-09-06 09:44:17.458477"], ["updated_at", "2023-09-06 09:44:17.458477"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.2ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Kaltgetränke"], ["created_at", "2023-09-06 09:44:17.461363"], ["updated_at", "2023-09-06 09:44:17.461363"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.2ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Heißgetränke"], ["created_at", "2023-09-06 09:44:17.462836"], ["updated_at", "2023-09-06 09:44:17.462836"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.7ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 1], ["created_at", "2023-09-06 09:44:17.470902"], ["updated_at", "2023-09-06 09:44:17.470902"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.2ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 2], ["created_at", "2023-09-06 09:44:17.472993"], ["updated_at", "2023-09-06 09:44:17.472993"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.2ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 2], ["created_at", "2023-09-06 09:44:17.474425"], ["updated_at", "2023-09-06 09:44:17.474425"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 11:44:25 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.9ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:1
+  [1m[36mBestellungArtikel Load (0.3ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:5
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 9.7ms | Allocations: 16300)
+  Rendered layout layouts/application.html.erb (Duration: 27.8ms | Allocations: 51770)
+Completed 200 OK in 45ms (Views: 25.6ms | ActiveRecord: 4.5ms | Allocations: 65073)
+
+
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 11:45:16 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.5ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:3
+  [1m[36mBestellungArtikel Load (0.2ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:7
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1356)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 4039)
+Completed 200 OK in 17ms (Views: 13.9ms | ActiveRecord: 0.7ms | Allocations: 5158)
+
+
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 11:45:49 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.3ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:3
+  [1m[36mBestellungArtikel Load (0.2ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:7
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1367)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 4064)
+Completed 200 OK in 12ms (Views: 9.0ms | ActiveRecord: 0.4ms | Allocations: 5184)
+
+
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 11:46:27 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.5ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:3
+  [1m[36mBestellungArtikel Load (0.2ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:11
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1360)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 4050)
+Completed 200 OK in 16ms (Views: 13.2ms | ActiveRecord: 0.6ms | Allocations: 5162)
+
+
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 11:46:49 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.4ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:2
+  [1m[36mBestellungArtikel Load (0.3ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:10
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1359)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 4050)
+Completed 200 OK in 15ms (Views: 12.2ms | ActiveRecord: 0.7ms | Allocations: 5170)
+
+
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 11:47:06 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellungArtikel Load (0.5ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:1
+  [1m[36mBestellung Load (0.2ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:9
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1343)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 4041)
+Completed 200 OK in 15ms (Views: 12.6ms | ActiveRecord: 0.7ms | Allocations: 5153)
+
+
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 11:47:26 +0200
+Processing by WarenkorbsController#index as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 5089)
+
+
+  
+NameError (uninitialized constant WarenkorbsController::Bestellung_Artikel
+Did you mean?  BestellungArtikel):
+  
+app/controllers/warenkorbs_controller.rb:4:in `index'
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 11:47:31 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellungArtikel Load (0.3ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:1
+  [1m[36mBestellung Load (0.2ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:8
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 2770)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 16910)
+Completed 200 OK in 16ms (Views: 8.7ms | ActiveRecord: 3.5ms | Allocations: 23496)
+
+
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 11:48:06 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.2ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:3
+  [1m[36mBestellungArtikel Load (0.2ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:12
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1360)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 4058)
+Completed 200 OK in 13ms (Views: 10.6ms | ActiveRecord: 0.4ms | Allocations: 5169)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (5047.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cafe_app_development"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (69.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cafe_app_development"[0m
+  [1m[35m (18.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cafe_app_test"[0m
+  [1m[35m (75.3ms)[0m  [1m[35mCREATE DATABASE "cafe_app_development" ENCODING = 'unicode'[0m
+  [1m[35m (39.1ms)[0m  [1m[35mCREATE DATABASE "cafe_app_test" ENCODING = 'unicode'[0m
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2953311040616065710)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateArtikels (20230904094621)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "artikels" ("id" bigserial primary key, "name" character varying, "id_kategorie" integer, "preis" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230904094621"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateArtikelkategories (20230904122205)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "artikelkategories" ("id" bigserial primary key, "kategorie" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230904122205"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateBestellungs (20230906090237)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "bestellungs" ("id" bigserial primary key, "tischnummer" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230906090237"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateBestellungArtikels (20230906090618)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "bestellung_artikels" ("id" bigserial primary key, "id_bestellung" integer, "id_artikel" integer, "anzahl" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230906090618"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-09-06 09:50:10.662819"], ["updated_at", "2023-09-06 09:50:10.662819"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2953311040616065710)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mArtikel Load (0.8ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  [1m[36mArtikelkategorie Load (0.7ms)[0m  [1m[34mSELECT "artikelkategories".* FROM "artikelkategories"[0m
+  [1m[36mBestellung Load (0.6ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  [1m[36mBestellungArtikel Load (0.6ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.6ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Snacks"], ["created_at", "2023-09-06 09:50:11.418825"], ["updated_at", "2023-09-06 09:50:11.418825"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.2ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Kaltgetränke"], ["created_at", "2023-09-06 09:50:11.421316"], ["updated_at", "2023-09-06 09:50:11.421316"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.2ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Heißgetränke"], ["created_at", "2023-09-06 09:50:11.422753"], ["updated_at", "2023-09-06 09:50:11.422753"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.6ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 1], ["created_at", "2023-09-06 09:50:11.429217"], ["updated_at", "2023-09-06 09:50:11.429217"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.2ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 2], ["created_at", "2023-09-06 09:50:11.431207"], ["updated_at", "2023-09-06 09:50:11.431207"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.2ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 2], ["created_at", "2023-09-06 09:50:11.432568"], ["updated_at", "2023-09-06 09:50:11.432568"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mArtikel Load (0.6ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  [1m[36mArtikelkategorie Load (0.4ms)[0m  [1m[34mSELECT "artikelkategories".* FROM "artikelkategories"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.6ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.2ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 2]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.1ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 3]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBestellung Load (0.6ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 2]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 3]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBestellungArtikel Load (0.6ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.3ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Snacks"], ["created_at", "2023-09-06 09:51:23.089255"], ["updated_at", "2023-09-06 09:51:23.089255"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.2ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Kaltgetränke"], ["created_at", "2023-09-06 09:51:23.090982"], ["updated_at", "2023-09-06 09:51:23.090982"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.2ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Heißgetränke"], ["created_at", "2023-09-06 09:51:23.092227"], ["updated_at", "2023-09-06 09:51:23.092227"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.3ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 1], ["created_at", "2023-09-06 09:51:23.093462"], ["updated_at", "2023-09-06 09:51:23.093462"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.2ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 2], ["created_at", "2023-09-06 09:51:23.094764"], ["updated_at", "2023-09-06 09:51:23.094764"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.2ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 2], ["created_at", "2023-09-06 09:51:23.095923"], ["updated_at", "2023-09-06 09:51:23.095923"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2953311040616065710)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBestellungArtikels (20230906095552)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "bestellung_artikels" ("id" bigserial primary key, "id_bestellunginteger" character varying, "id_artikel" integer, "anzahl" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230906095552"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2953311040616065710)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mArtikel Load (0.6ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  [1m[36mArtikelkategorie Load (0.3ms)[0m  [1m[34mSELECT "artikelkategories".* FROM "artikelkategories"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.4ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 4]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.2ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 5]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.1ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 6]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBestellung Load (0.4ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.1ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 4]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.1ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 5]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.1ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 6]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBestellungArtikel Load (0.6ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.6ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Snacks"], ["created_at", "2023-09-06 09:57:02.082882"], ["updated_at", "2023-09-06 09:57:02.082882"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.2ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Kaltgetränke"], ["created_at", "2023-09-06 09:57:02.085058"], ["updated_at", "2023-09-06 09:57:02.085058"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.2ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Heißgetränke"], ["created_at", "2023-09-06 09:57:02.086441"], ["updated_at", "2023-09-06 09:57:02.086441"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.3ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 1], ["created_at", "2023-09-06 09:57:02.087784"], ["updated_at", "2023-09-06 09:57:02.087784"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.2ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 2], ["created_at", "2023-09-06 09:57:02.089249"], ["updated_at", "2023-09-06 09:57:02.089249"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.2ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 2], ["created_at", "2023-09-06 09:57:02.090537"], ["updated_at", "2023-09-06 09:57:02.090537"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2953311040616065710)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2953311040616065710)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mArtikel Load (0.4ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  [1m[36mArtikelkategorie Load (0.5ms)[0m  [1m[34mSELECT "artikelkategories".* FROM "artikelkategories"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.9ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 7]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.3ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 8]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.6ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 9]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBestellung Load (0.5ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.4ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 7]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 8]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 9]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBestellungArtikel Load (0.7ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.9ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Snacks"], ["created_at", "2023-09-06 09:57:58.573938"], ["updated_at", "2023-09-06 09:57:58.573938"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.3ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Kaltgetränke"], ["created_at", "2023-09-06 09:57:58.577237"], ["updated_at", "2023-09-06 09:57:58.577237"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.4ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Heißgetränke"], ["created_at", "2023-09-06 09:57:58.579280"], ["updated_at", "2023-09-06 09:57:58.579280"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.3ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 1], ["created_at", "2023-09-06 09:57:58.581254"], ["updated_at", "2023-09-06 09:57:58.581254"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.2ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 2], ["created_at", "2023-09-06 09:57:58.582791"], ["updated_at", "2023-09-06 09:57:58.582791"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.2ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 2], ["created_at", "2023-09-06 09:57:58.584108"], ["updated_at", "2023-09-06 09:57:58.584108"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mArtikel Load (0.6ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  [1m[36mArtikelkategorie Load (0.4ms)[0m  [1m[34mSELECT "artikelkategories".* FROM "artikelkategories"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.4ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 10]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.1ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 11]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.1ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 12]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBestellung Load (0.4ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 10]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 11]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.1ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 12]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBestellungArtikel Load (0.8ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2953311040616065710)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2953311040616065710)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mArtikel Load (0.5ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  [1m[36mArtikelkategorie Load (0.3ms)[0m  [1m[34mSELECT "artikelkategories".* FROM "artikelkategories"[0m
+  [1m[36mBestellung Load (0.3ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  [1m[36mBestellungArtikel Load (0.2ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2953311040616065710)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(2953311040616065710)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (5049.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cafe_app_development"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (37.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cafe_app_development"[0m
+  [1m[35m (21.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cafe_app_test"[0m
+  [1m[35m (79.8ms)[0m  [1m[35mCREATE DATABASE "cafe_app_development" ENCODING = 'unicode'[0m
+  [1m[35m (42.3ms)[0m  [1m[35mCREATE DATABASE "cafe_app_test" ENCODING = 'unicode'[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2953311040616065710)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateArtikels (20230904094621)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "artikels" ("id" bigserial primary key, "name" character varying, "id_kategorie" integer, "preis" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230904094621"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateArtikelkategories (20230904122205)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "artikelkategories" ("id" bigserial primary key, "kategorie" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230904122205"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateBestellungs (20230906090237)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "bestellungs" ("id" bigserial primary key, "tischnummer" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230906090237"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateBestellungArtikels (20230906095552)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "bestellung_artikels" ("id" bigserial primary key, "id_bestellung" integer, "id_artikel" integer, "anzahl" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230906095552"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-09-06 09:59:51.093200"], ["updated_at", "2023-09-06 09:59:51.093200"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2953311040616065710)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mArtikel Load (1.0ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  [1m[36mArtikelkategorie Load (0.4ms)[0m  [1m[34mSELECT "artikelkategories".* FROM "artikelkategories"[0m
+  [1m[36mBestellung Load (0.4ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  [1m[36mBestellungArtikel Load (0.3ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.4ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Snacks"], ["created_at", "2023-09-06 09:59:51.830688"], ["updated_at", "2023-09-06 09:59:51.830688"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.1ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Kaltgetränke"], ["created_at", "2023-09-06 09:59:51.832752"], ["updated_at", "2023-09-06 09:59:51.832752"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.1ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Heißgetränke"], ["created_at", "2023-09-06 09:59:51.833930"], ["updated_at", "2023-09-06 09:59:51.833930"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.4ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 1], ["created_at", "2023-09-06 09:59:51.839015"], ["updated_at", "2023-09-06 09:59:51.839015"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.2ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 2], ["created_at", "2023-09-06 09:59:51.840763"], ["updated_at", "2023-09-06 09:59:51.840763"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.2ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 2], ["created_at", "2023-09-06 09:59:51.842219"], ["updated_at", "2023-09-06 09:59:51.842219"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mArtikel Load (0.8ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  [1m[36mArtikelkategorie Load (0.3ms)[0m  [1m[34mSELECT "artikelkategories".* FROM "artikelkategories"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.5ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.1ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 2]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.1ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 3]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBestellung Load (0.4ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.1ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 2]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 3]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBestellungArtikel Load (0.5ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.5ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Snacks"], ["created_at", "2023-09-06 10:00:38.432843"], ["updated_at", "2023-09-06 10:00:38.432843"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.2ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Kaltgetränke"], ["created_at", "2023-09-06 10:00:38.434990"], ["updated_at", "2023-09-06 10:00:38.434990"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.2ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Heißgetränke"], ["created_at", "2023-09-06 10:00:38.436386"], ["updated_at", "2023-09-06 10:00:38.436386"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.3ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 1], ["created_at", "2023-09-06 10:00:38.437876"], ["updated_at", "2023-09-06 10:00:38.437876"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.2ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 2], ["created_at", "2023-09-06 10:00:38.439351"], ["updated_at", "2023-09-06 10:00:38.439351"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.2ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 2], ["created_at", "2023-09-06 10:00:38.440691"], ["updated_at", "2023-09-06 10:00:38.440691"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mArtikel Load (0.7ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  [1m[36mArtikelkategorie Load (0.3ms)[0m  [1m[34mSELECT "artikelkategories".* FROM "artikelkategories"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.3ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 4]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.1ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 5]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.2ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 6]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBestellung Load (0.3ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 4]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 5]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.1ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 6]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBestellungArtikel Load (0.4ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.4ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Snacks"], ["created_at", "2023-09-06 10:01:52.988246"], ["updated_at", "2023-09-06 10:01:52.988246"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.2ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Kaltgetränke"], ["created_at", "2023-09-06 10:01:52.990223"], ["updated_at", "2023-09-06 10:01:52.990223"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.3ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Heißgetränke"], ["created_at", "2023-09-06 10:01:52.991555"], ["updated_at", "2023-09-06 10:01:52.991555"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.4ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 1], ["created_at", "2023-09-06 10:01:52.993002"], ["updated_at", "2023-09-06 10:01:52.993002"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.2ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 2], ["created_at", "2023-09-06 10:01:52.994691"], ["updated_at", "2023-09-06 10:01:52.994691"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.2ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 2], ["created_at", "2023-09-06 10:01:52.996129"], ["updated_at", "2023-09-06 10:01:52.996129"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mArtikel Load (0.8ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  [1m[36mArtikelkategorie Load (0.4ms)[0m  [1m[34mSELECT "artikelkategories".* FROM "artikelkategories"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.6ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 7]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.2ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 8]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.4ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 9]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBestellung Load (0.4ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 7]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.1ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 8]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.1ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 9]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.7ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Snacks"], ["created_at", "2023-09-06 10:03:44.929161"], ["updated_at", "2023-09-06 10:03:44.929161"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.1ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Kaltgetränke"], ["created_at", "2023-09-06 10:03:44.931421"], ["updated_at", "2023-09-06 10:03:44.931421"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.1ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Heißgetränke"], ["created_at", "2023-09-06 10:03:44.932706"], ["updated_at", "2023-09-06 10:03:44.932706"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.4ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 1], ["created_at", "2023-09-06 10:03:44.933999"], ["updated_at", "2023-09-06 10:03:44.933999"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.2ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 2], ["created_at", "2023-09-06 10:03:44.935655"], ["updated_at", "2023-09-06 10:03:44.935655"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.2ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 2], ["created_at", "2023-09-06 10:03:44.937064"], ["updated_at", "2023-09-06 10:03:44.937064"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mArtikel Load (1.0ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  [1m[36mArtikelkategorie Load (0.4ms)[0m  [1m[34mSELECT "artikelkategories".* FROM "artikelkategories"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.3ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 10]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.2ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 11]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.1ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 12]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBestellung Load (0.4ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 10]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 11]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 12]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.4ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Snacks"], ["created_at", "2023-09-06 10:03:53.595759"], ["updated_at", "2023-09-06 10:03:53.595759"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.1ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Kaltgetränke"], ["created_at", "2023-09-06 10:03:53.597750"], ["updated_at", "2023-09-06 10:03:53.597750"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.1ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Heißgetränke"], ["created_at", "2023-09-06 10:03:53.599073"], ["updated_at", "2023-09-06 10:03:53.599073"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.3ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 1], ["created_at", "2023-09-06 10:03:53.600476"], ["updated_at", "2023-09-06 10:03:53.600476"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.2ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 2], ["created_at", "2023-09-06 10:03:53.601991"], ["updated_at", "2023-09-06 10:03:53.601991"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.2ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 2], ["created_at", "2023-09-06 10:03:53.603380"], ["updated_at", "2023-09-06 10:03:53.603380"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2953311040616065710)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(2953311040616065710)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mArtikel Load (0.6ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  [1m[36mArtikelkategorie Load (0.3ms)[0m  [1m[34mSELECT "artikelkategories".* FROM "artikelkategories"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.4ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 13]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.2ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 14]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.1ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 15]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBestellung Load (0.4ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 13]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.1ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 14]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.1ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 15]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBestellungArtikel Load (0.6ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.6ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Snacks"], ["created_at", "2023-09-06 10:06:14.397297"], ["updated_at", "2023-09-06 10:06:14.397297"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.2ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Kaltgetränke"], ["created_at", "2023-09-06 10:06:14.399429"], ["updated_at", "2023-09-06 10:06:14.399429"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.2ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Heißgetränke"], ["created_at", "2023-09-06 10:06:14.400756"], ["updated_at", "2023-09-06 10:06:14.400756"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.2ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 1], ["created_at", "2023-09-06 10:06:14.402077"], ["updated_at", "2023-09-06 10:06:14.402077"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.2ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 2], ["created_at", "2023-09-06 10:06:14.403381"], ["updated_at", "2023-09-06 10:06:14.403381"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.2ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 2], ["created_at", "2023-09-06 10:06:14.404606"], ["updated_at", "2023-09-06 10:06:14.404606"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.5ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Snacks"], ["created_at", "2023-09-06 10:07:29.680880"], ["updated_at", "2023-09-06 10:07:29.680880"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.2ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Kaltgetränke"], ["created_at", "2023-09-06 10:07:29.683254"], ["updated_at", "2023-09-06 10:07:29.683254"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.1ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Heißgetränke"], ["created_at", "2023-09-06 10:07:29.684659"], ["updated_at", "2023-09-06 10:07:29.684659"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.7ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 1], ["created_at", "2023-09-06 10:07:29.691239"], ["updated_at", "2023-09-06 10:07:29.691239"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.2ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 2], ["created_at", "2023-09-06 10:07:29.693289"], ["updated_at", "2023-09-06 10:07:29.693289"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.2ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 2], ["created_at", "2023-09-06 10:07:29.694641"], ["updated_at", "2023-09-06 10:07:29.694641"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikel Create (0.8ms)[0m  [1m[32mINSERT INTO "artikels" ("name", "id_kategorie", "preis", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Kaffee-Niklas-Crema"], ["id_kategorie", 1], ["preis", 4], ["created_at", "2023-09-06 10:08:27.934323"], ["updated_at", "2023-09-06 10:08:27.934323"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.4ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Snacks"], ["created_at", "2023-09-06 10:08:27.941808"], ["updated_at", "2023-09-06 10:08:27.941808"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.1ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Kaltgetränke"], ["created_at", "2023-09-06 10:08:27.943719"], ["updated_at", "2023-09-06 10:08:27.943719"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.1ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Heißgetränke"], ["created_at", "2023-09-06 10:08:27.944951"], ["updated_at", "2023-09-06 10:08:27.944951"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.3ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 1], ["created_at", "2023-09-06 10:08:27.951514"], ["updated_at", "2023-09-06 10:08:27.951514"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.1ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 2], ["created_at", "2023-09-06 10:08:27.953084"], ["updated_at", "2023-09-06 10:08:27.953084"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.1ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 2], ["created_at", "2023-09-06 10:08:27.954315"], ["updated_at", "2023-09-06 10:08:27.954315"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mArtikel Load (0.9ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikel Destroy (0.4ms)[0m  [1m[31mDELETE FROM "artikels" WHERE "artikels"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mArtikelkategorie Load (0.5ms)[0m  [1m[34mSELECT "artikelkategories".* FROM "artikelkategories"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.2ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 16]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.1ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 17]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.2ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 18]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.1ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 19]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.1ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 20]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.1ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 21]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.1ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 22]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.2ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 23]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.2ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 24]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBestellung Load (0.4ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.1ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 16]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.1ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 17]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 18]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 19]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 20]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 21]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 22]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 23]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 24]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBestellungArtikel Load (0.3ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikel Create (0.4ms)[0m  [1m[32mINSERT INTO "artikels" ("name", "id_kategorie", "preis", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Kaffee-Niklas-Crema"], ["id_kategorie", 1], ["preis", 4], ["created_at", "2023-09-06 10:12:17.285378"], ["updated_at", "2023-09-06 10:12:17.285378"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.2ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Snacks"], ["created_at", "2023-09-06 10:12:17.293021"], ["updated_at", "2023-09-06 10:12:17.293021"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.3ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Kaltgetränke"], ["created_at", "2023-09-06 10:12:17.294520"], ["updated_at", "2023-09-06 10:12:17.294520"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.1ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Heißgetränke"], ["created_at", "2023-09-06 10:12:17.295982"], ["updated_at", "2023-09-06 10:12:17.295982"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.2ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 1], ["created_at", "2023-09-06 10:12:17.297303"], ["updated_at", "2023-09-06 10:12:17.297303"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.1ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 2], ["created_at", "2023-09-06 10:12:17.298676"], ["updated_at", "2023-09-06 10:12:17.298676"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.1ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 2], ["created_at", "2023-09-06 10:12:17.299946"], ["updated_at", "2023-09-06 10:12:17.299946"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellungArtikel Create (0.6ms)[0m  [1m[32mINSERT INTO "bestellung_artikels" ("id_bestellung", "id_artikel", "anzahl", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id_bestellung", 10], ["id_artikel", 2], ["anzahl", 4], ["created_at", "2023-09-06 10:12:17.306435"], ["updated_at", "2023-09-06 10:12:17.306435"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellungArtikel Create (0.2ms)[0m  [1m[32mINSERT INTO "bestellung_artikels" ("id_bestellung", "id_artikel", "anzahl", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id_bestellung", 11], ["id_artikel", 3], ["anzahl", 2], ["created_at", "2023-09-06 10:12:17.308510"], ["updated_at", "2023-09-06 10:12:17.308510"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellungArtikel Create (0.1ms)[0m  [1m[32mINSERT INTO "bestellung_artikels" ("id_bestellung", "id_artikel", "anzahl", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id_bestellung", 12], ["id_artikel", 1], ["anzahl", 1], ["created_at", "2023-09-06 10:12:17.309850"], ["updated_at", "2023-09-06 10:12:17.309850"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 12:13:03 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.9ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:3
+  [1m[36mBestellungArtikel Load (0.7ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:8
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 19.1ms | Allocations: 30595)
+  Rendered layout layouts/application.html.erb (Duration: 45.0ms | Allocations: 66088)
+Completed 200 OK in 63ms (Views: 34.9ms | ActiveRecord: 12.1ms | Allocations: 76451)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mArtikel Load (0.6ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikel Destroy (0.6ms)[0m  [1m[31mDELETE FROM "artikels" WHERE "artikels"."id" = $1[0m  [["id", 2]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mArtikelkategorie Load (0.3ms)[0m  [1m[34mSELECT "artikelkategories".* FROM "artikelkategories"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.1ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 25]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.1ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 26]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Destroy (0.1ms)[0m  [1m[31mDELETE FROM "artikelkategories" WHERE "artikelkategories"."id" = $1[0m  [["id", 27]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBestellung Load (0.5ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 25]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 26]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Destroy (0.1ms)[0m  [1m[31mDELETE FROM "bestellungs" WHERE "bestellungs"."id" = $1[0m  [["id", 27]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBestellungArtikel Load (0.4ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellungArtikel Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bestellung_artikels" WHERE "bestellung_artikels"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellungArtikel Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bestellung_artikels" WHERE "bestellung_artikels"."id" = $1[0m  [["id", 2]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellungArtikel Destroy (0.1ms)[0m  [1m[31mDELETE FROM "bestellung_artikels" WHERE "bestellung_artikels"."id" = $1[0m  [["id", 3]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikel Create (0.6ms)[0m  [1m[32mINSERT INTO "artikels" ("name", "id_kategorie", "preis", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Kaffee-Niklas-Crema"], ["id_kategorie", 1], ["preis", 4], ["created_at", "2023-09-06 10:19:21.966606"], ["updated_at", "2023-09-06 10:19:21.966606"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.3ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Snacks"], ["created_at", "2023-09-06 10:19:21.974056"], ["updated_at", "2023-09-06 10:19:21.974056"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.2ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Kaltgetränke"], ["created_at", "2023-09-06 10:19:21.975543"], ["updated_at", "2023-09-06 10:19:21.975543"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtikelkategorie Create (0.2ms)[0m  [1m[32mINSERT INTO "artikelkategories" ("kategorie", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["kategorie", "Heißgetränke"], ["created_at", "2023-09-06 10:19:21.976796"], ["updated_at", "2023-09-06 10:19:21.976796"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.2ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 1], ["created_at", "2023-09-06 10:19:21.978040"], ["updated_at", "2023-09-06 10:19:21.978040"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.2ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 2], ["created_at", "2023-09-06 10:19:21.979466"], ["updated_at", "2023-09-06 10:19:21.979466"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellung Create (0.2ms)[0m  [1m[32mINSERT INTO "bestellungs" ("tischnummer", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tischnummer", 2], ["created_at", "2023-09-06 10:19:21.980823"], ["updated_at", "2023-09-06 10:19:21.980823"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellungArtikel Create (0.3ms)[0m  [1m[32mINSERT INTO "bestellung_artikels" ("id_bestellung", "id_artikel", "anzahl", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id_bestellung", 28], ["id_artikel", 2], ["anzahl", 4], ["created_at", "2023-09-06 10:19:21.982141"], ["updated_at", "2023-09-06 10:19:21.982141"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellungArtikel Create (0.2ms)[0m  [1m[32mINSERT INTO "bestellung_artikels" ("id_bestellung", "id_artikel", "anzahl", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id_bestellung", 29], ["id_artikel", 3], ["anzahl", 2], ["created_at", "2023-09-06 10:19:21.983533"], ["updated_at", "2023-09-06 10:19:21.983533"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBestellungArtikel Create (0.2ms)[0m  [1m[32mINSERT INTO "bestellung_artikels" ("id_bestellung", "id_artikel", "anzahl", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id_bestellung", 30], ["id_artikel", 1], ["anzahl", 1], ["created_at", "2023-09-06 10:19:21.984736"], ["updated_at", "2023-09-06 10:19:21.984736"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 12:19:29 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.6ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:3
+  [1m[36mBestellungArtikel Load (0.5ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:8
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 18.5ms | Allocations: 4340)
+  Rendered layout layouts/application.html.erb (Duration: 25.9ms | Allocations: 7047)
+Completed 200 OK in 31ms (Views: 22.3ms | ActiveRecord: 6.7ms | Allocations: 8166)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-09-06 12:20:49 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/artikels/new" for 127.0.0.1 at 2023-09-06 12:20:56 +0200
+Processing by ArtikelsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/new.html.erb within layouts/application
+  Rendered artikels/_form.html.erb (Duration: 4.5ms | Allocations: 3042)
+  Rendered artikels/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 3372)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 5675)
+Completed 200 OK in 29ms (Views: 9.7ms | ActiveRecord: 5.1ms | Allocations: 23484)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 12:21:00 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.7ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.9ms | Allocations: 253)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1772)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 4003)
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.7ms | Allocations: 4457)
+
+
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 12:32:02 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.5ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:3
+  [1m[36mBestellungArtikel Load (0.4ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:8
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 17.5ms | Allocations: 4415)
+  Rendered layout layouts/application.html.erb (Duration: 23.8ms | Allocations: 7091)
+Completed 200 OK in 30ms (Views: 20.0ms | ActiveRecord: 6.6ms | Allocations: 8206)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 12:32:04 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.7ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 1.0ms | Allocations: 239)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1482)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 3787)
+Completed 200 OK in 15ms (Views: 12.1ms | ActiveRecord: 0.7ms | Allocations: 4671)
+
+
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 12:33:03 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.3ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:3
+  [1m[36mBestellungArtikel Load (0.2ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:8
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1164)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 3539)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.5ms | Allocations: 3881)
+
+
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 12:33:10 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.3ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:3
+  [1m[36mBestellungArtikel Load (0.3ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:8
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1521)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 4215)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.6ms | Allocations: 5326)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 12:33:11 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.2ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 1.0ms | Allocations: 239)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1497)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 3801)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.2ms | Allocations: 4678)
+
+
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 12:33:13 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.2ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:3
+  [1m[36mBestellungArtikel Load (0.2ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:8
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1156)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 3543)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.4ms | Allocations: 3883)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 12:33:17 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 886)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 3116)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.3ms | Allocations: 3444)
+
+
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 12:33:32 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.2ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:3
+  [1m[36mBestellungArtikel Load (0.2ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:8
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1156)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 3541)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.5ms | Allocations: 3879)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 12:33:36 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 890)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3120)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.3ms | Allocations: 3447)
+
+
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 12:35:19 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.2ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:3
+  [1m[36mBestellungArtikel Load (0.2ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:8
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1156)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 3549)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.4ms | Allocations: 3887)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 12:38:34 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.6ms | Allocations: 251)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 14.4ms | Allocations: 3488)
+  Rendered layout layouts/application.html.erb (Duration: 21.7ms | Allocations: 17449)
+Completed 200 OK in 28ms (Views: 14.0ms | ActiveRecord: 10.6ms | Allocations: 21411)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 12:50:17 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.9ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.5ms | Allocations: 251)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 23.5ms | Allocations: 6051)
+  Rendered layout layouts/application.html.erb (Duration: 31.8ms | Allocations: 19933)
+Completed 200 OK in 37ms (Views: 23.9ms | ActiveRecord: 9.0ms | Allocations: 23890)
+
+
+Started GET "/artikels/add" for 127.0.0.1 at 2023-09-06 12:50:19 +0200
+Processing by ArtikelsController#show as HTML
+  Parameters: {"id"=>"add"}
+  [1m[36mArtikel Load (0.2ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:67:in `set_artikel'
+Completed 404 Not Found in 8ms (ActiveRecord: 0.5ms | Allocations: 2815)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Artikel with 'id'=add):
+  
+app/controllers/artikels_controller.rb:67:in `set_artikel'
+Started GET "/artikels/add" for 127.0.0.1 at 2023-09-06 12:51:33 +0200
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 12:51:53 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  Rendered artikels/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 2187)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 2273)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms | Allocations: 12242)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p style="color: green"><%= notice %></p>
+
+<h1>Artikels</h1>
+
+<div id="artikels">
+  <% @artikels.each do |artikel| %>
+    <%= render artikel %>
+    <p>
+      <%= link_to "Show this artikel", artikel %>
+    </p>
+      <%= link_to "Add", artikels_add_path method :add%>
+  <% end %>
+</div>
+
+<%= link_to "New artikel", new_artikel_path %>
+
+
+
+
+<%= link_to "Show Warenkorb", warenkorbs_path %>
+
+):
+1:    <p style="color: green"><%= notice %></p>
+2:    
+3:    <h1>Artikels</h1>
+4:    
+5:    <div id="artikels">
+6:      <% @artikels.each do |artikel| %>
+7:        <%= render artikel %>
+8:        <p>
+9:          <%= link_to "Show this artikel", artikel %>
+10:        </p>
+11:          <%= link_to "Add", artikels_add_path method :add%>
+12:      <% end %>
+13:    </div>
+14:    
+15:    <%= link_to "New artikel", new_artikel_path %>
+16:    
+17:    
+18:    
+19:    
+20:    <%= link_to "Show Warenkorb", warenkorbs_path %>
+  
+app/views/artikels/index.html.erb:11: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/artikels/index.html.erb:11: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/artikels/index.html.erb:11: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/artikels/index.html.erb:11: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/artikels/index.html.erb:11: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/artikels/index.html.erb:11: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 12:52:12 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.5ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.3ms | Allocations: 270)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 9.9ms | Allocations: 17541)
+  Rendered layout layouts/application.html.erb (Duration: 28.6ms | Allocations: 52631)
+Completed 200 OK in 32ms (Views: 25.1ms | ActiveRecord: 4.5ms | Allocations: 56645)
+
+
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 12:52:14 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.6ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:3
+  [1m[36mBestellungArtikel Load (0.6ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:8
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 20.5ms | Allocations: 29043)
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | Allocations: 31511)
+Completed 200 OK in 32ms (Views: 18.1ms | ActiveRecord: 7.8ms | Allocations: 35372)
+
+
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 12:53:55 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.3ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:3
+  [1m[36mBestellungArtikel Load (0.3ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:8
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1530)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 4231)
+Completed 200 OK in 15ms (Views: 12.5ms | ActiveRecord: 0.5ms | Allocations: 5350)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 12:53:57 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.8ms | Allocations: 239)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1507)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 3811)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.3ms | Allocations: 4688)
+
+
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 12:53:59 +0200
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.3ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:3
+  [1m[36mBestellungArtikel Load (0.3ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:8
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1156)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 3545)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.6ms | Allocations: 3885)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 12:54:00 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.3ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 892)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3122)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.3ms | Allocations: 3450)
 
 

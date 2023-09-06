@@ -1,0 +1,24 @@
+
+
+<% @bestellungen.each do |bestellung| %>
+    <p>
+      Bestellung: <%= bestellung.id%>
+      Tischnummer: <%= bestellung.tischnummer %>
+
+        <% @bestellung_artikel.each do |artikel| %>
+        <% if bestellung.id == artikel.id_bestellung%>
+        <p>
+          Artikel Id: <%= artikel.id%>
+          Anzahl: <%= artikel.anzahl%>
+        </p>
+        <% end %>
+  <% end %>
+      
+    </p>
+  <% end %>
+
+  <%= link_to "Show artikels", artikels_path %>
+
+
+
+

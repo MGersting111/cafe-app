@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
   resources :artikelkategories
   resources :artikels
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  resources :bestellungs
+  resources :bestellung_artikels
+  resources :warenkorbs
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+
+
+
 end
