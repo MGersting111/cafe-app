@@ -451,3 +451,44 @@ Processing by ArtikelsController#index as HTML
 Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.2ms | Allocations: 3545)
 
 
+Started GET "/artikelkategories" for 127.0.0.1 at 2023-09-06 10:28:46 +0200
+Processing by ArtikelkategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikelkategories/index.html.erb within layouts/application
+  [1m[36mArtikelkategorie Load (0.5ms)[0m  [1m[34mSELECT "artikelkategories".* FROM "artikelkategories"[0m
+  ↳ app/views/artikelkategories/index.html.erb:6
+  Rendered artikelkategories/_artikelkategorie.html.erb (Duration: 0.7ms | Allocations: 185)
+  Rendered artikelkategories/_artikelkategorie.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered artikelkategories/_artikelkategorie.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered artikelkategories/index.html.erb within layouts/application (Duration: 13.2ms | Allocations: 14957)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 17261)
+Completed 200 OK in 22ms (Views: 17.4ms | ActiveRecord: 2.5ms | Allocations: 18292)
+
+
+Started GET "/artikelkategories/1" for 127.0.0.1 at 2023-09-06 10:28:48 +0200
+Processing by ArtikelkategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtikelkategorie Load (0.2ms)[0m  [1m[34mSELECT "artikelkategories".* FROM "artikelkategories" WHERE "artikelkategories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artikelkategories_controller.rb:63:in `set_artikelkategory'
+  Rendering layout layouts/application.html.erb
+  Rendering artikelkategories/show.html.erb within layouts/application
+  Rendered artikelkategories/_artikelkategorie.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered artikelkategories/show.html.erb within layouts/application (Duration: 4.6ms | Allocations: 919)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 3143)
+Completed 200 OK in 19ms (Views: 16.3ms | ActiveRecord: 0.2ms | Allocations: 4591)
+
+
+Started GET "/artikelkategories" for 127.0.0.1 at 2023-09-06 10:28:50 +0200
+Processing by ArtikelkategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikelkategories/index.html.erb within layouts/application
+  [1m[36mArtikelkategorie Load (0.6ms)[0m  [1m[34mSELECT "artikelkategories".* FROM "artikelkategories"[0m
+  ↳ app/views/artikelkategories/index.html.erb:6
+  Rendered artikelkategories/_artikelkategorie.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered artikelkategories/_artikelkategorie.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered artikelkategories/_artikelkategorie.html.erb (Duration: 0.2ms | Allocations: 16)
+  Rendered artikelkategories/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1235)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 3468)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.6ms | Allocations: 3795)
+
+
