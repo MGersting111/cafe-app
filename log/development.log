@@ -2484,3 +2484,29 @@ Processing by ArtikelsController#index as HTML
 Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.3ms | Allocations: 3450)
 
 
+Started GET "/warenkorbs" for 127.0.0.1 at 2023-09-06 13:37:09 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WarenkorbsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warenkorbs/index.html.erb within layouts/application
+  [1m[36mBestellung Load (0.7ms)[0m  [1m[34mSELECT "bestellungs".* FROM "bestellungs"[0m
+  ↳ app/views/warenkorbs/index.html.erb:3
+  [1m[36mBestellungArtikel Load (0.5ms)[0m  [1m[34mSELECT "bestellung_artikels".* FROM "bestellung_artikels"[0m
+  ↳ app/views/warenkorbs/index.html.erb:8
+  Rendered warenkorbs/index.html.erb within layouts/application (Duration: 17.0ms | Allocations: 30736)
+  Rendered layout layouts/application.html.erb (Duration: 37.4ms | Allocations: 66102)
+Completed 200 OK in 55ms (Views: 29.4ms | ActiveRecord: 10.1ms | Allocations: 76517)
+
+
+Started GET "/artikels" for 127.0.0.1 at 2023-09-06 13:37:36 +0200
+Processing by ArtikelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  [1m[36mArtikel Load (0.6ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels"[0m
+  ↳ app/views/artikels/index.html.erb:6
+  Rendered artikels/_artikel.html.erb (Duration: 0.5ms | Allocations: 266)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 17.0ms | Allocations: 16033)
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 18339)
+Completed 200 OK in 26ms (Views: 17.3ms | ActiveRecord: 3.5ms | Allocations: 21882)
+
+
