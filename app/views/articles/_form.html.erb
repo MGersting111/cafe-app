@@ -13,7 +13,7 @@
     if category
       fb.hidden_field :category_id
     else
-      data = category.all.pluck(:name, :id)
+      data = Category.all.pluck(:name, :id)
       fb.select :category_id, options_for_select(data)
     end
   %>

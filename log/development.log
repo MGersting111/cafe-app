@@ -1,0 +1,1885 @@
+
+Started GET "/" for 127.0.0.1 at 2023-09-08 11:41:55 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered categories/index.html.erb within layouts/application (Duration: 10.3ms | Allocations: 1643)
+  Rendered layout layouts/application.html.erb (Duration: 26.8ms | Allocations: 36776)
+Completed 200 OK in 36ms (Views: 27.4ms | ActiveRecord: 1.1ms | Allocations: 45729)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2023-09-08 11:41:59 +0200
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 3.2ms | Allocations: 2685)
+  Rendered articles/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 3040)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 3113)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 4.2ms | Allocations: 23755)
+
+
+  
+ActionView::Template::Error (undefined method `all' for nil:NilClass):
+    13:     if category
+    14:       fb.hidden_field :category_id
+    15:     else
+    16:       data = category.all.pluck(:name, :id)
+    17:       fb.select :category_id, options_for_select(data)
+    18:     end
+    19:   %>
+  
+app/views/articles/_form.html.erb:16
+app/views/articles/_form.html.erb:10
+app/views/articles/new.html.erb:3
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (5047.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cafe_app_development"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (92.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cafe_app_development"[0m
+  [1m[35m (16.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cafe_app_test"[0m
+  [1m[35m (81.9ms)[0m  [1m[35mCREATE DATABASE "cafe_app_development" ENCODING = 'unicode'[0m
+  [1m[35m (40.9ms)[0m  [1m[35mCREATE DATABASE "cafe_app_test" ENCODING = 'unicode'[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2953311040616065710)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateArticles (20230904094621)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "articles" ("id" bigserial primary key, "name" character varying, "category_id" integer, "price" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230904094621"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCategories (20230904122205)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230904122205"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateOrders (20230908084613)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "orders" ("id" bigserial primary key, "table" integer, "gesamtpreis" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230908084613"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateLineItems (20230908084807)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "line_items" ("id" bigserial primary key, "order_id" integer, "article_id" integer, "anzahl" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230908084807"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTables (20230908090123)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "tables" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230908090123"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-09-08 09:42:30.242584"], ["updated_at", "2023-09-08 09:42:30.242584"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2953311040616065710)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (0.9ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Snacks"], ["created_at", "2023-09-08 09:42:30.962894"], ["updated_at", "2023-09-08 09:42:30.962894"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Kaltgetränke"], ["created_at", "2023-09-08 09:42:30.965611"], ["updated_at", "2023-09-08 09:42:30.965611"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Heißgetränke"], ["created_at", "2023-09-08 09:42:30.967128"], ["updated_at", "2023-09-08 09:42:30.967128"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Create (0.9ms)[0m  [1m[32mINSERT INTO "articles" ("name", "category_id", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Brezel"], ["category_id", 1], ["price", 100], ["created_at", "2023-09-08 09:42:30.982134"], ["updated_at", "2023-09-08 09:42:30.982134"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("name", "category_id", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Fanta"], ["category_id", 2], ["price", 150], ["created_at", "2023-09-08 09:42:30.985449"], ["updated_at", "2023-09-08 09:42:30.985449"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2023-09-08 11:42:42 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered categories/_category.html.erb (Duration: 0.3ms | Allocations: 213)
+  Rendered categories/_category.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered categories/_category.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered categories/index.html.erb within layouts/application (Duration: 20.1ms | Allocations: 16996)
+  Rendered layout layouts/application.html.erb (Duration: 36.6ms | Allocations: 52069)
+Completed 200 OK in 45ms (Views: 30.8ms | ActiveRecord: 7.4ms | Allocations: 60998)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2023-09-08 11:42:52 +0200
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 3.3ms | Allocations: 2673)
+  Rendered articles/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 3016)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 3089)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 3.0ms | Allocations: 22105)
+
+
+  
+ActionView::Template::Error (undefined method `all' for nil:NilClass):
+    13:     if category
+    14:       fb.hidden_field :category_id
+    15:     else
+    16:       data = category.all.pluck(:name, :id)
+    17:       fb.select :category_id, options_for_select(data)
+    18:     end
+    19:   %>
+  
+app/views/articles/_form.html.erb:16
+app/views/articles/_form.html.erb:10
+app/views/articles/new.html.erb:3
+Started GET "/" for 127.0.0.1 at 2023-09-08 11:43:05 +0200
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered categories/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1140)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 3384)
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 0.3ms | Allocations: 3718)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2023-09-08 11:43:06 +0200
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:47:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered categories/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 857)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 3065)
+Completed 200 OK in 22ms (Views: 3.6ms | ActiveRecord: 0.3ms | Allocations: 8854)
+
+
+Started GET "/categories" for 127.0.0.1 at 2023-09-08 11:43:12 +0200
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered categories/_category.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered categories/_category.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered categories/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1134)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 3363)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.3ms | Allocations: 3697)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2023-09-08 11:43:14 +0200
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:47:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered categories/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 592)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 2799)
+Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 0.2ms | Allocations: 3580)
+
+
+Started GET "/categories/1/articles" for 127.0.0.1 at 2023-09-08 11:43:22 +0200
+Processing by ArticlesController#index as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_articlecat.html.erb (Duration: 0.5ms | Allocations: 166)
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 1]]
+  ↳ app/views/articles/index.html.erb:8
+  Rendered articles/_article.html.erb (Duration: 0.5ms | Allocations: 207)
+  Rendered articles/index.html.erb within layouts/application (Duration: 7.9ms | Allocations: 3491)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 5785)
+Completed 200 OK in 19ms (Views: 11.1ms | ActiveRecord: 0.7ms | Allocations: 8688)
+
+
+Started GET "/categories/1/articles/new" for 127.0.0.1 at 2023-09-08 11:43:24 +0200
+Processing by ArticlesController#new as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 8.1ms | Allocations: 2335)
+  Rendered articles/new.html.erb within layouts/application (Duration: 8.3ms | Allocations: 2429)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 4636)
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 0.2ms | Allocations: 5473)
+
+
+Started POST "/categories/1/articles" for 127.0.0.1 at 2023-09-08 11:43:39 +0200
+Processing by ArticlesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "article"=>{"category_id"=>"1", "name"=>"Croissant", "price"=>"230"}, "commit"=>"Create Article", "category_id"=>"1"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:23:in `create'
+  [1m[36mArticle Create (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("name", "category_id", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Croissant"], ["category_id", 1], ["price", 230], ["created_at", "2023-09-08 09:43:39.615641"], ["updated_at", "2023-09-08 09:43:39.615641"]]
+  ↳ app/controllers/articles_controller.rb:23:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:23:in `create'
+Redirected to http://127.0.0.1:3000/categories/1/articles
+Completed 302 Found in 8ms (ActiveRecord: 2.3ms | Allocations: 3862)
+
+
+Started GET "/categories/1/articles" for 127.0.0.1 at 2023-09-08 11:43:39 +0200
+Processing by ArticlesController#index as TURBO_STREAM
+  Parameters: {"category_id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_articlecat.html.erb (Duration: 0.1ms | Allocations: 17)
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 1]]
+  ↳ app/views/articles/index.html.erb:8
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1228)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 3448)
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 0.5ms | Allocations: 4308)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2023-09-08 11:43:41 +0200
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:47:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered categories/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 592)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 2799)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.2ms | Allocations: 3581)
+
+
+Started GET "/categories/1/articles" for 127.0.0.1 at 2023-09-08 11:43:43 +0200
+Processing by ArticlesController#index as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_articlecat.html.erb (Duration: 0.1ms | Allocations: 17)
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 1]]
+  ↳ app/views/articles/index.html.erb:8
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1154)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3374)
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.4ms | Allocations: 4184)
+
+
+Started GET "/orders" for 127.0.0.1 at 2023-09-08 11:43:50 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/orders"):
+  
+Started GET "/orders" for 127.0.0.1 at 2023-09-08 11:45:33 +0200
+Processing by OrdersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.9ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:6
+  Rendered orders/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1067)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 14804)
+Completed 200 OK in 12ms (Views: 9.6ms | ActiveRecord: 0.9ms | Allocations: 16322)
+
+
+Started GET "/tables" for 127.0.0.1 at 2023-09-08 11:45:37 +0200
+Processing by TablesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tables/index.html.erb within layouts/application
+  [1m[36mTable Load (0.7ms)[0m  [1m[34mSELECT "tables".* FROM "tables"[0m
+  ↳ app/views/tables/index.html.erb:6
+  Rendered tables/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1058)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 3362)
+Completed 200 OK in 13ms (Views: 8.4ms | ActiveRecord: 0.7ms | Allocations: 4672)
+
+
+Started GET "/tables/new" for 127.0.0.1 at 2023-09-08 11:45:38 +0200
+Processing by TablesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tables/new.html.erb within layouts/application
+  Rendered tables/_form.html.erb (Duration: 5.6ms | Allocations: 943)
+  Rendered tables/new.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1256)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 3471)
+Completed 200 OK in 21ms (Views: 12.9ms | ActiveRecord: 3.3ms | Allocations: 4904)
+
+
+Started POST "/tables" for 127.0.0.1 at 2023-09-08 11:45:40 +0200
+Processing by TablesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Create Table"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tables_controller.rb:27:in `block in create'
+  [1m[36mTable Create (0.8ms)[0m  [1m[32mINSERT INTO "tables" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2023-09-08 09:45:40.419855"], ["updated_at", "2023-09-08 09:45:40.419855"]]
+  ↳ app/controllers/tables_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tables_controller.rb:27:in `block in create'
+Redirected to http://127.0.0.1:3000/tables/1
+Completed 302 Found in 8ms (ActiveRecord: 1.2ms | Allocations: 2209)
+
+
+Started GET "/tables/1" for 127.0.0.1 at 2023-09-08 11:45:40 +0200
+Processing by TablesController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mTable Load (0.4ms)[0m  [1m[34mSELECT "tables".* FROM "tables" WHERE "tables"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tables_controller.rb:63:in `set_table'
+  Rendering layout layouts/application.html.erb
+  Rendering tables/show.html.erb within layouts/application
+  Rendered tables/_table.html.erb (Duration: 0.3ms | Allocations: 142)
+  Rendered tables/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1078)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 3285)
+Completed 200 OK in 7ms (Views: 3.6ms | ActiveRecord: 0.4ms | Allocations: 4742)
+
+
+Started GET "/tables" for 127.0.0.1 at 2023-09-08 11:45:42 +0200
+Processing by TablesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tables/index.html.erb within layouts/application
+  [1m[36mTable Load (0.2ms)[0m  [1m[34mSELECT "tables".* FROM "tables"[0m
+  ↳ app/views/tables/index.html.erb:6
+  Rendered tables/_table.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered tables/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 842)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3080)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.2ms | Allocations: 3407)
+
+
+Started GET "/tables/new" for 127.0.0.1 at 2023-09-08 11:45:48 +0200
+Processing by TablesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tables/new.html.erb within layouts/application
+  Rendered tables/_form.html.erb (Duration: 2.1ms | Allocations: 527)
+  Rendered tables/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 612)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 2827)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 3154)
+
+
+Started POST "/tables" for 127.0.0.1 at 2023-09-08 11:45:51 +0200
+Processing by TablesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Create Table"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tables_controller.rb:27:in `block in create'
+  [1m[36mTable Create (0.3ms)[0m  [1m[32mINSERT INTO "tables" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2023-09-08 09:45:51.636889"], ["updated_at", "2023-09-08 09:45:51.636889"]]
+  ↳ app/controllers/tables_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tables_controller.rb:27:in `block in create'
+Redirected to http://127.0.0.1:3000/tables/2
+Completed 302 Found in 6ms (ActiveRecord: 0.9ms | Allocations: 2088)
+
+
+Started GET "/tables/2" for 127.0.0.1 at 2023-09-08 11:45:51 +0200
+Processing by TablesController#show as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  [1m[36mTable Load (0.4ms)[0m  [1m[34mSELECT "tables".* FROM "tables" WHERE "tables"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tables_controller.rb:63:in `set_table'
+  Rendering layout layouts/application.html.erb
+  Rendering tables/show.html.erb within layouts/application
+  Rendered tables/_table.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered tables/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 585)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 2792)
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 0.4ms | Allocations: 3572)
+
+
+Started GET "/tables" for 127.0.0.1 at 2023-09-08 11:45:53 +0200
+Processing by TablesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tables/index.html.erb within layouts/application
+  [1m[36mTable Load (0.3ms)[0m  [1m[34mSELECT "tables".* FROM "tables"[0m
+  ↳ app/views/tables/index.html.erb:6
+  Rendered tables/_table.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered tables/_table.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered tables/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 969)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3197)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.3ms | Allocations: 3524)
+
+
+Started GET "/" for 127.0.0.1 at 2023-09-08 11:47:42 +0200
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered categories/_category.html.erb (Duration: 0.4ms | Allocations: 183)
+  Rendered categories/_category.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered categories/_category.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered categories/index.html.erb within layouts/application (Duration: 9.6ms | Allocations: 2960)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 5493)
+Completed 200 OK in 17ms (Views: 10.1ms | ActiveRecord: 5.3ms | Allocations: 8133)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2023-09-08 11:47:43 +0200
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:47:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered categories/show.html.erb within layouts/application (Duration: 3.7ms | Allocations: 846)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 3053)
+Completed 200 OK in 13ms (Views: 9.2ms | ActiveRecord: 0.2ms | Allocations: 4471)
+
+
+Started GET "/categories/1/articles" for 127.0.0.1 at 2023-09-08 11:47:45 +0200
+Processing by ArticlesController#index as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_articlecat.html.erb (Duration: 0.4ms | Allocations: 169)
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 1]]
+  ↳ app/views/articles/index.html.erb:8
+  Rendered articles/_article.html.erb (Duration: 0.5ms | Allocations: 214)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 10.2ms | Allocations: 5010)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 7305)
+Completed 200 OK in 23ms (Views: 12.4ms | ActiveRecord: 3.0ms | Allocations: 10658)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2023-09-08 11:47:46 +0200
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:47:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered categories/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 614)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2821)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.2ms | Allocations: 3605)
+
+
+Started GET "/categories" for 127.0.0.1 at 2023-09-08 11:47:48 +0200
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered categories/_category.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered categories/_category.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered categories/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1138)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 3366)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.2ms | Allocations: 3693)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2023-09-08 11:47:50 +0200
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 3.4ms | Allocations: 1920)
+  Rendered articles/new.html.erb within layouts/application (Duration: 5.3ms | Allocations: 2243)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2314)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 2715)
+
+
+  
+ActionView::Template::Error (undefined method `all' for nil:NilClass):
+    13:     if category
+    14:       fb.hidden_field :category_id
+    15:     else
+    16:       data = @category.all.pluck(:name, :id)
+    17:       fb.select :category_id, options_for_select(data)
+    18:     end
+    19:   %>
+  
+app/views/articles/_form.html.erb:16
+app/views/articles/_form.html.erb:10
+app/views/articles/new.html.erb:3
+Started GET "/articles/new" for 127.0.0.1 at 2023-09-08 11:50:10 +0200
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  [1m[36mCategory Pluck (0.3ms)[0m  [1m[34mSELECT "categories"."name", "categories"."id" FROM "categories"[0m
+  ↳ app/views/articles/_form.html.erb:16
+  Rendered articles/_form.html.erb (Duration: 13.3ms | Allocations: 6195)
+  Rendered articles/new.html.erb within layouts/application (Duration: 14.8ms | Allocations: 6555)
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 9076)
+Completed 200 OK in 22ms (Views: 19.2ms | ActiveRecord: 0.3ms | Allocations: 10209)
+
+
+Started POST "/articles" for 127.0.0.1 at 2023-09-08 11:50:20 +0200
+Processing by ArticlesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "article"=>{"category_id"=>"1", "name"=>"Brot", "price"=>"213"}, "commit"=>"Create Article"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:58:in `set_category'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:23:in `create'
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("name", "category_id", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Brot"], ["category_id", 1], ["price", 213], ["created_at", "2023-09-08 09:50:20.122212"], ["updated_at", "2023-09-08 09:50:20.122212"]]
+  ↳ app/controllers/articles_controller.rb:23:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:23:in `create'
+Redirected to http://127.0.0.1:3000/categories/1/articles
+Completed 302 Found in 10ms (ActiveRecord: 1.7ms | Allocations: 2894)
+
+
+Started GET "/categories/1/articles" for 127.0.0.1 at 2023-09-08 11:50:20 +0200
+Processing by ArticlesController#index as TURBO_STREAM
+  Parameters: {"category_id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_articlecat.html.erb (Duration: 0.4ms | Allocations: 164)
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 1]]
+  ↳ app/views/articles/index.html.erb:8
+  Rendered articles/_article.html.erb (Duration: 0.5ms | Allocations: 200)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2103)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 4323)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.4ms | Allocations: 5240)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2023-09-08 11:50:22 +0200
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:47:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/_category.html.erb (Duration: 0.7ms | Allocations: 175)
+  Rendered categories/show.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1085)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 3361)
+Completed 200 OK in 16ms (Views: 12.2ms | ActiveRecord: 0.3ms | Allocations: 4669)
+
+
+Started GET "/categories" for 127.0.0.1 at 2023-09-08 11:50:24 +0200
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered categories/_category.html.erb (Duration: 0.2ms | Allocations: 17)
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered categories/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1398)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 3626)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.3ms | Allocations: 4010)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2023-09-08 11:58:02 +0200
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:47:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered categories/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 598)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 2805)
+Completed 200 OK in 29ms (Views: 9.5ms | ActiveRecord: 10.0ms | Allocations: 6510)
+
+
+Started GET "/categories/1/articles" for 127.0.0.1 at 2023-09-08 11:58:12 +0200
+Processing by ArticlesController#index as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_articlecat.html.erb (Duration: 0.1ms | Allocations: 17)
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 1]]
+  ↳ app/views/articles/index.html.erb:8
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1295)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 3515)
+Completed 200 OK in 13ms (Views: 10.1ms | ActiveRecord: 1.0ms | Allocations: 4326)
+
+
+Started GET "/categories/1/articles" for 127.0.0.1 at 2023-09-08 12:19:04 +0200
+Processing by ArticlesController#index as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_articlecat.html.erb (Duration: 0.3ms | Allocations: 181)
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 1]]
+  ↳ app/views/articles/index.html.erb:8
+  Rendered articles/_article.html.erb (Duration: 0.2ms | Allocations: 214)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 4766)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 18731)
+Completed 200 OK in 40ms (Views: 13.9ms | ActiveRecord: 11.8ms | Allocations: 28748)
+
+
+Started GET "/categories/1/articles" for 127.0.0.1 at 2023-09-08 12:19:21 +0200
+Processing by ArticlesController#index as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_articlecat.html.erb (Duration: 0.4ms | Allocations: 169)
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 1]]
+  ↳ app/views/articles/index.html.erb:8
+  Rendered articles/_article.html.erb (Duration: 0.8ms | Allocations: 200)
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1912)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 4466)
+Completed 200 OK in 21ms (Views: 15.1ms | ActiveRecord: 0.9ms | Allocations: 6222)
+
+
+Started GET "/categories/1/articles/1" for 127.0.0.1 at 2023-09-08 12:20:29 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"category_id"=>"1", "id"=>"1"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1 AND "articles"."id" = $2 LIMIT $3[0m  [["category_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:65:in `set_article'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_article.html.erb (Duration: 0.6ms | Allocations: 202)
+  Rendered articles/_articlecat.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered articles/show.html.erb within layouts/application (Duration: 3.7ms | Allocations: 914)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 3123)
+Completed 200 OK in 18ms (Views: 9.6ms | ActiveRecord: 0.7ms | Allocations: 4972)
+
+
+Started GET "/categories/1/articles/1/edit" for 127.0.0.1 at 2023-09-08 12:20:32 +0200
+Processing by ArticlesController#edit as HTML
+  Parameters: {"category_id"=>"1", "id"=>"1"}
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1 AND "articles"."id" = $2 LIMIT $3[0m  [["category_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:65:in `set_article'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 4.8ms | Allocations: 1385)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 7.3ms | Allocations: 1784)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 3993)
+Completed 200 OK in 22ms (Views: 13.5ms | ActiveRecord: 0.9ms | Allocations: 5763)
+
+
+Started GET "/categories/1/articles" for 127.0.0.1 at 2023-09-08 12:20:34 +0200
+Processing by ArticlesController#index as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_articlecat.html.erb (Duration: 0.1ms | Allocations: 17)
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 1]]
+  ↳ app/views/articles/index.html.erb:8
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/_article.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1115)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3336)
+Completed 200 OK in 10ms (Views: 6.7ms | ActiveRecord: 0.6ms | Allocations: 4320)
+
+
+Started GET "/categories/1/articles/4" for 127.0.0.1 at 2023-09-08 12:20:36 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"category_id"=>"1", "id"=>"4"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1 AND "articles"."id" = $2 LIMIT $3[0m  [["category_id", 1], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:65:in `set_article'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered articles/_articlecat.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered articles/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 468)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 2677)
+Completed 200 OK in 12ms (Views: 7.1ms | ActiveRecord: 0.6ms | Allocations: 4382)
+
+
+Started GET "/categories/1/articles/4/edit" for 127.0.0.1 at 2023-09-08 12:20:38 +0200
+Processing by ArticlesController#edit as HTML
+  Parameters: {"category_id"=>"1", "id"=>"4"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1 AND "articles"."id" = $2 LIMIT $3[0m  [["category_id", 1], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:65:in `set_article'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 2.4ms | Allocations: 984)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1130)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 3339)
+Completed 200 OK in 15ms (Views: 9.0ms | ActiveRecord: 0.7ms | Allocations: 5030)
+
+
+Started GET "/categories" for 127.0.0.1 at 2023-09-08 12:20:42 +0200
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered categories/_category.html.erb (Duration: 0.4ms | Allocations: 175)
+  Rendered categories/_category.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered categories/_category.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered categories/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1561)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 3856)
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.3ms | Allocations: 4985)
+
+
+Started GET "/categories?clear_order_id=t" for 127.0.0.1 at 2023-09-08 12:21:20 +0200
+Processing by CategoriesController#index as HTML
+  Parameters: {"clear_order_id"=>"t"}
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered categories/_category.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered categories/_category.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered categories/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 978)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 3199)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.2ms | Allocations: 3734)
+
+
+Started GET "/categories?clear_order_id=t" for 127.0.0.1 at 2023-09-08 12:21:23 +0200
+Processing by CategoriesController#index as HTML
+  Parameters: {"clear_order_id"=>"t"}
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered categories/_category.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered categories/_category.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered categories/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 978)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 3199)
+Completed 200 OK in 12ms (Views: 9.6ms | ActiveRecord: 0.4ms | Allocations: 3708)
+
+
+Started GET "/categories?clear_order_id=t" for 127.0.0.1 at 2023-09-08 12:21:25 +0200
+Processing by CategoriesController#index as HTML
+  Parameters: {"clear_order_id"=>"t"}
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered categories/_category.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered categories/_category.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered categories/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 978)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 3199)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.4ms | Allocations: 3718)
+
+
+Started GET "/categories" for 127.0.0.1 at 2023-09-08 12:21:29 +0200
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered categories/_category.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered categories/_category.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered categories/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 978)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 3199)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.3ms | Allocations: 3703)
+
+
+Started GET "/categories" for 127.0.0.1 at 2023-09-08 12:24:01 +0200
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered categories/_category.html.erb (Duration: 0.7ms | Allocations: 175)
+  Rendered categories/_category.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered categories/_category.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered categories/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1491)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 4967)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.4ms | Allocations: 6232)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 2, expected 0..1)):
+    17: 
+    18:     Current Order: <%= @current_order_id %>
+    19:     <br>
+    20:     <%= link_to 'Warenkorb leeren', url_for(nil, clear_order_id: 't') %>
+    21:   </body>
+    22: </html>
+  
+app/views/layouts/application.html.erb:20
+Started GET "/categories" for 127.0.0.1 at 2023-09-08 12:24:10 +0200
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered categories/_category.html.erb (Duration: 1.0ms | Allocations: 175)
+  Rendered categories/_category.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered categories/_category.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered categories/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1490)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 4872)
+Completed 200 OK in 18ms (Views: 15.2ms | ActiveRecord: 0.3ms | Allocations: 6163)
+
+
+Started GET "/categories" for 127.0.0.1 at 2023-09-08 12:24:55 +0200
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered categories/_category.html.erb (Duration: 0.6ms | Allocations: 175)
+  Rendered categories/_category.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered categories/_category.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered categories/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1491)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 4143)
+Completed 200 OK in 17ms (Views: 14.7ms | ActiveRecord: 0.3ms | Allocations: 5440)
+
+
+Started GET "/categories" for 127.0.0.1 at 2023-09-08 12:24:56 +0200
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered categories/_category.html.erb (Duration: 0.2ms | Allocations: 17)
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered categories/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 978)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 3270)
+Completed 200 OK in 13ms (Views: 10.4ms | ActiveRecord: 0.5ms | Allocations: 3789)
+
+
+Started GET "/categories/3" for 127.0.0.1 at 2023-09-08 12:25:01 +0200
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:47:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered categories/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 681)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 2968)
+Completed 200 OK in 14ms (Views: 9.8ms | ActiveRecord: 0.4ms | Allocations: 3987)
+
+
+Started GET "/categories/3/articles" for 127.0.0.1 at 2023-09-08 12:25:05 +0200
+Processing by ArticlesController#index as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_articlecat.html.erb (Duration: 0.7ms | Allocations: 169)
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/views/articles/index.html.erb:8
+  Rendered articles/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1293)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 3678)
+Completed 200 OK in 19ms (Views: 13.4ms | ActiveRecord: 0.8ms | Allocations: 5191)
+
+
+Started GET "/categories/3/articles" for 127.0.0.1 at 2023-09-08 12:25:15 +0200
+Processing by ArticlesController#index as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_articlecat.html.erb (Duration: 0.4ms | Allocations: 169)
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/views/articles/index.html.erb:8
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1294)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 3975)
+Completed 200 OK in 18ms (Views: 12.3ms | ActiveRecord: 0.7ms | Allocations: 5735)
+
+
+Started GET "/categories/3/articles?clear_order_id=t" for 127.0.0.1 at 2023-09-08 12:25:22 +0200
+Processing by ArticlesController#index as HTML
+  Parameters: {"clear_order_id"=>"t", "category_id"=>"3"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_articlecat.html.erb (Duration: 0.1ms | Allocations: 17)
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/views/articles/index.html.erb:8
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 767)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 3078)
+Completed 200 OK in 14ms (Views: 9.3ms | ActiveRecord: 0.6ms | Allocations: 4068)
+
+
+Started GET "/categories/3/articles?clear_order_id=t" for 127.0.0.1 at 2023-09-08 12:25:23 +0200
+Processing by ArticlesController#index as HTML
+  Parameters: {"clear_order_id"=>"t", "category_id"=>"3"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_articlecat.html.erb (Duration: 0.1ms | Allocations: 17)
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/views/articles/index.html.erb:8
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 767)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 3078)
+Completed 200 OK in 13ms (Views: 9.0ms | ActiveRecord: 0.5ms | Allocations: 4073)
+
+
+Started GET "/categories/3/articles?clear_order_id=t" for 127.0.0.1 at 2023-09-08 12:25:23 +0200
+Processing by ArticlesController#index as HTML
+  Parameters: {"clear_order_id"=>"t", "category_id"=>"3"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_articlecat.html.erb (Duration: 0.1ms | Allocations: 17)
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/views/articles/index.html.erb:8
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 767)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 3078)
+Completed 200 OK in 13ms (Views: 8.8ms | ActiveRecord: 0.4ms | Allocations: 4079)
+
+
+Started GET "/categories/3/articles/new" for 127.0.0.1 at 2023-09-08 12:25:28 +0200
+Processing by ArticlesController#new as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 3.2ms | Allocations: 1277)
+  Rendered articles/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1630)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 3931)
+Completed 200 OK in 16ms (Views: 11.8ms | ActiveRecord: 0.3ms | Allocations: 4994)
+
+
+Started GET "/categories/3/articles" for 127.0.0.1 at 2023-09-08 12:25:29 +0200
+Processing by ArticlesController#index as HTML
+  Parameters: {"category_id"=>"3"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_articlecat.html.erb (Duration: 0.1ms | Allocations: 17)
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/views/articles/index.html.erb:8
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 767)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3078)
+Completed 200 OK in 9ms (Views: 6.0ms | ActiveRecord: 0.4ms | Allocations: 4064)
+
+
+Started GET "/categories/3" for 127.0.0.1 at 2023-09-08 12:25:31 +0200
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:47:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/_category.html.erb (Duration: 0.5ms | Allocations: 175)
+  Rendered categories/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 930)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 3307)
+Completed 200 OK in 16ms (Views: 12.0ms | ActiveRecord: 0.2ms | Allocations: 4785)
+
+
+Started GET "/categories" for 127.0.0.1 at 2023-09-08 12:25:35 +0200
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered categories/_category.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered categories/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1244)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 3547)
+Completed 200 OK in 14ms (Views: 11.6ms | ActiveRecord: 0.4ms | Allocations: 4120)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2953311040616065710)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddOrderIdToOrders (20230908122700)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.3ms)[0m  [1m[35mALTER TABLE "orders" ADD "order_id" character varying NOT NULL[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE INDEX "index_orders_on_order_id" ON "orders" ("order_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230908122700"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2953311040616065710)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mOrder Count (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  [1m[36mOrder Load (2.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE (foobar) ORDER BY "orders"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."order_id" = $1 ORDER BY "orders"."id" ASC LIMIT $2[0m  [["order_id", "foobar"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrder Create (1.1ms)[0m  [1m[32mINSERT INTO "orders" ("table", "gesamtpreis", "created_at", "updated_at", "order_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["table", nil], ["gesamtpreis", nil], ["created_at", "2023-09-08 10:31:42.308789"], ["updated_at", "2023-09-08 10:31:42.308789"], ["order_id", "foobar"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mOrder Load (0.7ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."order_id" = $1 ORDER BY "orders"."id" ASC LIMIT $2[0m  [["order_id", "foobar"], ["LIMIT", 1]]
+Started GET "/categories" for 127.0.0.1 at 2023-09-08 12:34:33 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#index as HTML
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms | Allocations: 4367)
+
+
+  
+NoMethodError (undefined method `find_or_create_by_order_id' for Order:Class
+Did you mean?  find_or_create_by):
+  
+app/controllers/application_controller.rb:15:in `setup_current_order'
+Started GET "/categories" for 127.0.0.1 at 2023-09-08 12:35:49 +0200
+Processing by CategoriesController#index as HTML
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."order_id" = $1 LIMIT $2[0m  [["order_id", "201c144d-0e45-4a9b-ac84-afe797dd4c88"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mOrder Create (0.5ms)[0m  [1m[32mINSERT INTO "orders" ("table", "gesamtpreis", "created_at", "updated_at", "order_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["table", nil], ["gesamtpreis", nil], ["created_at", "2023-09-08 10:35:50.013521"], ["updated_at", "2023-09-08 10:35:50.013521"], ["order_id", "201c144d-0e45-4a9b-ac84-afe797dd4c88"]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered categories/_category.html.erb (Duration: 0.4ms | Allocations: 183)
+  Rendered categories/_category.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered categories/_category.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered categories/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 2813)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 17605)
+Completed 200 OK in 38ms (Views: 16.0ms | ActiveRecord: 12.5ms | Allocations: 38474)
+
+
+Started GET "/categories?clear_order_id=t" for 127.0.0.1 at 2023-09-08 12:35:53 +0200
+Processing by CategoriesController#index as HTML
+  Parameters: {"clear_order_id"=>"t"}
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."order_id" = $1 LIMIT $2[0m  [["order_id", "622dae62-30a1-478d-b2e6-9d4ada170e7c"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mOrder Create (0.3ms)[0m  [1m[32mINSERT INTO "orders" ("table", "gesamtpreis", "created_at", "updated_at", "order_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["table", nil], ["gesamtpreis", nil], ["created_at", "2023-09-08 10:35:53.893110"], ["updated_at", "2023-09-08 10:35:53.893110"], ["order_id", "622dae62-30a1-478d-b2e6-9d4ada170e7c"]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered categories/_category.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered categories/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 974)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 3278)
+Completed 200 OK in 18ms (Views: 9.8ms | ActiveRecord: 1.4ms | Allocations: 6156)
+
+
+Started GET "/categories?clear_order_id=t" for 127.0.0.1 at 2023-09-08 12:35:54 +0200
+Processing by CategoriesController#index as HTML
+  Parameters: {"clear_order_id"=>"t"}
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."order_id" = $1 LIMIT $2[0m  [["order_id", "fe1c43ca-b975-4033-a044-240d49cdd464"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mOrder Create (0.4ms)[0m  [1m[32mINSERT INTO "orders" ("table", "gesamtpreis", "created_at", "updated_at", "order_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["table", nil], ["gesamtpreis", nil], ["created_at", "2023-09-08 10:35:54.846384"], ["updated_at", "2023-09-08 10:35:54.846384"], ["order_id", "fe1c43ca-b975-4033-a044-240d49cdd464"]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered categories/_category.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered categories/_category.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered categories/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 974)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 3278)
+Completed 200 OK in 20ms (Views: 9.3ms | ActiveRecord: 2.6ms | Allocations: 6140)
+
+
+Started GET "/categories?clear_order_id=t" for 127.0.0.1 at 2023-09-08 12:35:56 +0200
+Processing by CategoriesController#index as HTML
+  Parameters: {"clear_order_id"=>"t"}
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."order_id" = $1 LIMIT $2[0m  [["order_id", "cd856ed6-ee71-4cd5-81b0-e77bb64b9276"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mOrder Create (0.4ms)[0m  [1m[32mINSERT INTO "orders" ("table", "gesamtpreis", "created_at", "updated_at", "order_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["table", nil], ["gesamtpreis", nil], ["created_at", "2023-09-08 10:35:56.145979"], ["updated_at", "2023-09-08 10:35:56.145979"], ["order_id", "cd856ed6-ee71-4cd5-81b0-e77bb64b9276"]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered categories/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 974)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 3278)
+Completed 200 OK in 18ms (Views: 8.9ms | ActiveRecord: 1.8ms | Allocations: 6165)
+
+
+Started GET "/categories?clear_order_id=t" for 127.0.0.1 at 2023-09-08 12:35:57 +0200
+Processing by CategoriesController#index as HTML
+  Parameters: {"clear_order_id"=>"t"}
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."order_id" = $1 LIMIT $2[0m  [["order_id", "b2ec5b26-6f4d-4880-aff3-daf261cb4ce4"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mOrder Create (0.4ms)[0m  [1m[32mINSERT INTO "orders" ("table", "gesamtpreis", "created_at", "updated_at", "order_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["table", nil], ["gesamtpreis", nil], ["created_at", "2023-09-08 10:35:57.266662"], ["updated_at", "2023-09-08 10:35:57.266662"], ["order_id", "b2ec5b26-6f4d-4880-aff3-daf261cb4ce4"]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered categories/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 974)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 3278)
+Completed 200 OK in 19ms (Views: 8.5ms | ActiveRecord: 2.1ms | Allocations: 6156)
+
+
+Started GET "/categories?clear_order_id=t" for 127.0.0.1 at 2023-09-08 12:35:57 +0200
+Processing by CategoriesController#index as HTML
+  Parameters: {"clear_order_id"=>"t"}
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."order_id" = $1 LIMIT $2[0m  [["order_id", "2a2cc6db-2750-4348-8c0f-46fcce98e408"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mOrder Create (0.4ms)[0m  [1m[32mINSERT INTO "orders" ("table", "gesamtpreis", "created_at", "updated_at", "order_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["table", nil], ["gesamtpreis", nil], ["created_at", "2023-09-08 10:35:57.747165"], ["updated_at", "2023-09-08 10:35:57.747165"], ["order_id", "2a2cc6db-2750-4348-8c0f-46fcce98e408"]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered categories/_category.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered categories/_category.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered categories/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 974)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 3278)
+Completed 200 OK in 17ms (Views: 8.2ms | ActiveRecord: 1.9ms | Allocations: 6146)
+
+
+Started GET "/categories?clear_order_id=t" for 127.0.0.1 at 2023-09-08 12:35:58 +0200
+Processing by CategoriesController#index as HTML
+  Parameters: {"clear_order_id"=>"t"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."order_id" = $1 LIMIT $2[0m  [["order_id", "54f86172-843b-4dab-a505-6df3b223310e"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mOrder Create (0.4ms)[0m  [1m[32mINSERT INTO "orders" ("table", "gesamtpreis", "created_at", "updated_at", "order_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["table", nil], ["gesamtpreis", nil], ["created_at", "2023-09-08 10:35:58.215951"], ["updated_at", "2023-09-08 10:35:58.215951"], ["order_id", "54f86172-843b-4dab-a505-6df3b223310e"]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered categories/_category.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered categories/_category.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered categories/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 974)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 3278)
+Completed 200 OK in 17ms (Views: 8.5ms | ActiveRecord: 1.6ms | Allocations: 6156)
+
+
+Started GET "/categories?clear_order_id=t" for 127.0.0.1 at 2023-09-08 12:35:58 +0200
+Processing by CategoriesController#index as HTML
+  Parameters: {"clear_order_id"=>"t"}
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."order_id" = $1 LIMIT $2[0m  [["order_id", "1b7639f6-f720-427e-aee8-b9a9da96c4c0"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mOrder Create (0.4ms)[0m  [1m[32mINSERT INTO "orders" ("table", "gesamtpreis", "created_at", "updated_at", "order_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["table", nil], ["gesamtpreis", nil], ["created_at", "2023-09-08 10:35:58.666455"], ["updated_at", "2023-09-08 10:35:58.666455"], ["order_id", "1b7639f6-f720-427e-aee8-b9a9da96c4c0"]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered categories/_category.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered categories/_category.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered categories/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 974)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 3278)
+Completed 200 OK in 18ms (Views: 7.8ms | ActiveRecord: 1.8ms | Allocations: 6170)
+
+
+Started GET "/categories?clear_order_id=t" for 127.0.0.1 at 2023-09-08 12:35:59 +0200
+Processing by CategoriesController#index as HTML
+  Parameters: {"clear_order_id"=>"t"}
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."order_id" = $1 LIMIT $2[0m  [["order_id", "aaa8339e-1ffc-46e4-8733-b903f711464d"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mOrder Create (0.5ms)[0m  [1m[32mINSERT INTO "orders" ("table", "gesamtpreis", "created_at", "updated_at", "order_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["table", nil], ["gesamtpreis", nil], ["created_at", "2023-09-08 10:35:59.166375"], ["updated_at", "2023-09-08 10:35:59.166375"], ["order_id", "aaa8339e-1ffc-46e4-8733-b903f711464d"]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered categories/_category.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered categories/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 974)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 3278)
+Completed 200 OK in 19ms (Views: 8.4ms | ActiveRecord: 1.9ms | Allocations: 6150)
+
+
+Started GET "/categories?clear_order_id=t" for 127.0.0.1 at 2023-09-08 12:35:59 +0200
+Processing by CategoriesController#index as HTML
+  Parameters: {"clear_order_id"=>"t"}
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."order_id" = $1 LIMIT $2[0m  [["order_id", "e315529c-beaa-42ae-b991-d45139bd0e98"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mOrder Create (0.4ms)[0m  [1m[32mINSERT INTO "orders" ("table", "gesamtpreis", "created_at", "updated_at", "order_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["table", nil], ["gesamtpreis", nil], ["created_at", "2023-09-08 10:35:59.683462"], ["updated_at", "2023-09-08 10:35:59.683462"], ["order_id", "e315529c-beaa-42ae-b991-d45139bd0e98"]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered categories/_category.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered categories/_category.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered categories/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 974)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 3293)
+Completed 200 OK in 19ms (Views: 8.4ms | ActiveRecord: 1.9ms | Allocations: 6171)
+
+
+Started GET "/categories?clear_order_id=t" for 127.0.0.1 at 2023-09-08 12:36:25 +0200
+Processing by CategoriesController#index as HTML
+  Parameters: {"clear_order_id"=>"t"}
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."order_id" = $1 LIMIT $2[0m  [["order_id", "ec021930-db73-4056-a814-497758dd7c13"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mOrder Create (0.3ms)[0m  [1m[32mINSERT INTO "orders" ("table", "gesamtpreis", "created_at", "updated_at", "order_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["table", nil], ["gesamtpreis", nil], ["created_at", "2023-09-08 10:36:25.236146"], ["updated_at", "2023-09-08 10:36:25.236146"], ["order_id", "ec021930-db73-4056-a814-497758dd7c13"]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered categories/_category.html.erb (Duration: 0.7ms | Allocations: 175)
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered categories/_category.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered categories/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1490)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 4161)
+Completed 200 OK in 23ms (Views: 13.1ms | ActiveRecord: 1.6ms | Allocations: 7834)
+
+
+Started GET "/categories/2" for 127.0.0.1 at 2023-09-08 12:36:28 +0200
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."order_id" = $1 LIMIT $2[0m  [["order_id", "ec021930-db73-4056-a814-497758dd7c13"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:47:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered categories/show.html.erb within layouts/application (Duration: 2.9ms | Allocations: 681)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 2984)
+Completed 200 OK in 18ms (Views: 8.8ms | ActiveRecord: 0.7ms | Allocations: 5181)
+
+
+Started GET "/categories/2/articles" for 127.0.0.1 at 2023-09-08 12:36:30 +0200
+Processing by ArticlesController#index as HTML
+  Parameters: {"category_id"=>"2"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."order_id" = $1 LIMIT $2[0m  [["order_id", "ec021930-db73-4056-a814-497758dd7c13"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_articlecat.html.erb (Duration: 0.6ms | Allocations: 169)
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/views/articles/index.html.erb:8
+  Rendered articles/_article.html.erb (Duration: 0.5ms | Allocations: 214)
+  Rendered articles/index.html.erb within layouts/application (Duration: 10.8ms | Allocations: 4762)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 7161)
+Completed 200 OK in 22ms (Views: 11.7ms | ActiveRecord: 3.5ms | Allocations: 11286)
+
+
+Started GET "/categories/2/articles/2" for 127.0.0.1 at 2023-09-08 12:36:32 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"category_id"=>"2", "id"=>"2"}
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."order_id" = $1 LIMIT $2[0m  [["order_id", "ec021930-db73-4056-a814-497758dd7c13"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1 AND "articles"."id" = $2 LIMIT $3[0m  [["category_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:65:in `set_article'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_article.html.erb (Duration: 0.6ms | Allocations: 202)
+  Rendered articles/_articlecat.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered articles/show.html.erb within layouts/application (Duration: 3.6ms | Allocations: 911)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 3219)
+Completed 200 OK in 21ms (Views: 10.6ms | ActiveRecord: 0.9ms | Allocations: 5608)
+
+
+Started GET "/categories/2/articles/2?clear_order_id=t" for 127.0.0.1 at 2023-09-08 12:36:34 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"clear_order_id"=>"t", "category_id"=>"2", "id"=>"2"}
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."order_id" = $1 LIMIT $2[0m  [["order_id", "36adbab1-e026-40bb-abcd-c94d5317326c"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mOrder Create (0.5ms)[0m  [1m[32mINSERT INTO "orders" ("table", "gesamtpreis", "created_at", "updated_at", "order_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["table", nil], ["gesamtpreis", nil], ["created_at", "2023-09-08 10:36:34.058394"], ["updated_at", "2023-09-08 10:36:34.058394"], ["order_id", "36adbab1-e026-40bb-abcd-c94d5317326c"]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1 AND "articles"."id" = $2 LIMIT $3[0m  [["category_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:65:in `set_article'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered articles/_articlecat.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered articles/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 468)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 2776)
+Completed 200 OK in 23ms (Views: 8.8ms | ActiveRecord: 1.9ms | Allocations: 6845)
+
+
+Started GET "/categories/2/articles" for 127.0.0.1 at 2023-09-08 12:36:35 +0200
+Processing by ArticlesController#index as HTML
+  Parameters: {"category_id"=>"2"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."order_id" = $1 LIMIT $2[0m  [["order_id", "36adbab1-e026-40bb-abcd-c94d5317326c"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_articlecat.html.erb (Duration: 0.2ms | Allocations: 17)
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/views/articles/index.html.erb:8
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 883)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 3195)
+Completed 200 OK in 18ms (Views: 11.3ms | ActiveRecord: 1.2ms | Allocations: 4761)
+
+
+Started GET "/categories/2/articles?clear_order_id=t" for 127.0.0.1 at 2023-09-08 12:36:37 +0200
+Processing by ArticlesController#index as HTML
+  Parameters: {"clear_order_id"=>"t", "category_id"=>"2"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."order_id" = $1 LIMIT $2[0m  [["order_id", "37fb009e-d1cd-47ca-89e6-4f49d4d8d8c0"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mOrder Create (0.4ms)[0m  [1m[32mINSERT INTO "orders" ("table", "gesamtpreis", "created_at", "updated_at", "order_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["table", nil], ["gesamtpreis", nil], ["created_at", "2023-09-08 10:36:37.171728"], ["updated_at", "2023-09-08 10:36:37.171728"], ["order_id", "37fb009e-d1cd-47ca-89e6-4f49d4d8d8c0"]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_articlecat.html.erb (Duration: 0.1ms | Allocations: 17)
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/views/articles/index.html.erb:8
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 883)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 3196)
+Completed 200 OK in 19ms (Views: 9.2ms | ActiveRecord: 1.7ms | Allocations: 6551)
+
+
+Started GET "/categories/2/articles?clear_order_id=t" for 127.0.0.1 at 2023-09-08 12:36:37 +0200
+Processing by ArticlesController#index as HTML
+  Parameters: {"clear_order_id"=>"t", "category_id"=>"2"}
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."order_id" = $1 LIMIT $2[0m  [["order_id", "f9b80aa3-9c4a-4a04-888c-699117cc37a2"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mOrder Create (0.4ms)[0m  [1m[32mINSERT INTO "orders" ("table", "gesamtpreis", "created_at", "updated_at", "order_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["table", nil], ["gesamtpreis", nil], ["created_at", "2023-09-08 10:36:37.974873"], ["updated_at", "2023-09-08 10:36:37.974873"], ["order_id", "f9b80aa3-9c4a-4a04-888c-699117cc37a2"]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_articlecat.html.erb (Duration: 0.1ms | Allocations: 17)
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/views/articles/index.html.erb:8
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 883)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 3196)
+Completed 200 OK in 21ms (Views: 9.0ms | ActiveRecord: 2.0ms | Allocations: 6534)
+
+
+Started GET "/categories/2/articles?clear_order_id=t" for 127.0.0.1 at 2023-09-08 12:36:41 +0200
+Processing by ArticlesController#index as HTML
+  Parameters: {"clear_order_id"=>"t", "category_id"=>"2"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."order_id" = $1 LIMIT $2[0m  [["order_id", "9377bc3e-076d-48af-abd4-7622133f3f00"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mOrder Create (0.4ms)[0m  [1m[32mINSERT INTO "orders" ("table", "gesamtpreis", "created_at", "updated_at", "order_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["table", nil], ["gesamtpreis", nil], ["created_at", "2023-09-08 10:36:41.606929"], ["updated_at", "2023-09-08 10:36:41.606929"], ["order_id", "9377bc3e-076d-48af-abd4-7622133f3f00"]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_articlecat.html.erb (Duration: 0.1ms | Allocations: 17)
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/views/articles/index.html.erb:8
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 883)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 3196)
+Completed 200 OK in 18ms (Views: 8.5ms | ActiveRecord: 1.9ms | Allocations: 6540)
+
+
+Started GET "/categories/2/articles?clear_order_id=t" for 127.0.0.1 at 2023-09-08 12:36:41 +0200
+Processing by ArticlesController#index as HTML
+  Parameters: {"clear_order_id"=>"t", "category_id"=>"2"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."order_id" = $1 LIMIT $2[0m  [["order_id", "62e741fa-d3bf-425b-b93e-063ef42d5b85"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mOrder Create (0.5ms)[0m  [1m[32mINSERT INTO "orders" ("table", "gesamtpreis", "created_at", "updated_at", "order_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["table", nil], ["gesamtpreis", nil], ["created_at", "2023-09-08 10:36:41.759529"], ["updated_at", "2023-09-08 10:36:41.759529"], ["order_id", "62e741fa-d3bf-425b-b93e-063ef42d5b85"]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_articlecat.html.erb (Duration: 0.1ms | Allocations: 17)
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/views/articles/index.html.erb:8
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 883)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 3196)
+Completed 200 OK in 21ms (Views: 8.8ms | ActiveRecord: 2.1ms | Allocations: 6542)
+
+
+Started GET "/categories/2/articles?clear_order_id=t" for 127.0.0.1 at 2023-09-08 12:36:41 +0200
+Processing by ArticlesController#index as HTML
+  Parameters: {"clear_order_id"=>"t", "category_id"=>"2"}
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."order_id" = $1 LIMIT $2[0m  [["order_id", "b63364ec-e186-415c-9dd2-8864ad3358c9"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mOrder Create (0.5ms)[0m  [1m[32mINSERT INTO "orders" ("table", "gesamtpreis", "created_at", "updated_at", "order_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["table", nil], ["gesamtpreis", nil], ["created_at", "2023-09-08 10:36:41.911541"], ["updated_at", "2023-09-08 10:36:41.911541"], ["order_id", "b63364ec-e186-415c-9dd2-8864ad3358c9"]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_articlecat.html.erb (Duration: 0.1ms | Allocations: 17)
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/views/articles/index.html.erb:8
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 883)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 3196)
+Completed 200 OK in 21ms (Views: 8.5ms | ActiveRecord: 2.2ms | Allocations: 6538)
+
+
+Started GET "/categories/2/articles?clear_order_id=t" for 127.0.0.1 at 2023-09-08 12:36:42 +0200
+Processing by ArticlesController#index as HTML
+  Parameters: {"clear_order_id"=>"t", "category_id"=>"2"}
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."order_id" = $1 LIMIT $2[0m  [["order_id", "a62476c5-63c2-4af6-ab1b-e8c4e9adcb3a"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mOrder Create (0.4ms)[0m  [1m[32mINSERT INTO "orders" ("table", "gesamtpreis", "created_at", "updated_at", "order_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["table", nil], ["gesamtpreis", nil], ["created_at", "2023-09-08 10:36:42.043104"], ["updated_at", "2023-09-08 10:36:42.043104"], ["order_id", "a62476c5-63c2-4af6-ab1b-e8c4e9adcb3a"]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_articlecat.html.erb (Duration: 0.1ms | Allocations: 17)
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/views/articles/index.html.erb:8
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 883)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3196)
+Completed 200 OK in 20ms (Views: 8.9ms | ActiveRecord: 1.9ms | Allocations: 6547)
+
+
+Started GET "/categories/2/articles?clear_order_id=t" for 127.0.0.1 at 2023-09-08 12:36:42 +0200
+Processing by ArticlesController#index as HTML
+  Parameters: {"clear_order_id"=>"t", "category_id"=>"2"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."order_id" = $1 LIMIT $2[0m  [["order_id", "046580d2-30ce-4d84-aa1c-744d6823e00d"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mOrder Create (0.5ms)[0m  [1m[32mINSERT INTO "orders" ("table", "gesamtpreis", "created_at", "updated_at", "order_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["table", nil], ["gesamtpreis", nil], ["created_at", "2023-09-08 10:36:42.193415"], ["updated_at", "2023-09-08 10:36:42.193415"], ["order_id", "046580d2-30ce-4d84-aa1c-744d6823e00d"]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_articlecat.html.erb (Duration: 0.1ms | Allocations: 17)
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/views/articles/index.html.erb:8
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 883)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3196)
+Completed 200 OK in 18ms (Views: 8.0ms | ActiveRecord: 1.6ms | Allocations: 6540)
+
+
+Started GET "/categories/2/articles?clear_order_id=t" for 127.0.0.1 at 2023-09-08 12:36:42 +0200
+Processing by ArticlesController#index as HTML
+  Parameters: {"clear_order_id"=>"t", "category_id"=>"2"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."order_id" = $1 LIMIT $2[0m  [["order_id", "2d4a43bd-c35b-4732-b7bf-65d0eed929e5"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mOrder Create (0.3ms)[0m  [1m[32mINSERT INTO "orders" ("table", "gesamtpreis", "created_at", "updated_at", "order_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["table", nil], ["gesamtpreis", nil], ["created_at", "2023-09-08 10:36:42.322525"], ["updated_at", "2023-09-08 10:36:42.322525"], ["order_id", "2d4a43bd-c35b-4732-b7bf-65d0eed929e5"]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_articlecat.html.erb (Duration: 0.1ms | Allocations: 17)
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/views/articles/index.html.erb:8
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 883)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 3196)
+Completed 200 OK in 16ms (Views: 8.0ms | ActiveRecord: 1.2ms | Allocations: 6540)
+
+
+Started GET "/categories/2/articles?clear_order_id=t" for 127.0.0.1 at 2023-09-08 12:36:42 +0200
+Processing by ArticlesController#index as HTML
+  Parameters: {"clear_order_id"=>"t", "category_id"=>"2"}
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."order_id" = $1 LIMIT $2[0m  [["order_id", "354f822d-aec5-4456-9790-c2c958833f32"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mOrder Create (0.5ms)[0m  [1m[32mINSERT INTO "orders" ("table", "gesamtpreis", "created_at", "updated_at", "order_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["table", nil], ["gesamtpreis", nil], ["created_at", "2023-09-08 10:36:42.494334"], ["updated_at", "2023-09-08 10:36:42.494334"], ["order_id", "354f822d-aec5-4456-9790-c2c958833f32"]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_articlecat.html.erb (Duration: 0.1ms | Allocations: 17)
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/views/articles/index.html.erb:8
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 883)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 3196)
+Completed 200 OK in 21ms (Views: 9.2ms | ActiveRecord: 2.0ms | Allocations: 6538)
+
+
+Started GET "/categories/2/articles?clear_order_id=t" for 127.0.0.1 at 2023-09-08 12:36:42 +0200
+Processing by ArticlesController#index as HTML
+  Parameters: {"clear_order_id"=>"t", "category_id"=>"2"}
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."order_id" = $1 LIMIT $2[0m  [["order_id", "9f0ba72c-9e00-4474-8c0f-b1bb4e2c9081"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mOrder Create (0.3ms)[0m  [1m[32mINSERT INTO "orders" ("table", "gesamtpreis", "created_at", "updated_at", "order_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["table", nil], ["gesamtpreis", nil], ["created_at", "2023-09-08 10:36:42.627823"], ["updated_at", "2023-09-08 10:36:42.627823"], ["order_id", "9f0ba72c-9e00-4474-8c0f-b1bb4e2c9081"]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_articlecat.html.erb (Duration: 0.1ms | Allocations: 17)
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/views/articles/index.html.erb:8
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 883)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 3196)
+Completed 200 OK in 20ms (Views: 9.0ms | ActiveRecord: 1.8ms | Allocations: 6546)
+
+
+Started GET "/categories/2/articles?clear_order_id=t" for 127.0.0.1 at 2023-09-08 12:36:42 +0200
+Processing by ArticlesController#index as HTML
+  Parameters: {"clear_order_id"=>"t", "category_id"=>"2"}
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."order_id" = $1 LIMIT $2[0m  [["order_id", "df35f16d-bc0e-4511-9b38-a324a486e5ea"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mOrder Create (0.5ms)[0m  [1m[32mINSERT INTO "orders" ("table", "gesamtpreis", "created_at", "updated_at", "order_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["table", nil], ["gesamtpreis", nil], ["created_at", "2023-09-08 10:36:42.760941"], ["updated_at", "2023-09-08 10:36:42.760941"], ["order_id", "df35f16d-bc0e-4511-9b38-a324a486e5ea"]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_articlecat.html.erb (Duration: 0.1ms | Allocations: 17)
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/views/articles/index.html.erb:8
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 883)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3196)
+Completed 200 OK in 26ms (Views: 7.8ms | ActiveRecord: 2.9ms | Allocations: 6560)
+
+
+Started GET "/categories/2/articles?clear_order_id=t" for 127.0.0.1 at 2023-09-08 12:36:42 +0200
+Processing by ArticlesController#index as HTML
+  Parameters: {"clear_order_id"=>"t", "category_id"=>"2"}
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."order_id" = $1 LIMIT $2[0m  [["order_id", "a233668b-68e3-47c1-a4f2-4266cac83772"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mOrder Create (0.4ms)[0m  [1m[32mINSERT INTO "orders" ("table", "gesamtpreis", "created_at", "updated_at", "order_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["table", nil], ["gesamtpreis", nil], ["created_at", "2023-09-08 10:36:42.895142"], ["updated_at", "2023-09-08 10:36:42.895142"], ["order_id", "a233668b-68e3-47c1-a4f2-4266cac83772"]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_articlecat.html.erb (Duration: 0.1ms | Allocations: 17)
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/views/articles/index.html.erb:8
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 883)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 3203)
+Completed 200 OK in 20ms (Views: 8.8ms | ActiveRecord: 2.0ms | Allocations: 6550)
+
+
+Started GET "/categories/2/articles?clear_order_id=t" for 127.0.0.1 at 2023-09-08 12:36:43 +0200
+Processing by ArticlesController#index as HTML
+  Parameters: {"clear_order_id"=>"t", "category_id"=>"2"}
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."order_id" = $1 LIMIT $2[0m  [["order_id", "ed9cd0cf-c714-4474-99c3-89be18b08eb0"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mOrder Create (0.5ms)[0m  [1m[32mINSERT INTO "orders" ("table", "gesamtpreis", "created_at", "updated_at", "order_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["table", nil], ["gesamtpreis", nil], ["created_at", "2023-09-08 10:36:43.044594"], ["updated_at", "2023-09-08 10:36:43.044594"], ["order_id", "ed9cd0cf-c714-4474-99c3-89be18b08eb0"]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_articlecat.html.erb (Duration: 0.1ms | Allocations: 17)
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/views/articles/index.html.erb:8
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 883)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 3204)
+Completed 200 OK in 21ms (Views: 9.4ms | ActiveRecord: 2.2ms | Allocations: 6542)
+
+
+Started GET "/categories/2/articles?clear_order_id=t" for 127.0.0.1 at 2023-09-08 12:36:43 +0200
+Processing by ArticlesController#index as HTML
+  Parameters: {"clear_order_id"=>"t", "category_id"=>"2"}
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."order_id" = $1 LIMIT $2[0m  [["order_id", "51826bbb-5294-4d19-b6f0-a9b31403628a"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mOrder Create (0.4ms)[0m  [1m[32mINSERT INTO "orders" ("table", "gesamtpreis", "created_at", "updated_at", "order_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["table", nil], ["gesamtpreis", nil], ["created_at", "2023-09-08 10:36:43.196863"], ["updated_at", "2023-09-08 10:36:43.196863"], ["order_id", "51826bbb-5294-4d19-b6f0-a9b31403628a"]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_articlecat.html.erb (Duration: 0.1ms | Allocations: 17)
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/views/articles/index.html.erb:8
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 883)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 3196)
+Completed 200 OK in 22ms (Views: 9.5ms | ActiveRecord: 1.8ms | Allocations: 6543)
+
+
+Started GET "/categories/2/articles?clear_order_id=t" for 127.0.0.1 at 2023-09-08 12:36:43 +0200
+Processing by ArticlesController#index as HTML
+  Parameters: {"clear_order_id"=>"t", "category_id"=>"2"}
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."order_id" = $1 LIMIT $2[0m  [["order_id", "e8e5b37f-e081-4901-b887-b3fc23497b3e"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mOrder Create (0.5ms)[0m  [1m[32mINSERT INTO "orders" ("table", "gesamtpreis", "created_at", "updated_at", "order_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["table", nil], ["gesamtpreis", nil], ["created_at", "2023-09-08 10:36:43.343597"], ["updated_at", "2023-09-08 10:36:43.343597"], ["order_id", "e8e5b37f-e081-4901-b887-b3fc23497b3e"]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_articlecat.html.erb (Duration: 0.1ms | Allocations: 17)
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/views/articles/index.html.erb:8
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 883)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 3196)
+Completed 200 OK in 20ms (Views: 8.4ms | ActiveRecord: 2.2ms | Allocations: 6538)
+
+
+Started GET "/categories/2/articles?clear_order_id=t" for 127.0.0.1 at 2023-09-08 12:36:43 +0200
+Processing by ArticlesController#index as HTML
+  Parameters: {"clear_order_id"=>"t", "category_id"=>"2"}
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."order_id" = $1 LIMIT $2[0m  [["order_id", "b52e3589-5255-4922-931b-7dba9e917cd3"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mOrder Create (0.5ms)[0m  [1m[32mINSERT INTO "orders" ("table", "gesamtpreis", "created_at", "updated_at", "order_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["table", nil], ["gesamtpreis", nil], ["created_at", "2023-09-08 10:36:43.494787"], ["updated_at", "2023-09-08 10:36:43.494787"], ["order_id", "b52e3589-5255-4922-931b-7dba9e917cd3"]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_articlecat.html.erb (Duration: 0.1ms | Allocations: 17)
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/views/articles/index.html.erb:8
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 883)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3196)
+Completed 200 OK in 22ms (Views: 8.3ms | ActiveRecord: 2.3ms | Allocations: 6538)
+
+
+Started GET "/categories/2/articles?clear_order_id=t" for 127.0.0.1 at 2023-09-08 12:36:43 +0200
+Processing by ArticlesController#index as HTML
+  Parameters: {"clear_order_id"=>"t", "category_id"=>"2"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."order_id" = $1 LIMIT $2[0m  [["order_id", "607ae3d2-d1ed-4264-abae-9bc792e579f6"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mOrder Create (0.3ms)[0m  [1m[32mINSERT INTO "orders" ("table", "gesamtpreis", "created_at", "updated_at", "order_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["table", nil], ["gesamtpreis", nil], ["created_at", "2023-09-08 10:36:43.639207"], ["updated_at", "2023-09-08 10:36:43.639207"], ["order_id", "607ae3d2-d1ed-4264-abae-9bc792e579f6"]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_articlecat.html.erb (Duration: 0.1ms | Allocations: 17)
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/views/articles/index.html.erb:8
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 883)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 3196)
+Completed 200 OK in 17ms (Views: 8.5ms | ActiveRecord: 1.7ms | Allocations: 6536)
+
+
+Started GET "/categories/2/articles?clear_order_id=t" for 127.0.0.1 at 2023-09-08 12:36:43 +0200
+Processing by ArticlesController#index as HTML
+  Parameters: {"clear_order_id"=>"t", "category_id"=>"2"}
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."order_id" = $1 LIMIT $2[0m  [["order_id", "ae2de2ed-14c9-459c-bbf6-0b017f5de2e9"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mOrder Create (0.5ms)[0m  [1m[32mINSERT INTO "orders" ("table", "gesamtpreis", "created_at", "updated_at", "order_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["table", nil], ["gesamtpreis", nil], ["created_at", "2023-09-08 10:36:43.794775"], ["updated_at", "2023-09-08 10:36:43.794775"], ["order_id", "ae2de2ed-14c9-459c-bbf6-0b017f5de2e9"]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_articlecat.html.erb (Duration: 0.2ms | Allocations: 17)
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/views/articles/index.html.erb:8
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 883)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 3196)
+Completed 200 OK in 21ms (Views: 8.7ms | ActiveRecord: 2.2ms | Allocations: 6546)
+
+
+Started GET "/categories/2/articles?clear_order_id=t" for 127.0.0.1 at 2023-09-08 12:36:43 +0200
+Processing by ArticlesController#index as HTML
+  Parameters: {"clear_order_id"=>"t", "category_id"=>"2"}
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."order_id" = $1 LIMIT $2[0m  [["order_id", "fcf056d0-1075-484d-89ac-8084d3871150"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mOrder Create (0.4ms)[0m  [1m[32mINSERT INTO "orders" ("table", "gesamtpreis", "created_at", "updated_at", "order_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["table", nil], ["gesamtpreis", nil], ["created_at", "2023-09-08 10:36:43.928914"], ["updated_at", "2023-09-08 10:36:43.928914"], ["order_id", "fcf056d0-1075-484d-89ac-8084d3871150"]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_articlecat.html.erb (Duration: 0.1ms | Allocations: 17)
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/views/articles/index.html.erb:8
+  Rendered articles/_article.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 883)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 3196)
+Completed 200 OK in 21ms (Views: 9.3ms | ActiveRecord: 1.9ms | Allocations: 6540)
+
+
+  [1m[36mOrder Count (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders" ORDER BY "orders"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/categories/2" for 127.0.0.1 at 2023-09-08 12:39:24 +0200
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."order_id" = $1 LIMIT $2[0m  [["order_id", "fcf056d0-1075-484d-89ac-8084d3871150"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:47:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered categories/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 441)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 2741)
+Completed 200 OK in 10ms (Views: 6.1ms | ActiveRecord: 0.3ms | Allocations: 4281)
+
+
+Started GET "/categories" for 127.0.0.1 at 2023-09-08 12:39:26 +0200
+Processing by CategoriesController#index as HTML
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."order_id" = $1 LIMIT $2[0m  [["order_id", "fcf056d0-1075-484d-89ac-8084d3871150"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered categories/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 974)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 3278)
+Completed 200 OK in 13ms (Views: 9.2ms | ActiveRecord: 0.6ms | Allocations: 4387)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2023-09-08 12:39:56 +0200
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."order_id" = $1 LIMIT $2[0m  [["order_id", "fcf056d0-1075-484d-89ac-8084d3871150"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `setup_current_order'
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:47:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered categories/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 441)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 2756)
+Completed 200 OK in 23ms (Views: 7.9ms | ActiveRecord: 0.7ms | Allocations: 4304)
+
+
