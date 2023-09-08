@@ -1,11 +1,11 @@
 <%
-path = artikelkategorie.id ? artikelkategory_path(artikelkategorie) : artikelkategories_path
-http_method = artikelkategorie.id ? :patch : :post
+path = category.id ? category_path(category) : categories_path
+http_method = category.id ? :patch : :post
 %>
-<%= form_for(artikelkategorie, url: path, method: http_method) do |form| %>
+<%= form_for(category, url: path, method: http_method) do |form| %>
   <div>
-    <%= form.label :kategorie, style: "display: block" %>
-    <%= form.text_field :kategorie %>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
   </div>
 
   <div>
