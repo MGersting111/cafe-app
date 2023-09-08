@@ -1,70 +1,61 @@
 class ArtikelsController < ApplicationController
-  before_action :set_artikel, only: %i[ show edit update destroy ]
+  before_action :set_artikelkategorie
+  before_action :set_artikel, only: [:show, :edit, :update, :destroy]
 
-  # GET /artikels or /artikels.json
   def index
-    @artikels = Artikel.all
+    @artikels = @artikelkategorie.artikel
   end
 
-  # GET /artikels/1 or /artikels/1.json
   def show
   end
 
-  # GET /artikels/new
   def new
-    @artikel = Artikel.new
+    @artikel = Artikel.new(artikelkategorie: @artikelkategorie)
   end
 
-  # GET /artikels/1/edit
   def edit
   end
 
-  # POST /artikels or /artikels.json
   def create
-    @artikel = Artikel.new(artikel_params)
+    @artikel = @artikelkategorie.artikel.build(artikel_params)
 
-    respond_to do |format|
-      if @artikel.save
-        format.html { redirect_to artikel_url(@artikel), notice: "Artikel was successfully created." }
-        format.json { render :show, status: :created, location: @artikel }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @artikel.errors, status: :unprocessable_entity }
-      end
+    if @artikel.save
+      redirect_to artikelkategory_artikels_url(@artikelkategorie), notice: "Artikel wurde erfolgreich erstellt."
+    else
+      render :new
     end
   end
 
-  # PATCH/PUT /artikels/1 or /artikels/1.json
   def update
-    respond_to do |format|
-      if @artikel.update(artikel_params)
-        format.html { redirect_to artikel_url(@artikel), notice: "Artikel was successfully updated." }
-        format.json { render :show, status: :ok, location: @artikel }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @artikel.errors, status: :unprocessable_entity }
-      end
+    if @artikel.update(artikel_params)
+      redirect_to artikelkategory_artikel_url(@artikelkategorie, @artikel), notice: "Artikel wurde erfolgreich geändert."
+    else
+      render :edit
     end
   end
 
-  # DELETE /artikels/1 or /artikels/1.json
   def destroy
     @artikel.destroy
-
-    respond_to do |format|
-      format.html { redirect_to artikels_url, notice: "Artikel was successfully destroyed." }
-      format.json { head :no_content }
-    end
+    redirect_to artikelkategory_artikels_url, notice: "Artikel wurde erfolgreich gelöscht."
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_artikel
-      @artikel = Artikel.find(params[:id])
+
+    def set_artikelkategorie
+      if params[:artikelkategory_id]
+        @artikelkategorie = Artikelkategorie.find(params[:artikelkategory_id])
+      elsif params.dig(:artikel, :artikelkategorie_id)
+        @artikelkategorie = Artikelkategorie.find(params.dig(:artikel, :artikelkategorie_id))
+      else
+        @arikelkategorie = nil
+      end
     end
 
-    # Only allow a list of trusted parameters through.
+    def set_artikel
+      @artikel = @artikelkategorie.artikel.find(params[:id])
+    end
+
     def artikel_params
-      params.require(:artikel).permit(:name, :id_kategorie, :preis)
+      params.require(:artikel).permit(:name, :artikelkategorie_id, :preis)
     end
 end

@@ -1,9 +1,13 @@
 
+<<<<<<< HEAD
+artikel = Artikel.create([{name: "Brezel", artikelkategorie_id: 1, preis: 100}, {name: "Fanta", artikelkategorie_id: 2, preis: 150}])
+=======
 Artikel.destroy_all
 Artikelkategorie.destroy_all
 Bestellung.destroy_all
 BestellungArtikel.destroy_all
 artikel = Artikel.create([{name: "Kaffee-Niklas-Crema", id_kategorie: 1, preis: 4}])
+>>>>>>> main
 
 artikelkategorie = Artikelkategorie.create([{kategorie: "Snacks"}, {kategorie: "Kaltgetränke"}, {kategorie: "Heißgetränke"}])
 

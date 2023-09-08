@@ -3,17 +3,24 @@
 <h1>Artikels</h1>
 
 <div id="artikels">
+  <%= render "artikelkat", artikelkategorie: @artikelkategorie%>
+  <hr>
   <% @artikels.each do |artikel| %>
-    <%= render artikel %>
+    <%= render "artikel", artikel: artikel %>
     <p>
-      <%= link_to "Show this artikel", artikel %>
+      <%= link_to "Anzeigen", artikelkategory_artikel_path(@artikelkategorie, artikel) %>
     </p>
   <% end %>
 </div>
 
+<<<<<<< HEAD
+<%= link_to "Neuer Artikel", new_artikelkategory_artikel_path(@artikelkategorie) %> |
+<%= link_to "Zurück", artikelkategory_path(@artikelkategorie)%>
+=======
 <%= link_to "New artikel", new_artikel_path %>
 
 
 
 
 <%= link_to "Show Warenkorb", warenkorbs_path %>
+>>>>>>> main
