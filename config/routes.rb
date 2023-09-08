@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   end
   
   resources :articles, only: %i[new create]
-
+  resources :orders
+  resources :line_items
+  resources :tables
   root 'categories#index'
 end
