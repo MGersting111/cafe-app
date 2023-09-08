@@ -8,7 +8,15 @@
   <% @articles.each do |article| %>
     <%= render "article", article: article %>
     <p>
-      <%= link_to "Anzeigen", category_article_path(@category, article) %>
+      <%= link_to "Anzeigen", category_article_path(@category, article) %> |
+      <% line_item = LineItem.new(anzahl: 1, article: article) %>
+      <%= form_with(model: line_item) do |form| %>
+        <%= form.hidden_field :article_id %>
+
+        <%= form.select :anzahl, options_for_select(1..10) %>
+
+        <%= form.submit "Zum Warenkorb hinzufügen, mofo"%>
+      <% end %>
     </p>
   <% end %>
 </div>
