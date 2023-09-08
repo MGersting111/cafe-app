@@ -4054,3 +4054,271 @@ Processing by ArtikelsController#index as HTML
 Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.3ms | Allocations: 3787)
 
 
+Started GET "/" for 127.0.0.1 at 2023-09-08 09:34:57 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 2 pending migrations:
+
+20230906090237_create_bestellungs.rb
+20230906095552_create_bestellung_artikels.rb
+
+
+):
+  
+activerecord (7.0.7.2) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.7.2) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.7.2) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.7.2) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.7.2) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.7.2) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.7.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.7.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.7.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.7.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2953311040616065710)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBestellungs (20230906090237)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "bestellungs" ("id" bigserial primary key, "tischnummer" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (2.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230906090237"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateBestellungArtikels (20230906095552)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "bestellung_artikels" ("id" bigserial primary key, "id_bestellung" integer, "id_artikel" integer, "anzahl" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230906095552"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2953311040616065710)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2023-09-08 09:35:51 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArtikelkategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikelkategories/index.html.erb within layouts/application
+  [1m[36mArtikelkategorie Load (0.7ms)[0m  [1m[34mSELECT "artikelkategories".* FROM "artikelkategories"[0m
+  ↳ app/views/artikelkategories/index.html.erb:6
+  Rendered artikelkategories/_artikelkategorie.html.erb (Duration: 1.0ms | Allocations: 213)
+  Rendered artikelkategories/_artikelkategorie.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered artikelkategories/_artikelkategorie.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered artikelkategories/index.html.erb within layouts/application (Duration: 42.5ms | Allocations: 20659)
+  Rendered layout layouts/application.html.erb (Duration: 356.5ms | Allocations: 116378)
+Completed 200 OK in 405ms (Views: 374.8ms | ActiveRecord: 5.2ms | Allocations: 125937)
+
+
+Started GET "/artikels/new" for 127.0.0.1 at 2023-09-08 09:35:53 +0200
+Processing by ArtikelsController#new as HTML
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 3.2ms | Allocations: 17570)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'artikelkategorie' for Artikel.):
+  
+app/controllers/artikels_controller.rb:14:in `new'
+Started GET "/" for 127.0.0.1 at 2023-09-08 09:39:50 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArtikelkategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikelkategories/index.html.erb within layouts/application
+  [1m[36mArtikelkategorie Load (0.5ms)[0m  [1m[34mSELECT "artikelkategories".* FROM "artikelkategories"[0m
+  ↳ app/views/artikelkategories/index.html.erb:6
+  Rendered artikelkategories/_artikelkategorie.html.erb (Duration: 0.4ms | Allocations: 213)
+  Rendered artikelkategories/_artikelkategorie.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered artikelkategories/_artikelkategorie.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered artikelkategories/index.html.erb within layouts/application (Duration: 31.1ms | Allocations: 17112)
+  Rendered layout layouts/application.html.erb (Duration: 91.9ms | Allocations: 51207)
+Completed 200 OK in 107ms (Views: 91.4ms | ActiveRecord: 4.2ms | Allocations: 60083)
+
+
+Started GET "/artikelkategories/1" for 127.0.0.1 at 2023-09-08 09:39:52 +0200
+Processing by ArtikelkategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtikelkategorie Load (0.2ms)[0m  [1m[34mSELECT "artikelkategories".* FROM "artikelkategories" WHERE "artikelkategories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artikelkategories_controller.rb:47:in `set_artikelkategory'
+  Rendering layout layouts/application.html.erb
+  Rendering artikelkategories/show.html.erb within layouts/application
+  Rendered artikelkategories/_artikelkategorie.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered artikelkategories/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 988)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 3196)
+Completed 200 OK in 12ms (Views: 6.4ms | ActiveRecord: 0.3ms | Allocations: 6013)
+
+
+Started GET "/artikelkategories/1/artikels" for 127.0.0.1 at 2023-09-08 09:39:53 +0200
+Processing by ArtikelsController#index as HTML
+  Parameters: {"artikelkategory_id"=>"1"}
+  [1m[36mArtikelkategorie Load (0.2ms)[0m  [1m[34mSELECT "artikelkategories".* FROM "artikelkategories" WHERE "artikelkategories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:56:in `set_artikelkategorie'
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  Rendered artikels/_artikelkat.html.erb (Duration: 0.8ms | Allocations: 171)
+  [1m[36mArtikel Load (0.4ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."artikelkategorie_id" = $1[0m  [["artikelkategorie_id", 1]]
+  ↳ app/views/artikels/index.html.erb:8
+  Rendered artikels/_artikel.html.erb (Duration: 0.6ms | Allocations: 216)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 31.5ms | Allocations: 19443)
+  Rendered layout layouts/application.html.erb (Duration: 34.9ms | Allocations: 21739)
+Completed 200 OK in 57ms (Views: 33.2ms | ActiveRecord: 3.5ms | Allocations: 31365)
+
+
+Started GET "/artikelkategories/2" for 127.0.0.1 at 2023-09-08 09:39:56 +0200
+Processing by ArtikelkategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArtikelkategorie Load (0.2ms)[0m  [1m[34mSELECT "artikelkategories".* FROM "artikelkategories" WHERE "artikelkategories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/artikelkategories_controller.rb:47:in `set_artikelkategory'
+  Rendering layout layouts/application.html.erb
+  Rendering artikelkategories/show.html.erb within layouts/application
+  Rendered artikelkategories/_artikelkategorie.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered artikelkategories/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 726)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2934)
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.2ms | Allocations: 3734)
+
+
+Started GET "/artikelkategories/2/artikels" for 127.0.0.1 at 2023-09-08 09:39:57 +0200
+Processing by ArtikelsController#index as HTML
+  Parameters: {"artikelkategory_id"=>"2"}
+  [1m[36mArtikelkategorie Load (0.2ms)[0m  [1m[34mSELECT "artikelkategories".* FROM "artikelkategories" WHERE "artikelkategories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:56:in `set_artikelkategorie'
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  Rendered artikels/_artikelkat.html.erb (Duration: 0.1ms | Allocations: 17)
+  [1m[36mArtikel Load (0.2ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."artikelkategorie_id" = $1[0m  [["artikelkategorie_id", 2]]
+  ↳ app/views/artikels/index.html.erb:8
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1226)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 3447)
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 0.4ms | Allocations: 4273)
+
+
+Started GET "/artikelkategories/2" for 127.0.0.1 at 2023-09-08 09:39:59 +0200
+Processing by ArtikelkategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArtikelkategorie Load (0.9ms)[0m  [1m[34mSELECT "artikelkategories".* FROM "artikelkategories" WHERE "artikelkategories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/artikelkategories_controller.rb:47:in `set_artikelkategory'
+  Rendering layout layouts/application.html.erb
+  Rendering artikelkategories/show.html.erb within layouts/application
+  Rendered artikelkategories/_artikelkategorie.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered artikelkategories/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 742)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 2949)
+Completed 200 OK in 12ms (Views: 7.9ms | ActiveRecord: 0.9ms | Allocations: 3730)
+
+
+Started GET "/artikelkategories/2" for 127.0.0.1 at 2023-09-08 09:40:03 +0200
+Processing by ArtikelkategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArtikelkategorie Load (0.8ms)[0m  [1m[34mSELECT "artikelkategories".* FROM "artikelkategories" WHERE "artikelkategories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/artikelkategories_controller.rb:47:in `set_artikelkategory'
+  Rendering layout layouts/application.html.erb
+  Rendering artikelkategories/show.html.erb within layouts/application
+  Rendered artikelkategories/_artikelkategorie.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered artikelkategories/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 716)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2923)
+Completed 200 OK in 10ms (Views: 6.1ms | ActiveRecord: 0.8ms | Allocations: 3704)
+
+
+Started GET "/artikelkategories" for 127.0.0.1 at 2023-09-08 09:40:04 +0200
+Processing by ArtikelkategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikelkategories/index.html.erb within layouts/application
+  [1m[36mArtikelkategorie Load (0.2ms)[0m  [1m[34mSELECT "artikelkategories".* FROM "artikelkategories"[0m
+  ↳ app/views/artikelkategories/index.html.erb:6
+  Rendered artikelkategories/_artikelkategorie.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered artikelkategories/_artikelkategorie.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered artikelkategories/_artikelkategorie.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered artikelkategories/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1262)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3490)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.2ms | Allocations: 3817)
+
+
+Started GET "/artikels/new" for 127.0.0.1 at 2023-09-08 09:40:06 +0200
+Processing by ArtikelsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/new.html.erb within layouts/application
+  [1m[36mArtikelkategorie Pluck (0.2ms)[0m  [1m[34mSELECT "artikelkategories"."kategorie", "artikelkategories"."id" FROM "artikelkategories"[0m
+  ↳ app/views/artikels/_form.html.erb:16
+  Rendered artikels/_form.html.erb (Duration: 13.2ms | Allocations: 3893)
+  Rendered artikels/new.html.erb within layouts/application (Duration: 14.2ms | Allocations: 4251)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 6473)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.2ms | Allocations: 6953)
+
+
+Started GET "/artikelkategories" for 127.0.0.1 at 2023-09-08 09:40:08 +0200
+Processing by ArtikelkategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikelkategories/index.html.erb within layouts/application
+  [1m[36mArtikelkategorie Load (1.1ms)[0m  [1m[34mSELECT "artikelkategories".* FROM "artikelkategories"[0m
+  ↳ app/views/artikelkategories/index.html.erb:6
+  Rendered artikelkategories/_artikelkategorie.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered artikelkategories/_artikelkategorie.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered artikelkategories/_artikelkategorie.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered artikelkategories/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1262)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 3498)
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 1.1ms | Allocations: 3825)
+
+
+Started GET "/artikelkategories/1" for 127.0.0.1 at 2023-09-08 09:40:10 +0200
+Processing by ArtikelkategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtikelkategorie Load (0.2ms)[0m  [1m[34mSELECT "artikelkategories".* FROM "artikelkategories" WHERE "artikelkategories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artikelkategories_controller.rb:47:in `set_artikelkategory'
+  Rendering layout layouts/application.html.erb
+  Rendering artikelkategories/show.html.erb within layouts/application
+  Rendered artikelkategories/_artikelkategorie.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered artikelkategories/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 726)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 2939)
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 0.2ms | Allocations: 3720)
+
+
+Started GET "/artikelkategories/1/artikels" for 127.0.0.1 at 2023-09-08 09:40:12 +0200
+Processing by ArtikelsController#index as HTML
+  Parameters: {"artikelkategory_id"=>"1"}
+  [1m[36mArtikelkategorie Load (1.3ms)[0m  [1m[34mSELECT "artikelkategories".* FROM "artikelkategories" WHERE "artikelkategories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artikels_controller.rb:56:in `set_artikelkategorie'
+  Rendering layout layouts/application.html.erb
+  Rendering artikels/index.html.erb within layouts/application
+  Rendered artikels/_artikelkat.html.erb (Duration: 0.1ms | Allocations: 17)
+  [1m[36mArtikel Load (1.2ms)[0m  [1m[34mSELECT "artikels".* FROM "artikels" WHERE "artikels"."artikelkategorie_id" = $1[0m  [["artikelkategorie_id", 1]]
+  ↳ app/views/artikels/index.html.erb:8
+  Rendered artikels/_artikel.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered artikels/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1220)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 3441)
+Completed 200 OK in 14ms (Views: 7.5ms | ActiveRecord: 2.5ms | Allocations: 4251)
+
+
