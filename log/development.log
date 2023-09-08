@@ -1337,3 +1337,65 @@ app/views/artikels/index.html.erb:23: unterminated regexp meets end of file
 app/views/artikels/index.html.erb:23: regexp encoding option 'n' differs from source encoding 'UTF-8'
 app/views/artikels/index.html.erb:23: /.../n has a non escaped non ASCII character in non ASCII-8BIT script: /div>
 app/views/artikels/index.html.erb:23: syntax error, unexpected end-of-input, expecting ')'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2953311040616065710)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateOrders (20230908084613)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "orders" ("id" bigserial primary key, "table" integer, "gesamtpreis" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230908084613"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateLineItems (20230908084807)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "line_items" ("id" bigserial primary key, "order_id" integer, "article_id" integer, "anzahl" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230908084807"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2953311040616065710)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/artikelkategories" for 127.0.0.1 at 2023-09-08 10:48:35 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArtikelkategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artikelkategories/index.html.erb within layouts/application
+  [1m[36mArtikelkategorie Load (0.6ms)[0m  [1m[34mSELECT "artikelkategories".* FROM "artikelkategories"[0m
+  ↳ app/views/artikelkategories/index.html.erb:6
+  Rendered artikelkategories/_artikelkategorie.html.erb (Duration: 0.4ms | Allocations: 210)
+  Rendered artikelkategories/_artikelkategorie.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered artikelkategories/_artikelkategorie.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered artikelkategories/index.html.erb within layouts/application (Duration: 11.7ms | Allocations: 16993)
+  Rendered layout layouts/application.html.erb (Duration: 32.2ms | Allocations: 52071)
+Completed 200 OK in 49ms (Views: 36.9ms | ActiveRecord: 4.5ms | Allocations: 60985)
+
+
+Started GET "/orders" for 127.0.0.1 at 2023-09-08 10:48:38 +0200
+Processing by OrdersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (1.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:6
+  Rendered orders/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1084)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 3389)
+Completed 200 OK in 13ms (Views: 8.7ms | ActiveRecord: 1.1ms | Allocations: 4708)
+
+
+Started GET "/line_items" for 127.0.0.1 at 2023-09-08 10:48:44 +0200
+Processing by LineItemsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering line_items/index.html.erb within layouts/application
+  [1m[36mLineItem Load (0.8ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items"[0m
+  ↳ app/views/line_items/index.html.erb:6
+  Rendered line_items/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1073)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3378)
+Completed 200 OK in 14ms (Views: 8.5ms | ActiveRecord: 0.8ms | Allocations: 4734)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2953311040616065710)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTables (20230908090123)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "tables" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230908090123"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2953311040616065710)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m

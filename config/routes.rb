@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :tables
+  resources :line_items
+  resources :orders
   resources :artikelkategories do
     resources :artikels
   end
