@@ -15,8 +15,9 @@
 
     <hr>
 
-    Current Order: <%= @current_order.order_id %>
+    Warenkorb: <%= @current_order.line_items.count %>
     <br>
-    <%= link_to 'Warenkorb leeren', url_for(clear_order_id: 't') %>
+    <%= link_to 'Warenkorb leeren', url_for(clear_order_id: 't') %> |
+    <%= link_to 'Zum Warenkorb', basket_path%>
   </body>
 </html>

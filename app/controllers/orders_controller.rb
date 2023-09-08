@@ -1,6 +1,10 @@
 class OrdersController < ApplicationController
   before_action :set_order, only: %i[ show edit update destroy ]
 
+  # GET /basket
+  def current_order
+  end
+
   # GET /orders or /orders.json
   def index
     @orders = Order.all

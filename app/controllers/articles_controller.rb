@@ -41,12 +41,6 @@ class ArticlesController < ApplicationController
   end
 
   def add
-    if session[:id]
-      session[:id] << @article.id
-    else
-      session[:id] = []
-    end
-    redirect_to articles_url
   end
 
   private

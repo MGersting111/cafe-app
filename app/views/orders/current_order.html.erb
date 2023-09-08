@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Warenkorb</h1>
+
+<div id="orders">
+  <% @current_order.line_items.each do |line_items| %>
+    <%#= render order %>
+    <%= line_items.article.name%>
+    Anzahl: <%= line_items.anzahl%>
+    <p>
+    </p>
+  <% end %>
+</div>
