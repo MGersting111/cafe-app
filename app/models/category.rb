@@ -1,3 +1,3 @@
-class Artikelkategorie < ApplicationRecord
+class Category < ApplicationRecord
   has_many :article
 end

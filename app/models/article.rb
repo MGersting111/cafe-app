@@ -1,3 +1,3 @@
-class Artikel < ApplicationRecord
+class Article < ApplicationRecord
   belongs_to :category
 end
