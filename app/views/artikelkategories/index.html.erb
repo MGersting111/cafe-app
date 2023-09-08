@@ -3,12 +3,13 @@
 <h1>Artikelkategories</h1>
 
 <div id="artikelkategories">
-  <% @artikelkategories.each do |artikelkategory| %>
-    <%= render artikelkategory %>
+  <% @artikelkategories.each do |artikelkategorie| %>
+    <%= render artikelkategorie %>
     <p>
-      <%= link_to "Show this artikelkategorie", artikelkategory %>
+      <%= link_to "Anzeigen", artikelkategorie %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New artikelkategorie", new_artikelkategory_path %>
+<%= link_to "Neue Artikelkategorie", new_artikelkategory_path %> |
+<%= link_to "Neuer Artikel", new_artikel_path %>
