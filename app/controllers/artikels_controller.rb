@@ -1,6 +1,7 @@
 class ArtikelsController < ApplicationController
   before_action :set_artikelkategorie
-  before_action :set_artikel, only: [:show, :edit, :update, :destroy]
+  before_action :set_artikel, only: [:show, :edit, :update, :destroy, :add]
+
 
   def index
     @artikels = @artikelkategorie.artikel
@@ -37,6 +38,15 @@ class ArtikelsController < ApplicationController
   def destroy
     @artikel.destroy
     redirect_to artikelkategory_artikels_url, notice: "Artikel wurde erfolgreich gelöscht."
+  end
+
+  def add
+    if session[:id] 
+      session[:id] << @artikel.id
+    else
+      session[:id] = [] 
+    end
+    redirect_to artikels_url
   end
 
   private
