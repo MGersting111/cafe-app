@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  resources :artikelkategories do
-    resources :artikels
+  resources :categories do
+    resources :articles
   end
-  resources :artikels, only: %i[new create]
+  
+  resources :articles, only: %i[new create]
 
-  root 'artikelkategories#index'
- 
+  root 'categories#index'
 end

@@ -1,14 +1,14 @@
-<h1><%= [@artikelkategorie&.kategorie, 'New artikel'].compact.join(' | ') %></h1>
+<h1><%= [@category&.name, 'Neuer Artikel'].compact.join(' | ') %></h1>
 
-<%= render "form", artikelkategorie: @artikelkategorie, artikel: @artikel %>
+<%= render "form", category: @category, article: @article %>
 <br>
 
 <div>
   <%=
-    if @artikelkategorie
-      link_to "Zurück", artikelkategory_artikels_path(@artikelkategorie)
+    if @category
+      link_to "Zurück", category_articles_path(@category)
     else
-      link_to "Zurück", artikelkategories_path
+      link_to "Zurück", categories_path
     end
   %>
 </div>

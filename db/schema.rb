@@ -14,30 +14,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_06_095552) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "artikelkategories", force: :cascade do |t|
-    t.string "kategorie"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "artikels", force: :cascade do |t|
+  create_table "categories", force: :cascade do |t|
     t.string "name"
-    t.integer "artikelkategorie_id"
-    t.integer "preis"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "bestellung_artikels", force: :cascade do |t|
-    t.integer "id_bestellung"
-    t.integer "id_artikel"
-    t.integer "anzahl"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "bestellungs", force: :cascade do |t|
-    t.integer "tischnummer"
+  create_table "articles", force: :cascade do |t|
+    t.string "name"
+    t.integer "category_id"
+    t.integer "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

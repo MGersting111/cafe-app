@@ -1,20 +1,20 @@
 <%
-  if artikelkategorie
-    path = artikel.id ? artikelkategory_artikel_path(artikelkategorie, artikel) : artikelkategory_artikels_path(artikelkategorie)
-    http_method = artikel.id ? :patch : :post
+  if category
+    path = article.id ? category_article_path(category, article) : category_articles_path(category)
+    http_method = article.id ? :patch : :post
   else
-    path = artikels_path
+    path = articles_path
     http_method = :post
   end
 %>
-<%= form_for(artikel, url: path, method: http_method) do |fb| %>
+<%= form_for(article, url: path, method: http_method) do |fb| %>
 
   <%=
-    if artikelkategorie
-      fb.hidden_field :artikelkategorie_id
+    if category
+      fb.hidden_field :category_id
     else
-      data = Artikelkategorie.all.pluck(:kategorie, :id)
-      fb.select :artikelkategorie_id, options_for_select(data)
+      data = category.all.pluck(:name, :id)
+      fb.select :category_id, options_for_select(data)
     end
   %>
 
@@ -25,7 +25,7 @@
 
   <div>
     <%= fb.label :preis, style: "display: block" %>
-    <%= fb.number_field :preis, step: :any %>
+    <%= fb.number_field :price, step: :any %>
   </div>
 
   <div>
