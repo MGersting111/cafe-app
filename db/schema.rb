@@ -24,6 +24,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_08_090123) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "line_items", force: :cascade do |t|
     t.integer "order_id"
@@ -41,13 +44,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_08_090123) do
   end
 
   create_table "tables", force: :cascade do |t|
-  end
-
-  create_table "articles", force: :cascade do |t|
-    t.string "name"
-    t.integer "category_id"
-    t.integer "price"
-
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
