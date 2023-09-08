@@ -12,5 +12,11 @@
 
   <body>
     <%= yield %>
+
+    <hr>
+
+    Current Order: <%= @current_order.order_id %>
+    <br>
+    <%= link_to 'Warenkorb leeren', url_for(clear_order_id: 't') %>
   </body>
 </html>
