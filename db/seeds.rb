@@ -1,8 +1,3 @@
 
-#Artikel.destroy_all
-#Artikelkategorie.destroy_all
-
-
-
-artikelkategorie = Artikelkategorie.create([{kategorie: "Snacks"}, {kategorie: "Kaltgetränke"}, {kategorie: "Heißgetränke"}])
-artikel = Artikel.create([{name: "Brezel", artikelkategorie_id: 1, preis: 100}, {name: "Fanta", artikelkategorie_id: 2, preis: 150}])
+article = Article.create([{name: "Brezel", category_id: 1, price: 100}, {name: "Fanta", category_id: 2, price: 150}])
+category = Category.create([{name: "Snacks"}, {name: "Kaltgetränke"}, {name: "Heißgetränke"}])
