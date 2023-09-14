@@ -14,7 +14,7 @@
     <% articleId = line_items.article.id %>
 
     <% if lineItems.key?(articleId) %>
-      <% lineItems[articleId].anzahl = lineItems[articleId].anzahl + line_items.anzahl %>
+      <% lineItems[articleId].anzahl += line_items.anzahl %>
     <% else %>
       <% lineItems[articleId] = line_items %>
     <% end %>
@@ -28,7 +28,7 @@
     Preis: <%= price %>€
     <p>
     </p>
-    <% totalPrice = totalPrice + price %>
+    <% totalPrice += price %>
   <% end %>
 
   <hr>
