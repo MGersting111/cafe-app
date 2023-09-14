@@ -4,7 +4,6 @@
 
 <div>
   <%= link_to "Editieren", edit_category_path(@category) %> |
-  <%= link_to "Zurück", categories_path %> |
   <%= link_to "Anzeigen", category_articles_path(@category)%>
 
   <%= button_to "Löschen", @category, method: :delete %>

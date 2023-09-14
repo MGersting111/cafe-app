@@ -2,13 +2,3 @@
 
 <%= render "form", category: @category, article: @article %>
 <br>
-
-<div>
-  <%=
-    if @category
-      link_to "Zurück", category_articles_path(@category)
-    else
-      link_to "Zurück", categories_path
-    end
-  %>
-</div>

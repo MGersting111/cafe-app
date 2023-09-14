@@ -24,6 +24,7 @@ class OrdersController < ApplicationController
       redirect_to order_url(@order), notice: "Order was successfully created."
     else
       render :new
+    end
   end
 
   def update
