@@ -6,7 +6,12 @@
   <% @categories.each do |category| %>
     <%= render category %>
     <p>
-      <%= link_to "Anzeigen", category %>
+      <%= link_to "Anzeigen", category_articles_path(category) %> |
+      <%= link_to "Editieren", edit_category_path(category) %> |
+      <%= data = category.article.all.pluck(:name, :id)
+        select_tag(category.id, options_for_select(data))
+      %>
+      <%= button_to "Löschen", category, method: :delete %>
     </p>
   <% end %>
 </div>

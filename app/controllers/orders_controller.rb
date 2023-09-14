@@ -4,6 +4,12 @@ class OrdersController < ApplicationController
   def current_order
   end
 
+  def grand_total
+    self.line_items.map{ |i|
+      i.anzahl
+    }.sum
+  end
+
   def index
     @orders = Order.all
   end
