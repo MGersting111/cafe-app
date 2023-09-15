@@ -15,7 +15,7 @@
 
     <hr>
 
-    Warenkorb:
+    Warenkorb: <%= @current_order.grand_total %>
     <% if @current_order.line_items.count > 0 %>
         Kame...hame...kame...hame.........
         <% if @current_order.line_items.count > 4 %>

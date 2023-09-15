@@ -4,33 +4,17 @@
 
 <div id="orders">
   <% totalPrice = 0 %>
-  <% orderedLineItems = []%>
-  <% @current_order.line_items.each do |line_items| %>
-    <% orderedLineItems << line_items %>
-  <% end %>
-
-  <% lineItems = Hash.new %>
-  <% orderedLineItems.each do |line_items| %>
-    <% articleId = line_items.article.id %>
-
-    <% if lineItems.key?(articleId) %>
-      <% lineItems[articleId].anzahl += line_items.anzahl %>
-    <% else %>
-      <% lineItems[articleId] = line_items %>
-    <% end %>
-  <% end %>
-
-  <% lineItems.each_key do |articleId| %>
-    <% line_item = lineItems[articleId] %>
-    <% price = line_item.article.price * line_item.anzahl / 100 %>
+  <% price = 0 %>
+  <% @lineItems.each_key do |articleId| %>
+    <% line_item = @lineItems[articleId] %>
     <%= line_item.article.name %> |
     Anzahl: <%= line_item.anzahl%> |
-    Preis: <%= price %>€
+    Preis: <%= price = OrdersController.price(line_item) %>€
     <p>
     </p>
     <% totalPrice += price %>
   <% end %>
-
+<%= @a %>
   <hr>
   Der Gesamtpreis beträgt sagenumwobene : <%= totalPrice %>€
 </div>
