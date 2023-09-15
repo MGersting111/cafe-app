@@ -2,8 +2,6 @@ class Order < ApplicationRecord
   has_many :line_items
 
   def grand_total
-    self.line_items.map{ |i|
-      i.anzahl
-    }.sum
+    @grand_total ||= line_items.sum(:anzahl)
   end
 end
