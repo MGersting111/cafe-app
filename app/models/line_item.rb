@@ -2,6 +2,6 @@ class LineItem < ApplicationRecord
   belongs_to :article
 
   def total
-    anzahl * article.price
+    count * article.price
   end
 end

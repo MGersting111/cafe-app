@@ -14,7 +14,7 @@ class LineItemsTest < ApplicationSystemTestCase
     visit line_items_url
     click_on "New line item"
 
-    fill_in "Anzahl", with: @line_item.anzahl
+    fill_in "Anzahl", with: @line_item.count
     fill_in "Article", with: @line_item.article_id
     fill_in "Order", with: @line_item.order_id
     click_on "Create Line item"
@@ -27,7 +27,7 @@ class LineItemsTest < ApplicationSystemTestCase
     visit line_item_url(@line_item)
     click_on "Edit this line item", match: :first
 
-    fill_in "Anzahl", with: @line_item.anzahl
+    fill_in "Anzahl", with: @line_item.count
     fill_in "Article", with: @line_item.article_id
     fill_in "Order", with: @line_item.order_id
     click_on "Update Line item"

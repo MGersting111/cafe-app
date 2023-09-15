@@ -3,9 +3,9 @@
 one:
   id_bestellunginteger: MyString
   id_artikel: 1
-  anzahl: 1
+  count: 1
 
 two:
   id_bestellunginteger: MyString
   id_artikel: 1
-  anzahl: 1
+  count: 1

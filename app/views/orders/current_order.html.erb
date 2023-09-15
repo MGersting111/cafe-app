@@ -5,7 +5,7 @@
 <div id="orders">
   <% @current_order.line_items.each do |line_item| %>
     <%= line_item.article.name %> |
-    Anzahl: <%= line_item.anzahl%> |
+    Anzahl: <%= line_item.count%> |
     Preis: <%= line_item.total %>€
     <br>
   <% end %>
