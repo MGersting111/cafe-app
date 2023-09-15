@@ -1,8 +1,9 @@
-p
-  = notice
+p= notice
+
 = render @category
+
 div
   = link_to "Editieren", edit_category_path(@category)
-  |  | 
+  = '|'
   = link_to "Anzeigen", category_articles_path(@category)
   = button_to "Löschen", @category, method: :delete
