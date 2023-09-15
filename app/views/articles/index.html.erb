@@ -21,4 +21,4 @@
   <% end %>
 </div>
 
-<%= link_to "Neuer Artikel", new_category_article_path(@category) %>
+<%= link_to "Neuer Artikel", new_category_article_path(@category) if user_signed_in? %>
