@@ -3,16 +3,16 @@ class LineItemsController < ApplicationController
 
 
   def create
-    @line_item = @current_order.line_items.find_by(article_id: line_item_params[:article_id])
-    @line_item = @current_order.line_items.build(line_item_params.except(:count)) if !@line_item
-    @line_item.count += line_item_params[:count].to_i
+    @line_item = @current_order.line_items.find_by(article_id: line_create_params[:article_id])
+    @line_item = @current_order.line_items.build(line_create_params.except(:count)) if !@line_item
+    @line_item.count += line_create_params[:count].to_i
     @line_item.save!
 
     redirect_to category_articles_path(@line_item.article.category)
   end
 
   def update
-    if @line_item.update(line_item_params)
+    if @line_item.update(line_update_params)
       redirect_to line_item_url(@line_item), notice: "Line item was successfully updated."
     else
       render :edit
@@ -30,7 +30,11 @@ class LineItemsController < ApplicationController
       @line_item = LineItem.find(params[:id])
     end
 
-    def line_item_params
+    def line_create_params
       params.require(:line_item).permit(:article_id, :count)
+    end
+
+    def line_update_params
+      params.require(:line_item).permit(:count)
     end
 end

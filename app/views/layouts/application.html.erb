@@ -16,8 +16,7 @@
         <%= link_to "Edit Profile",
         edit_user_registration_path %> ||
 
-        <%= link_to "Sign Out",
-        destroy_user_session_path, method: :delete %>
+        <%=  button_to "Sign Out", destroy_user_session_path, method: :delete %>
     <% else %>
         <%= link_to "Sign In",
         new_user_session_path %>
@@ -27,7 +26,7 @@
 
     <hr>
 
-    Warenkorb: <%= @current_order.grand_total %>
+    Warenkorb: <%= @current_order.item_count %>
 
     <br>
     <%= link_to 'Warenkorb leeren', url_for(clear_order_id: 't') %> |
