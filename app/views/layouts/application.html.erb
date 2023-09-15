@@ -11,6 +11,9 @@
   </head>
 
   <body>
+    <%= link_to "",
+      _path, %>
+
     <%= yield %>
 
     <hr>
@@ -32,5 +35,9 @@
     <%= link_to 'Zum Warenkorb', basket_path%> |
     <%= link_to 'Zurück du Schlingel', 'javascript:history.back()' %> |
     <%= link_to 'Zurück zu allen Kategorien, opfer', categories_path %>
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
   </body>
 </html>
