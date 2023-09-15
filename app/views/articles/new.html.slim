@@ -1,0 +1,4 @@
+h1
+  = [@category&.name, 'Neuer Artikel'].compact.join(' | ')
+= render "form", category: @category, article: @article
+br
