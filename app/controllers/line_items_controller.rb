@@ -3,9 +3,11 @@ class LineItemsController < ApplicationController
 
 
   def create
-    create_params = {order_id: @current_order.id}
-    create_params = create_params.merge(line_item_params)
-    @line_item = LineItem.create(create_params)
+    @line_item = @current_order.line_items.find_by(article_id: line_item_params[:article_id])
+    @line_item = @current_order.line_items.build(line_item_params.except(:count)) if !@line_item
+    @line_item.count += line_item_params[:count].to_i
+    @line_item.save!
+
     redirect_to category_articles_path(@line_item.article.category)
   end
 
@@ -29,6 +31,6 @@ class LineItemsController < ApplicationController
     end
 
     def line_item_params
-      params.require(:line_item).permit(:order_id, :article_id, :anzahl)
+      params.require(:line_item).permit(:article_id, :count)
     end
 end
