@@ -1,9 +1,9 @@
-p[style="color: green"]
+p
   = notice
 h1
   | Warenkorb
 #orders
-  - @current_order.line_items.sort_by do |li| li.article.name}.each do |line_item|
+  - @current_order.line_items.sort_by { |li| li.article.name }.each do |line_item|
     = line_item.article.name
     |  | Anzahl: 
     = line_item.count
