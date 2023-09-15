@@ -11,8 +11,14 @@
   </head>
 
   <body>
-    <%= link_to "",
-      _path, %>
+    <%= link_to "Sign In",
+      new_user_session_path %> ||
+
+      <%= link_to "Edit Profile",
+      edit_user_registration_path %> ||
+
+      <%= link_to "Sign Out",
+      destroy_user_session_path, method: :delete %>
 
     <%= yield %>
 
