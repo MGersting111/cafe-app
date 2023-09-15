@@ -25,16 +25,6 @@
     <hr>
 
     Warenkorb: <%= @current_order.grand_total %>
-    <% if @current_order.line_items.count > 0 %>
-        Kame...hame...kame...hame.........
-        <% if @current_order.line_items.count > 4 %>
-          HAAAAAAAAAAAAA
-        <% else %>
-          FAIL
-        <% end %>
-    <% else %>
-      FAIL
-    <% end %>
 
     <br>
     <%= link_to 'Warenkorb leeren', url_for(clear_order_id: 't') %> |
