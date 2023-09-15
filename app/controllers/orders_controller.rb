@@ -1,13 +1,25 @@
 class OrdersController < ApplicationController
   before_action :set_order, only: %i[ show edit update destroy ]
 
-  def current_order
+  def self.price line_item
+    price = line_item.article.price * line_item.anzahl / 100
   end
 
-  def grand_total
-    self.line_items.map{ |i|
-      i.anzahl
-    }.sum
+  def current_order
+    @lineItems = Hash.new
+    orderedLineItems = []
+    @current_order.line_items.each do |line_items|
+      orderedLineItems << line_items
+    end
+    orderedLineItems.each do |line_items|
+      articleId = line_items.article.id
+
+      if @lineItems.key?(articleId)
+        @lineItems[articleId].anzahl += line_items.anzahl
+      else
+        @lineItems[articleId] = line_items
+      end
+    end
   end
 
   def index
