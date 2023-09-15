@@ -6,7 +6,7 @@
   <% @current_order.line_items.each do |line_item| %>
     <%= line_item.article.name %> |
     Anzahl: <%= line_item.count%> |
-    Preis: <%= line_item.total %>€
+    Preis: <%= line_item.total / 100 #bitte nicht meckern Andy %>€
     <br>
   <% end %>
 <%= @a %>

@@ -6,15 +6,15 @@
   <% @categories.each do |category| %>
     <%= render category %>
     <p>
-      <%= link_to "Anzeigen", category_articles_path(category) %> |
-      <%= link_to "Editieren", edit_category_path(category) %> |
-      <%= data = category.article.all.pluck(:name, :id)
-        select_tag(category.id, options_for_select(data))
-      %>
-      <%= button_to "Löschen", category, method: :delete %>
+      <%= link_to "Hier ... Artikel", category_articles_path(category) %>
+      <% if user_signed_in? %>
+        | <%= link_to "Editieren", edit_category_path(category) %>
+        <%= button_to "Löschen", category, method: :delete %>
+      <% end %>
     </p>
   <% end %>
 </div>
-
-<%= link_to "Neue Artikelkategorie", new_category_path %> |
-<%= link_to "Neuer Artikel", new_article_path %>
+<% if user_signed_in? %>
+  <%= link_to "Neue Artikelkategorie", new_category_path %> |
+  <%= link_to "Neuer Artikel", new_article_path %>
+<% end %>

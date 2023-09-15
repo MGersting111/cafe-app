@@ -11,14 +11,17 @@
   </head>
 
   <body>
-    <%= link_to "Sign In",
-      new_user_session_path %> ||
 
-      <%= link_to "Edit Profile",
-      edit_user_registration_path %> ||
+    <% if user_signed_in? %>
+        <%= link_to "Edit Profile",
+        edit_user_registration_path %> ||
 
-      <%= link_to "Sign Out",
-      destroy_user_session_path, method: :delete %>
+        <%= link_to "Sign Out",
+        destroy_user_session_path, method: :delete %>
+    <% else %>
+        <%= link_to "Sign In",
+        new_user_session_path %>
+    <% end %>
 
     <%= yield %>
 
@@ -29,8 +32,8 @@
     <br>
     <%= link_to 'Warenkorb leeren', url_for(clear_order_id: 't') %> |
     <%= link_to 'Zum Warenkorb', basket_path%> |
-    <%= link_to 'Zurück du Schlingel', 'javascript:history.back()' %> |
-    <%= link_to 'Zurück zu allen Kategorien, opfer', categories_path %>
+    <%= link_to 'Seite Zurück', 'javascript:history.back()' %> |
+    <%= link_to 'Zurück zu allen Kategorien', categories_path %>
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
