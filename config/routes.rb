@@ -11,5 +11,7 @@ Rails.application.routes.draw do
 
   get 'basket', to: 'orders#current_order'
 
+  post 'basket', to: 'orders#order_complete'
+
   root 'categories#index'
 end

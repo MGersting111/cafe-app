@@ -14,4 +14,9 @@ class ApplicationController < ActionController::Base
   	session[:order_id] ||= SecureRandom.uuid
   	@current_order = Order.find_or_create_by(order_id: session[:order_id])
   end
+
+  def spawn_new_current_order
+    session[:order_id] = nil
+    setup_current_order
+  end
 end

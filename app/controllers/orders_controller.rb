@@ -37,6 +37,12 @@ class OrdersController < ApplicationController
     redirect_to orders_url, notice: "Order was successfully destroyed."
   end
 
+  def order_complete
+    #
+    spawn_new_current_order
+    redirect_to categories_path, notice: "Bestellung wurde abgeschlossen"
+  end
+
   private
 
     def set_order

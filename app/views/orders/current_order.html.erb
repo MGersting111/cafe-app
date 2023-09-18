@@ -18,5 +18,8 @@
   <% end %>
   <hr>
   Der Gesamtpreis beträgt sagenumwobene : <%= format_money(@current_order.grand_total) %>
+  <hr>
+  <%= button_to "Bestellung abschließen", basket_path,method: :post%>
+
 </div>
 
