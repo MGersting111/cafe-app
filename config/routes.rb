@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   resources :tables
 
   get 'basket', to: 'orders#current_order'
+  post 'basket', to: 'orders#order_complete'
+  post 'order_finished/:id', to: 'orders#order_finished', as: :order_finished
+
 
   root 'categories#index'
 end
