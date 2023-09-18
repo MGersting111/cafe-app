@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-  before_action :set_order, only: %i[ show edit update destroy ]
+  before_action :set_order, only: %i[ show edit update destroy order_finished]
 
   def index
     @orders = Order.all
@@ -38,9 +38,21 @@ class OrdersController < ApplicationController
   end
 
   def order_complete
-    #
-    spawn_new_current_order
-    redirect_to categories_path, notice: "Bestellung wurde abgeschlossen"
+    if @current_order.grand_total != 0
+      #gesamtpreis wird in db gespeichert
+      #state wird in placed geändert
+      @current_order.update_column(:grand_total, @current_order.grand_total)
+      @current_order.update_column(:state, "placed")
+      spawn_new_current_order
+      redirect_to categories_path, notice: "Bestellung wurde abgeschlossen"
+    else
+      redirect_to categories_path, notice: "Keine Artikel im Warenkorb"
+    end
+  end
+
+  def order_finished
+    @order.update_column(:state, "finished")
+    redirect_to orders_url
   end
 
   private
@@ -50,6 +62,6 @@ class OrdersController < ApplicationController
     end
 
     def order_params
-      params.require(:order).permit(:table, :gesamtpreis)
+      params.require(:order).permit(:table, :grand_total)
     end
 end

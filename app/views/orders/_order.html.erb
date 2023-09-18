@@ -6,7 +6,12 @@
 
   <p>
     <strong>Gesamtpreis:</strong>
-    <%= order.gesamtpreis %>
+    <%= format_money(order.grand_total) %>
+  </p>
+
+  <p>
+    <strong>Erstellt am:</strong>
+    <%= order.created_at %>
   </p>
 
 </div>

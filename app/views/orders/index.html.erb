@@ -1,14 +1,17 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Orders</h1>
+<h1>Alle offenen Bestellungen #Henry mach mal schneller <3</h1>
+
 
 <div id="orders">
   <% @orders.each do |order| %>
+  <%if order.state == "placed"%>
     <%= render order %>
     <p>
       <%= link_to "Show this order", order %>
+      <hr>
     </p>
+    <% end %>
   <% end %>
 </div>
 
-<%= link_to "New order", new_order_path %>
