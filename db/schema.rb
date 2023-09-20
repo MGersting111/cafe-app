@@ -38,7 +38,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_18_111942) do
 
   create_table "orders", force: :cascade do |t|
     t.integer "table"
-    t.integer "grand_total"
+    t.integer "gesamtpreis"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "order_id", null: false
@@ -57,10 +57,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_18_111942) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.string "confirmation_token"
-    t.datetime "confirmed_at"
-    t.datetime "confirmation_sent_at"
-    t.string "unconfirmed_email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true

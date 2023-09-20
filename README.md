@@ -1,30 +1,24 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to the Cafe-App - proudly built with ❤️ and ☕.
+At the core a rather Rails 7 & bootstrap.
 
-Things you may want to cover:
+After checking out the source install the bundle:
 
-* Ruby version
+```
+  bundle install
+```
 
-* System dependencies
+Then setup the database
 
-* Configuration
+```
+  ./bin/rails db:create
+  ./bin/rails db:migrate
+  ./bin/rails db:seed
+```
 
-* Database creation
+Start the development server with
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# cafe-app
-
-
-* vllt klappt das hier jz endlich mal beim ersten anlauf wundervoller Micha
-*hier klappt gar nichts wie es soll
-* kannst du das hier lesen toller Micha?
+```
+  foreman start -f Procfile.dev
+```
