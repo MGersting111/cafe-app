@@ -42,6 +42,7 @@ class OrdersController < ApplicationController
       #gesamtpreis wird in db gespeichert
       #state wird in placed geändert
       @current_order.update_column(:grand_total, @current_order.grand_total)
+      @current_order.update_column(:table)
       @current_order.update_column(:state, "placed")
       spawn_new_current_order
       redirect_to categories_path, notice: "Bestellung wurde abgeschlossen"
