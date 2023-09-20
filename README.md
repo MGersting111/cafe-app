@@ -9,6 +9,16 @@ After checking out the source install the bundle:
   bundle install
 ```
 
+you need the following packages
+
+```
+brew install yarn
+brew install node
+brew install libsass
+brew install node-sass
+yarn install
+```
+
 Then setup the database
 
 ```
