@@ -1,7 +1,7 @@
 <div id="<%= dom_id order %>">
   <p>
     <strong>Table:</strong>
-    <%= order.table %>
+    <%= order.table&.name || "-----.-----"%>
   </p>
 
   <p>

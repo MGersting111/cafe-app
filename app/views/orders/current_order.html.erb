@@ -19,7 +19,7 @@
 
    <%= form_with(model: @current_order) do |form| %>
         Tisch wählen:
-        <%= form.select :table, options_for_select(1..10) %>
+        <%= form.select :table_id, options_for_select(Table.all.pluck(:name, :id)) %>
         <%= form.submit "Änderung Speichern"%>
       <% end %>
 

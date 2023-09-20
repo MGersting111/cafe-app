@@ -25,8 +25,12 @@ class OrdersController < ApplicationController
   end
 
   def update
-    if @order.update(order_params)
-      redirect_to order_url(@order), notice: "Order was successfully updated."
+    table_id = order_params.delete(:table_id)
+    table = table_id ? Table.find(table_id) : nil
+    update_params = order_params.merge(table: table)
+
+    if @order.update(update_params)
+      redirect_to basket_path, notice: "Order was successfully updated."
     else
       render :edit
     end
@@ -42,7 +46,6 @@ class OrdersController < ApplicationController
       #gesamtpreis wird in db gespeichert
       #state wird in placed geändert
       @current_order.update_column(:grand_total, @current_order.grand_total)
-      @current_order.update_column(:table)
       @current_order.update_column(:state, "placed")
       spawn_new_current_order
       redirect_to categories_path, notice: "Bestellung wurde abgeschlossen"
@@ -76,6 +79,6 @@ class OrdersController < ApplicationController
     end
 
     def order_params
-      params.require(:order).permit(:table, :grand_total)
+      params.require(:order).permit(:table_id)
     end
 end
