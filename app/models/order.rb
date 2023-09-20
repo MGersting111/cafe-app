@@ -1,7 +1,11 @@
 class Order < ApplicationRecord
+  ALLOWED_STATES = %w[ running placed served payed]
   has_many :line_items
-  allowed_states = %w[ running placed served payed]
-  validates :state, inclusion: allowed_states
+
+
+  validates :state, 
+            inclusion: { in: ALLOWED_STATES },
+            presence: true
 
   def item_count
     @item_count ||= line_items.sum(:count)
