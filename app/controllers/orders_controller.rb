@@ -60,7 +60,7 @@ class OrdersController < ApplicationController
   end
 
   def order_payed
-    @order.update_column(:state, "played")
+    @order.update_column(:state, "payed")
     redirect_to orders_url
   end
 
