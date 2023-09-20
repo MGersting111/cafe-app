@@ -42,15 +42,14 @@ class OrdersController < ApplicationController
   end
 
   def order_complete
-    if @current_order.grand_total != 0
+    if @current_order.empty?
+      redirect_to categories_path, notice: "Fehler: Keine Artikel im Warenkorb"
+    else
       #gesamtpreis wird in db gespeichert
       #state wird in placed geändert
-      @current_order.update_column(:grand_total, @current_order.grand_total)
-      @current_order.update_column(:state, "placed")
+      @current_order.update(state: "placed")
       spawn_new_current_order
       redirect_to categories_path, notice: "Bestellung wurde abgeschlossen"
-    else
-      redirect_to categories_path, notice: "Fehler: Keine Artikel im Warenkorb"
     end
   end
 

@@ -14,4 +14,8 @@ class Order < ApplicationRecord
   def grand_total
     line_items.map{|li| li.total}.sum
   end
+
+  def empty?
+    line_items.none?
+  end
 end
