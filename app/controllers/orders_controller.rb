@@ -44,10 +44,9 @@ class OrdersController < ApplicationController
   def order_complete
     if @current_order.empty?
       redirect_to categories_path, notice: "Fehler: Keine Artikel im Warenkorb"
-    else
-      #gesamtpreis wird in db gespeichert
-      #state wird in placed geändert
-      @current_order.update(state: "placed")
+    elsif !@current_order.update(state: "placed")
+      redirect_to categories_path, notice: "Fehler: Bestellung konnte nicht aufgegeben werden"
+     else
       spawn_new_current_order
       redirect_to categories_path, notice: "Bestellung wurde abgeschlossen"
     end
