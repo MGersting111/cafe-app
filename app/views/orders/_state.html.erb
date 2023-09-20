@@ -1,0 +1,14 @@
+<h1></h1>
+
+<% orderState = state %>
+<div id="orders">
+  <% @orders.each do |order| %>
+  <%if order.state == orderState && order.created_at.day == Time.now.day %>
+    <%= render order %>
+    <p>
+      <%= link_to "Bestellung Anzeigen", order %>
+      <hr>
+    </p>
+    <% end %>
+  <% end %>
+</div>
