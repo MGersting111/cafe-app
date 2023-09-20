@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-  before_action :set_order, only: %i[ show edit update destroy order_finished]
+  before_action :set_order, only: %i[ show edit update destroy order_finished order_served]
 
   def index
     @orders = Order.all
@@ -52,6 +52,11 @@ class OrdersController < ApplicationController
 
   def order_finished
     @order.update_column(:state, "finished")
+    redirect_to orders_url
+  end
+
+  def order_served
+    @order.update_column(:state, "served")
     redirect_to orders_url
   end
 
