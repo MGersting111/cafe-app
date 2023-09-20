@@ -1,0 +1,14 @@
+<h1>Bediente und unbezahlte Bestellungen </h1>
+
+
+<div id="orders">
+  <% @orders.each do |order| %>
+  <%if order.state == "payed" && order.created_at.day == Time.now.day %>
+    <%= render order %>
+    <p>
+      <%= link_to "Bestellung Anzeigen", order %>
+      <hr>
+    </p>
+    <% end %>
+  <% end %>
+</div>
