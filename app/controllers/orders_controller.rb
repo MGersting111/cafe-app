@@ -46,7 +46,7 @@ class OrdersController < ApplicationController
       spawn_new_current_order
       redirect_to categories_path, notice: "Bestellung wurde abgeschlossen"
     else
-      redirect_to categories_path, notice: "Keine Artikel im Warenkorb"
+      redirect_to categories_path, notice: "Fehler: Keine Artikel im Warenkorb"
     end
   end
 
