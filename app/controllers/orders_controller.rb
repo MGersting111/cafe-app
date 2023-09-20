@@ -50,21 +50,21 @@ class OrdersController < ApplicationController
     end
   end
 
-  def order_payed
-    @order.update_column(:state, "payed")
-    redirect_to orders_url
-  end
-
-  def orders_payed
-    @orders = Order.all
-  end
-
   def order_served
     @order.update_column(:state, "served")
     redirect_to orders_url
   end
 
   def orders_served
+    @orders = Order.all
+  end
+
+  def order_payed
+    @order.update_column(:state, "played")
+    redirect_to orders_url
+  end
+
+  def orders_payed
     @orders = Order.all
   end
 
