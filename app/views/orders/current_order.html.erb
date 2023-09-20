@@ -16,6 +16,13 @@
       <% end %>
     <%= button_to "Entfernen", line_item_path(line_item), method: :delete %>
   <% end %>
+
+   <%= form_with(model: @current_order) do |form| %>
+        Tisch wählen:
+        <%= form.select :table, options_for_select(1..10) %>
+        <%= form.submit "Änderung Speichern"%>
+      <% end %>
+
   <hr>
   Der Gesamtpreis beträgt sagenumwobene : <%= format_money(@current_order.grand_total) %>
   <hr>
