@@ -51,7 +51,7 @@ class OrdersController < ApplicationController
   end
 
   def order_served
-    @order.update_column(:state, "served")
+    @order.update(state: "served")
     redirect_to orders_url
   end
 
@@ -60,7 +60,7 @@ class OrdersController < ApplicationController
   end
 
   def order_payed
-    @order.update_column(:state, "payed")
+    @order.update(state: "payed")
     redirect_to orders_url
   end
 
