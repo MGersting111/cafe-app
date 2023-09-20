@@ -35,7 +35,9 @@
     <%= link_to 'Zurück zu allen Kategorien', categories_path %>
 
     <% if user_signed_in? %>
-      <%= link_to 'Alle aktiven Bestellungen anzeigen', orders_path%>
+      | <%= link_to 'Alle aktiven Bestellungen anzeigen', orders_path%> ||
+      <%= link_to 'Alle unbezahlten Bestellungen', served_path%> ||
+      <%= link_to 'Abgeschlossenen Bestellungen', payed_path%>
     <% end %>
 
     <!-- <p class="notice"><%= notice %></p> -->

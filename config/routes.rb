@@ -11,8 +11,10 @@ Rails.application.routes.draw do
 
   get 'basket', to: 'orders#current_order'
   post 'basket', to: 'orders#order_complete'
-  post 'order_finished/:id', to: 'orders#order_finished', as: :order_finished
-
+  post 'order_payed/:id', to: 'orders#order_payed', as: :order_payed
+  post 'order_served/:id', to: 'orders#order_served', as: :order_served
+  get 'served', to: 'orders#orders_served'
+  get 'payed', to: 'orders#orders_payed'
 
   root 'categories#index'
 end

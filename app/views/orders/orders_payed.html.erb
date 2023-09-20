@@ -1,11 +1,9 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Alle offenen Bestellungen</h1>
+<h1>Bediente und unbezahlte Bestellungen </h1>
 
 
 <div id="orders">
   <% @orders.each do |order| %>
-  <%if order.state == "placed" && order.created_at.day == Time.now.day %>
+  <%if order.state == "payed" && order.created_at.day == Time.now.day %>
     <%= render order %>
     <p>
       <%= link_to "Bestellung Anzeigen", order %>
@@ -14,4 +12,3 @@
     <% end %>
   <% end %>
 </div>
-

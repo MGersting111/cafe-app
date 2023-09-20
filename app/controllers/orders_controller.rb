@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-  before_action :set_order, only: %i[ show edit update destroy order_finished]
+  before_action :set_order, only: %i[ show edit update destroy order_payed order_served ]
 
   def index
     @orders = Order.all
@@ -46,13 +46,26 @@ class OrdersController < ApplicationController
       spawn_new_current_order
       redirect_to categories_path, notice: "Bestellung wurde abgeschlossen"
     else
-      redirect_to categories_path, notice: "Keine Artikel im Warenkorb"
+      redirect_to categories_path, notice: "Fehler: Keine Artikel im Warenkorb"
     end
   end
 
-  def order_finished
-    @order.update_column(:state, "finished")
+  def order_served
+    @order.update_column(:state, "served")
     redirect_to orders_url
+  end
+
+  def orders_served
+    @orders = Order.all
+  end
+
+  def order_payed
+    @order.update_column(:state, "played")
+    redirect_to orders_url
+  end
+
+  def orders_payed
+    @orders = Order.all
   end
 
   private
