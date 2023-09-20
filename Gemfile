@@ -76,3 +76,9 @@ group :test do
 end
 
 gem "pry", "~> 0.14.2"
+
+gem "cssbundling-rails", "~> 1.3"
+
+gem "foreman", "~> 0.87.2"
+
+gem "jsbundling-rails", "~> 1.2"
