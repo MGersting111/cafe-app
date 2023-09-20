@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_20_171000) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_20_173000) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -42,7 +42,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_20_171000) do
     t.string "order_id", null: false
     t.string "state", default: "running"
     t.integer "table_id"
-    t.integer "grand_total"
     t.index ["order_id"], name: "index_orders_on_order_id"
   end
 
