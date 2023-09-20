@@ -13,7 +13,7 @@ class LineItemsController < ApplicationController
 
   def update
     if @line_item.update(line_update_params)
-      redirect_to line_item_url(@line_item), notice: "Line item was successfully updated."
+      redirect_to basket_path, notice: "Line item was successfully updated."
     else
       render :edit
     end
