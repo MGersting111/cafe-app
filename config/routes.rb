@@ -16,5 +16,8 @@ Rails.application.routes.draw do
   get 'served', to: 'orders#orders_served'
   get 'payed', to: 'orders#orders_payed'
 
+  #Tables
+  get 'table/1', to: 'categories#index'
+
   root 'categories#index'
 end
