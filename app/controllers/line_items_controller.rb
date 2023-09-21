@@ -4,8 +4,8 @@ class LineItemsController < ApplicationController
   before_action :set_line_item, only: %i[update destroy]
 
   def create
-    @line_item = @current_order.line_items.find_by(article_id: line_create_params[:article_id])
-    @line_item ||= @current_order.line_items.build(line_create_params.except(:count))
+    @line_item = find_or_build_line_item
+
     @line_item.count += line_create_params[:count].to_i
     @line_item.save!
 
@@ -37,5 +37,10 @@ class LineItemsController < ApplicationController
 
   def line_update_params
     params.require(:line_item).permit(:count)
+  end
+
+  def find_or_build_line_item
+    line_item = @current_order.line_items.find_by(article_id: line_create_params[:article_id])
+    line_item || @current_order.line_items.build(line_create_params.except(:count))
   end
 end
