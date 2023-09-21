@@ -1,9 +1,9 @@
 = form_with(model: order) do |form|
   - if order.errors.any?
-    div[style="color: red"]
+    div
       h2
         = pluralize(order.errors.count, "error")
-        |  prohibited this order from being saved:
+        = " prohibited this order from being saved:"
       ul
         - order.errors.each do |error|
           li

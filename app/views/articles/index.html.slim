@@ -1,7 +1,9 @@
-p[style="color: green"]
+p
   = notice
+
 h1
-  | Artikel
+  = "Artikel"
+
 #articles
   = render "articlecat", category: @category
   hr
@@ -9,10 +11,11 @@ h1
     = render "article", article: article
     p
       = link_to "Anzeigen", category_article_path(@category, article)
-      |  | 
+      = " | "
       - line_item = LineItem.new(count: 1, article: article)
       = form_with(model: line_item) do |form|
         = form.hidden_field :article_id
         = form.select :count, options_for_select(1..10)
         = form.submit "Zum Warenkorb hinzufügen"
+
 = link_to "Neuer Artikel", new_category_article_path(@category) if user_signed_in?

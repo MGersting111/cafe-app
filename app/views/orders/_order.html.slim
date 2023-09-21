@@ -1,15 +1,9 @@
-| <div id="
-= dom_id order
-| "> 
 p
-  strong
-    | Table:
-  = order.table&.name || "-----.-----"
+  strong= "Table:"
+  = order.table&.name || "-/-"
 p
-  strong
-    | Gesamtpreis:
+  strong= "Gesamtpreis:"
   = format_money(order.grand_total)
 p
-  strong
-    | Erstellt am:
+  strong= "Erstellt am:"
   = order.created_at

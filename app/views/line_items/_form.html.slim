@@ -1,9 +1,9 @@
 = form_with(model: line_item) do |form|
   - if line_item.errors.any?
-    div[style="color: red"]
+    div
       h2
         = pluralize(line_item.errors.count, "error")
-        |  prohibited this line_item from being saved:
+        = " prohibited this line_item from being saved:"
       ul
         - line_item.errors.each do |error|
           li

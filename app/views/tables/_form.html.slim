@@ -1,9 +1,9 @@
 = form_with(model: table) do |form|
   - if table.errors.any?
-    div[style="color: red"]
+    div
       h2
         = pluralize(table.errors.count, "error")
-        |  prohibited this table from being saved:
+        = " prohibited this table from being saved:"
       ul
         - table.errors.each do |error|
           li

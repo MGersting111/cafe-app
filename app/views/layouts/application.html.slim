@@ -2,39 +2,41 @@ doctype html
 html
   head
     title
-      | CafeApp
+      = "CafeApp"
     meta[name="viewport" content="width=device-width,initial-scale=1"]
     = csrf_meta_tags
     = csp_meta_tag
-    = stylesheet_link_tag "application", "data-turbo-track": "reload"
-    = javascript_include_tag "application", "data-turbo-track": "reload", defer: true
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "application", defer: true
   body
     - if user_signed_in?
       = link_to "Edit Profile",
       -         edit_user_registration_path
-      |  || 
+      = " | "
       =  button_to "Sign Out", destroy_user_session_path, method: :delete
     - else
       = link_to "Sign In",
       -         new_user_session_path
     = yield
     hr
-    |  Warenkorb: 
+    = " Warenkorb: "
     = @current_order.item_count
     br
     = link_to 'Warenkorb leeren', url_for(clear_order_id: 't')
-    |  | 
+    = " | "
     = link_to 'Zum Warenkorb', basket_path
-    |  | 
+    = " | "
     = link_to 'Seite Zurück', 'javascript:history.back()'
-    |  | 
+    = " | "
     = link_to 'Zurück zu allen Kategorien', categories_path
+
     - if user_signed_in?
-      |  | 
+      = " | "
       = link_to 'Alle aktiven Bestellungen anzeigen', orders_path
-      |  || 
+      = " | "
       = link_to 'Alle unbezahlten Bestellungen', served_path
-      |  || 
+      = " | "
       = link_to 'Abgeschlossenen Bestellungen', payed_path
+
     p.alert
       = alert
