@@ -1,0 +1,18 @@
+= form_with(model: order) do |form|
+  - if order.errors.any?
+    div[style="color: red"]
+      h2
+        = pluralize(order.errors.count, "error")
+        |  prohibited this order from being saved:
+      ul
+        - order.errors.each do |error|
+          li
+            = error.full_message
+  div
+    = form.label :table, style: "display: block"
+    = form.number_field :table
+  div
+    = form.label :gesamtpreis, style: "display: block"
+    = form.number_field :gesamtpreis
+  div
+    = form.submit

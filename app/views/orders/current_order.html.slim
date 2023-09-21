@@ -1,0 +1,26 @@
+p[style="color: green"]
+  = notice
+h1
+  | Warenkorb
+#orders
+  - @current_order.line_items.sort_by do |li| li.article.name}.each do |line_item|
+    = line_item.article.name
+    |  | Anzahl: 
+    = line_item.count
+    |  | Preis: 
+    = format_money(line_item.total)
+    br
+    = form_with(model: line_item) do |form|
+      |  Anzahl ändern: 
+      = form.select :count, options_for_select(1..10)
+      = form.submit "Änderung Speichern"
+    = button_to "Entfernen", line_item_path(line_item), method: :delete
+  = form_with(model: @current_order) do |form|
+    |  Tisch wählen: 
+    = form.select :table_id, options_for_select(Table.all.pluck(:name, :id))
+    = form.submit "Änderung Speichern"
+  hr
+  |  Der Gesamtpreis beträgt sagenumwobene : 
+  = format_money(@current_order.grand_total)
+  hr
+  = button_to "Bestellung abschließen", basket_path,method: :post

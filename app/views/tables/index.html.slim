@@ -1,0 +1,10 @@
+p[style="color: green"]
+  = notice
+h1
+  | Tables
+#tables
+  - @tables.each do |table|
+    = render table
+    p
+      = link_to "Show this table", table
+= link_to "New table", new_table_path

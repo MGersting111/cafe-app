@@ -1,0 +1,11 @@
+p[style="color: green"]
+  = notice
+h1
+  | Alle offenen Bestellungen
+#orders
+  - @orders.each do |order|
+    - if order.state == "placed" && order.created_at.day == Time.now.day
+      = render order
+      p
+        = link_to "Bestellung Anzeigen", order
+      hr
