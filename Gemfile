@@ -3,26 +3,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.0.0"
 
-# Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.0.7", ">= 7.0.7.2"
-
-# The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
-gem "sprockets-rails"
-
-# Use postgresql as the database for Active Record
-gem "pg", "~> 1.1"
-
-# Use the Puma web server [https://github.com/puma/puma]
-gem "puma", "~> 5.0"
-
-# Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
-gem "importmap-rails"
-
-# Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
-gem "turbo-rails"
-
-# Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
-gem "stimulus-rails"
+gem "rails", "~> 7.0.7", ">= 7.0.7.2" # So rails. much wow. Many bugs.
+gem "sprockets-rails"   # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
+gem "pg", "~> 1.1"      # Postgres. Our beloved database.
+gem "puma", "~> 5.0"    # The Webserver.
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
@@ -83,3 +67,5 @@ gem "cssbundling-rails", "~> 1.3"
 gem "foreman", "~> 0.87.2"
 
 gem "jsbundling-rails", "~> 1.2"
+
+gem "slim-rails"
