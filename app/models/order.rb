@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class Order < ApplicationRecord
-  ALLOWED_STATES = %w[ running placed served payed]
+  ALLOWED_STATES = %w[running placed served payed].freeze
   has_many :line_items
   belongs_to :table, optional: true
 
@@ -12,7 +14,7 @@ class Order < ApplicationRecord
   end
 
   def grand_total
-    line_items.map{|li| li.total}.sum
+    line_items.map(&:total).sum
   end
 
   def empty?

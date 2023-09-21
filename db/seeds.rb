@@ -1,3 +1,5 @@
+# frozen_string_literal: true
 
-category = Category.create([{name: "Snacks"}, {name: "Kaltgetränke"}, {name: "Heißgetränke"}])
-article = Article.create([{name: "Brezel", category_id: 1, price: 100}, {name: "Fanta", category_id: 2, price: 150}])
+Category.create([{ name: 'Snacks' }, { name: 'Kaltgetränke' }, { name: 'Heißgetränke' }])
+Article.create([{ name: 'Brezel', category_id: 1, price: 100 },
+                { name: 'Fanta', category_id: 2, price: 150 }])

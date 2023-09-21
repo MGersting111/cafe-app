@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ChangeTableFk < ActiveRecord::Migration[7.0]
   def up
     add_column :orders, :table_id, :integer

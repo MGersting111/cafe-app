@@ -1,24 +1,24 @@
+# frozen_string_literal: true
+
 class OrdersController < ApplicationController
-  before_action :set_order, only: %i[ show edit update destroy order_payed order_served ]
+  before_action :set_order, only: %i[show edit update destroy order_payed order_served]
 
   def index
     @orders = Order.all
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @order = Order.new
   end
 
-  def edit
-  end
+  def edit; end
 
   def create
     @order = Order.new(order_params)
     if @order.save
-      redirect_to order_url(@order), notice: "Order was successfully created."
+      redirect_to order_url(@order), notice: 'Order was successfully created.'
     else
       render :new
     end
@@ -30,7 +30,7 @@ class OrdersController < ApplicationController
     update_params = order_params.merge(table: table)
 
     if @order.update(update_params)
-      redirect_to basket_path, notice: "Order was successfully updated."
+      redirect_to basket_path, notice: 'Order was successfully updated.'
     else
       render :edit
     end
@@ -38,22 +38,22 @@ class OrdersController < ApplicationController
 
   def destroy
     @order.destroy
-    redirect_to orders_url, notice: "Order was successfully destroyed."
+    redirect_to orders_url, notice: 'Order was successfully destroyed.'
   end
 
   def order_complete
     if @current_order.empty?
-      redirect_to categories_path, notice: "Fehler: Keine Artikel im Warenkorb"
-    elsif !@current_order.update(state: "placed")
-      redirect_to categories_path, notice: "Fehler: Bestellung konnte nicht aufgegeben werden"
-     else
+      redirect_to categories_path, notice: 'Fehler: Keine Artikel im Warenkorb'
+    elsif !@current_order.update(state: 'placed')
+      redirect_to categories_path, notice: 'Fehler: Bestellung konnte nicht aufgegeben werden'
+    else
       spawn_new_current_order
-      redirect_to categories_path, notice: "Bestellung wurde abgeschlossen"
+      redirect_to categories_path, notice: 'Bestellung wurde abgeschlossen'
     end
   end
 
   def order_served
-    @order.update(state: "served")
+    @order.update(state: 'served')
     redirect_to orders_url
   end
 
@@ -62,7 +62,7 @@ class OrdersController < ApplicationController
   end
 
   def order_payed
-    @order.update(state: "payed")
+    @order.update(state: 'payed')
     redirect_to orders_url
   end
 
@@ -72,11 +72,11 @@ class OrdersController < ApplicationController
 
   private
 
-    def set_order
-      @order = Order.find(params[:id])
-    end
+  def set_order
+    @order = Order.find(params[:id])
+  end
 
-    def order_params
-      params.require(:order).permit(:table_id)
-    end
+  def order_params
+    params.require(:order).permit(:table_id)
+  end
 end

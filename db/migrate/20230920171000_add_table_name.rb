@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 class AddTableName < ActiveRecord::Migration[7.0]
   def up
-    add_column :tables, :name, :string, null: false, default: ""
+    add_column :tables, :name, :string, null: false, default: ''
     execute 'update tables set name = id;'
   end
 
