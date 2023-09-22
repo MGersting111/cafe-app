@@ -22,8 +22,8 @@ group :development do
   gem 'rubocop', require: false
 end
 
-gem "dockerfile-rails", ">= 1.5", :group => :development
+gem 'dockerfile-rails', '>= 1.5', group: :development
 
-gem "sentry-ruby", "~> 5.11"
+gem 'sentry-ruby', '~> 5.11'
 
-gem "sentry-rails", "~> 5.11"
+gem 'sentry-rails', '~> 5.11'
