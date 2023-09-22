@@ -2,7 +2,6 @@
 
 module Management
   class DashboardsController < BaseController
-    def show
-    end
+    def show; end
   end
 end
