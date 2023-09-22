@@ -1,0 +1,8 @@
+- path = category.id ? category_path(category) : categories_path
+- http_method = category.id ? :patch : :post
+= form_for(category, url: path, method: http_method) do |form|
+  div
+    = form.label :name, style: "display: block"
+    = form.text_field :name
+  div
+    = form.submit "Änderung Speichern"

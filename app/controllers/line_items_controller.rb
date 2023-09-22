@@ -21,7 +21,7 @@ class LineItemsController < ApplicationController
 
   def destroy
     @line_item.destroy
-    redirect_to line_items_url, notice: "Line item was successfully destroyed."
+    redirect_to basket_path, notice: "Line item was successfully destroyed."
   end
 
   private
