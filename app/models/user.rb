@@ -7,8 +7,8 @@ class User < ApplicationRecord
          :rememberable,
          :validatable,
          :confirmable
-         # :lockable,
-         # :timeoutable,
-         # :trackable,
-         # :omniauthable,
+  # :lockable,
+  # :timeoutable,
+  # :trackable,
+  # :omniauthable,
 end
