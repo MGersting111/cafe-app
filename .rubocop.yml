@@ -3,6 +3,7 @@ AllCops:
   Exclude:
     - 'config/**/*'
     - 'db/**/*'
+    - 'bin/**/*'
 
 ########## STYLE
 Style/Documentation:
