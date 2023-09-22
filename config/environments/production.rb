@@ -93,5 +93,24 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  # config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.default_url_options = {
+    host: 'cafe-app.fly.dev',
+    port: 80
+  }
+
+  if ENV['SENDGRID_API_KEY'].blank?
+    Rails.logger.debug 'WARNING! SENDGRID_API_KEY IS MISSING! MAILS WILL NOT WORK! PLEASE SET THIS UP!'
+  else
+    Rails.logger.debug "Using ENV[SENDGRID_API_KEY] **********#{ENV['SENDGRID_API_KEY'].last(3)} for sending mails via Sendgrid"
+  end
+
+  ActionMailer::Base.smtp_settings = {
+    :user_name            => 'apikey', # This is the string literal 'apikey', NOT the ID of your API key
+    :password             => ENV['SENDGRID_API_KEY'], # This is the secret sendgrid API key which was issued during API key creation
+    :domain               => 'cafe-app.example.com',
+    :address              => 'smtp.sendgrid.net',
+    :port                 => 587,
+    :authentication       => :plain,
+    :enable_starttls_auto => true
+  }
 end
