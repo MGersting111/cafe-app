@@ -11,6 +11,15 @@ nav.navbar.navbar-expand-lg.bg-body-tertiary
     #navbarSupportedContent.collapse.navbar-collapse
       ul.navbar-nav.me-auto.mb-2.mb-lg-0
 
+        li.nav-item
+          = link_to basket_url, class: 'nav-link position-relative pe-3'
+            i.bi-basket.me-1
+            = 'Warenkorb'
+            - if @current_order.item_count > 0
+              span.badge.rounded-pill.bg-danger[style="position:absolute; top:0px; right:0px;"]
+                .small
+                  = @current_order.item_count
+
         - if user_signed_in?
           li.nav-item
             = link_to edit_user_registration_path, class: 'nav-link'
