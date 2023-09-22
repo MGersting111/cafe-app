@@ -9,6 +9,10 @@ html
     = stylesheet_link_tag "application"
     = javascript_include_tag "application", defer: true
   body
+    .bg-light
+      .container
+        = render 'shared_partials/main_navigation'
+
     - if user_signed_in?
       = link_to "Edit Profile",
       -         edit_user_registration_path
