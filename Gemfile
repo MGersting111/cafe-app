@@ -21,3 +21,9 @@ group :development do
   gem 'letter_opener', '~> 1.4', '>= 1.4.1'
   gem 'rubocop', require: false
 end
+
+gem "dockerfile-rails", ">= 1.5", :group => :development
+
+gem "sentry-ruby", "~> 5.11"
+
+gem "sentry-rails", "~> 5.11"
