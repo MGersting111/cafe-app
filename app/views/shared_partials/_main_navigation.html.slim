@@ -20,11 +20,12 @@ nav.navbar.navbar-expand-lg.bg-body-tertiary
                 .small
                   = @current_order.item_count
 
+
         - if user_signed_in?
           li.nav-item
             = link_to edit_user_registration_path, class: 'nav-link'
               i.bi-person.me-1
-              = 'My Account'
+              = 'Benutzerkonto'
 
         -#  li.nav-item
         -#    a.nav-link.active[aria-current="page" href="#"]
@@ -55,12 +56,11 @@ nav.navbar.navbar-expand-lg.bg-body-tertiary
         -#    a.nav-link.disabled[aria-disabled="true"]
         -#      = 'Disabled'
 
-
       - if user_signed_in?
         = button_to destroy_user_session_path, method: :delete, class: 'btn btn-link' do
           i.bi-box-arrow-right.me-1
-          = 'Sign Out'
+          = 'Abmelden'
       - else
         = link_to new_user_session_path, class: 'btn btn-primary' do
           i.bi-box-arrow-right.me-1
-          = 'Login'
+          = 'Anmelden'

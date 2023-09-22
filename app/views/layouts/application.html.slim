@@ -13,10 +13,6 @@ html
 
     = yield
 
-    = link_to 'Seite Zurück', 'javascript:history.back()'
-    = " | "
-    = link_to 'Zurück zu allen Kategorien', categories_path
-
     - if user_signed_in?
       = " | "
       = link_to 'Alle aktiven Bestellungen anzeigen', orders_path
