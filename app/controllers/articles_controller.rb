@@ -8,13 +8,15 @@ class ArticlesController < ApplicationController
     @articles = @category.article
   end
 
-  def show; end
+  def show
+  end
 
   def new
     @article = Article.new(category: @category)
   end
 
-  def edit; end
+  def edit
+  end
 
   def create
     @article = @category.article.build(article_params)
@@ -39,7 +41,8 @@ class ArticlesController < ApplicationController
     redirect_to category_articles_url, notice: 'Artikel wurde erfolgreich gelöscht.'
   end
 
-  def add; end
+  def add
+  end
 
   private
 

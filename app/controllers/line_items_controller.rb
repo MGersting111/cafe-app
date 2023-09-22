@@ -9,7 +9,7 @@ class LineItemsController < ApplicationController
     @line_item.count += line_create_params[:count].to_i
     @line_item.save!
 
-    redirect_to category_articles_path(@line_item.article.category)
+    redirect_to category_articles_path(@line_item.article.category), success: "#{@line_item.article.name} was added."
   end
 
   def update

@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::Base
+  add_flash_types :error, :notice, :success
+
   before_action :discard_current_order
   before_action :setup_current_order
 

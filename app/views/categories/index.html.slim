@@ -1,18 +1,14 @@
-p
-  = notice
-
 h1
   = "Kategorien"
 
-#categories
-  - @categories.each do |category|
-    = render category
-    p
-      = link_to "Hier ... Artikel", category_articles_path(category)
-      - if user_signed_in?
-        = " |  "
-        = link_to "Editieren", edit_category_path(category)
-        = button_to "Löschen", category, method: :delete
+- @categories.each do |category|
+  = render category
+  p
+    = link_to "Hier ... Artikel", category_articles_path(category)
+    - if user_signed_in?
+      = " |  "
+      = link_to "Editieren", edit_category_path(category)
+      = button_to "Löschen", category, method: :delete
 
 - if user_signed_in?
   = link_to "Neue Artikelkategorie", new_category_path
