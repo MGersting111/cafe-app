@@ -1,0 +1,6 @@
+- ApplicationHelper::FLASH_MAPPING.each do |type, config|
+  - if flash[type]
+    .container.mt-3
+      .alert[class="alert-#{config[:class]}"]
+        i.fw-bold.me-2[class="bi-#{config[:icon]}"]
+        = flash[type]

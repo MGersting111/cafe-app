@@ -9,34 +9,8 @@ html
     = stylesheet_link_tag "application"
     = javascript_include_tag "application", defer: true
   body
-    - if user_signed_in?
-      = link_to "Edit Profile",
-      -         edit_user_registration_path
-      = " | "
-      =  button_to "Sign Out", destroy_user_session_path, method: :delete
-    - else
-      = link_to "Sign In",
-      -         new_user_session_path
-    = yield
-    hr
-    = " Warenkorb: "
-    = @current_order.item_count
-    br
-    = link_to 'Warenkorb leeren', url_for(clear_order_id: 't')
-    = " | "
-    = link_to 'Zum Warenkorb', basket_path
-    = " | "
-    = link_to 'Seite Zurück', 'javascript:history.back()'
-    = " | "
-    = link_to 'Zurück zu allen Kategorien', categories_path
+    = render 'shared_partials/main_navigation'
+    = render 'shared_partials/flash'
 
-    - if user_signed_in?
-      = " | "
-      = link_to 'Alle aktiven Bestellungen anzeigen', orders_path
-      = " | "
-      = link_to 'Alle unbezahlten Bestellungen', served_path
-      = " | "
-      = link_to 'Abgeschlossenen Bestellungen', payed_path
-
-    p.alert
-      = alert
+    .container
+      = yield

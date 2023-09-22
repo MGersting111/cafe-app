@@ -1,7 +1,5 @@
-p
-  = notice
-h1
-  | Alle offenen Bestellungen
+h1= "Alle offenen Bestellungen"
+
 #orders
   - @orders.each do |order|
     - if order.state == "placed" && order.created_at.day == Time.now.day

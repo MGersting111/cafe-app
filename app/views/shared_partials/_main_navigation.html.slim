@@ -1,0 +1,52 @@
+nav.navbar.navbar-expand-lg.bg-body-tertiary
+  .container
+
+    = link_to root_path, class: 'navbar-brand' do
+      i.bi-cup-hot.me-2
+      = 'CafeApp'
+
+    button.navbar-toggler[type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"]
+      span.navbar-toggler-icon
+
+    #navbarSupportedContent.collapse.navbar-collapse
+      ul.navbar-nav.me-auto.mb-2.mb-lg-0
+
+        li.nav-item
+          = link_to basket_url, class: 'nav-link position-relative pe-3'
+            i.bi-basket.me-1
+            = 'Warenkorb'
+            - if @current_order.item_count > 0
+              span.badge.rounded-pill.bg-danger[style="position:absolute; top:0px; right:0px;"]
+                .small
+                  = @current_order.item_count
+
+        - if user_signed_in?
+          li.nav-item
+            = link_to edit_user_registration_path, class: 'nav-link'
+              i.bi-person.me-1
+              = 'Benutzerkonto'
+
+          li.nav-item.dropdown
+            a.nav-link.dropdown-toggle[href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"]
+              i.bi-list.me-1
+              = 'Bestellungen'
+
+            ul.dropdown-menu
+              li
+                = link_to orders_path, class: 'dropdown-item' do
+                  = 'Aktiven Bestellungen'
+              li
+                = link_to served_path, class: 'dropdown-item' do
+                  = 'Unbezahlten Bestellungen'
+              li
+                = link_to payed_path, class: 'dropdown-item' do
+                  = 'Abgeschlossenen Bestellungen'
+
+      - if user_signed_in?
+        = button_to destroy_user_session_path, method: :delete, class: 'btn btn-link' do
+          i.bi-box-arrow-right.me-1
+          = 'Abmelden'
+      - else
+        = link_to new_user_session_path, class: 'btn btn-primary' do
+          i.bi-box-arrow-right.me-1
+          = 'Anmelden'
