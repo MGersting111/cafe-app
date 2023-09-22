@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   devise_for :users
   resources :categories do
@@ -6,7 +8,7 @@ Rails.application.routes.draw do
   get 'categories/:id/articles', to: 'articles#add', as: 'add'
   resources :articles, only: %i[new create]
   resources :orders
-  resources :line_items, only: [:create, :update, :delete, :destroy]
+  resources :line_items, only: %i[create update delete destroy]
   resources :tables
 
   get 'basket', to: 'orders#current_order'
@@ -16,7 +18,7 @@ Rails.application.routes.draw do
   get 'served', to: 'orders#orders_served'
   get 'payed', to: 'orders#orders_payed'
 
-  #Tables
+  # Tables
   get 'table/1', to: 'categories#index'
 
   root 'categories#index'

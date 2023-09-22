@@ -1,0 +1,9 @@
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'config/**/*'
+    - 'db/**/*'
+
+########## STYLE
+Style/Documentation:
+  Enabled: false

@@ -1,5 +1,9 @@
+# frozen_string_literal: true
+
 module ApplicationHelper
-  def format_money(value, precision = 2)
-    "#{'%.2f' % (value / 100.0).round(precision)} €"
+  def format_money(cent)
+    value = cent / 100.0
+    formatted = format('%.2f', value)
+    "#{formatted} €"
   end
 end
