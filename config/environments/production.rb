@@ -99,9 +99,9 @@ Rails.application.configure do
   }
 
   if ENV['SENDGRID_API_KEY'].blank?
-    Rails.logger.debug 'WARNING! SENDGRID_API_KEY IS MISSING! MAILS WILL NOT WORK! PLEASE SET THIS UP!'
+    puts 'WARNING! SENDGRID_API_KEY IS MISSING! MAILS WILL NOT WORK! PLEASE SET THIS UP!'
   else
-    Rails.logger.debug "Using ENV[SENDGRID_API_KEY] **********#{ENV['SENDGRID_API_KEY'].last(3)} for sending mails via Sendgrid"
+    puts "Using ENV[SENDGRID_API_KEY] **********#{ENV['SENDGRID_API_KEY'].last(3)} for sending mails via Sendgrid"
   end
 
   ActionMailer::Base.smtp_settings = {
