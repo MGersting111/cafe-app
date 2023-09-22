@@ -11,15 +11,8 @@ html
   body
     = render 'shared_partials/main_navigation'
 
-    = yield
-
-    - if user_signed_in?
-      = " | "
-      = link_to 'Alle aktiven Bestellungen anzeigen', orders_path
-      = " | "
-      = link_to 'Alle unbezahlten Bestellungen', served_path
-      = " | "
-      = link_to 'Abgeschlossenen Bestellungen', payed_path
+    .container
+      = yield
 
     p.alert
       = alert

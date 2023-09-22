@@ -20,41 +20,27 @@ nav.navbar.navbar-expand-lg.bg-body-tertiary
                 .small
                   = @current_order.item_count
 
-
         - if user_signed_in?
           li.nav-item
             = link_to edit_user_registration_path, class: 'nav-link'
               i.bi-person.me-1
               = 'Benutzerkonto'
 
-        -#  li.nav-item
-        -#    a.nav-link.active[aria-current="page" href="#"]
-        -#      = 'Home'
-        -#
-        -#  li.nav-item
-        -#    a.nav-link[href="#"]
-        -#      = 'Link'
-        -#
-        -#  li.nav-item.dropdown
-        -#    a.nav-link.dropdown-toggle[href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"]
-        -#      = ' Dropdown'
-        -#
-        -#    ul.dropdown-menu
-        -#      li
-        -#        a.dropdown-item[href="#"]
-        -#          = 'Action'
-        -#      li
-        -#        a.dropdown-item[href="#"]
-        -#          = 'Another action'
-        -#      li
-        -#        hr.dropdown-divider
-        -#      li
-        -#        a.dropdown-item[href="#"]
-        -#          = 'Something else here'
-        -#
-        -#  li.nav-item
-        -#    a.nav-link.disabled[aria-disabled="true"]
-        -#      = 'Disabled'
+          li.nav-item.dropdown
+            a.nav-link.dropdown-toggle[href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"]
+              i.bi-list.me-1
+              = 'Bestellungen'
+
+            ul.dropdown-menu
+              li
+                = link_to orders_path, class: 'dropdown-item' do
+                  = 'Aktiven Bestellungen'
+              li
+                = link_to served_path, class: 'dropdown-item' do
+                  = 'Unbezahlten Bestellungen'
+              li
+                = link_to payed_path, class: 'dropdown-item' do
+                  = 'Abgeschlossenen Bestellungen'
 
       - if user_signed_in?
         = button_to destroy_user_session_path, method: :delete, class: 'btn btn-link' do
