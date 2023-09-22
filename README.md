@@ -107,7 +107,8 @@ The most important ones for us are:
    # Arbitrary commands work like this:
    fly ssh console -a your-app-name -C "your command goes here"
 
-   # That is seeding:
-   fly ssh console -a cafe-app -C "bin/rails db:seed"
-   fly ssh console -a cafe-app -C "bin/rails db:migrate:status"
+   fly ssh console -a cafe-app -C "bin/rails db:seed"              # seeding
+   fly ssh console -a cafe-app -C "bin/rails db:migrate"           # migrate
+   fly ssh console -a cafe-app -C "bin/rails db:rollback"          # rollback
+   fly ssh console -a cafe-app -C "bin/rails db:migrate:status"    # migrate status
 ```
