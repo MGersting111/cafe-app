@@ -1,29 +1,21 @@
-h2= "Sign up"
+.row.mt-5
+  .col-4
+  .col-4
+    h2= "Registrieren"
 
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = render "devise/shared/error_messages", resource: resource
-  .field
-    = f.label :email
+    = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      = render "devise/shared/error_messages", resource: resource
+      .field= f.label :email
+      = f.email_field :email, autofocus: true, autocomplete: "email"
 
-  br
-  = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    - if @minimum_password_length
-      em
-        = "("
-        = @minimum_password_length
-        = " characters minimum)"
+      .field= f.label :password
+      = f.password_field :password, autocomplete: "new-password"
 
-  br
-  = f.password_field :password, autocomplete: "new-password"
-  .field
-    = f.label :password_confirmation
+      .field= f.label :password_confirmation
+      = f.password_field :password_confirmation, autocomplete: "new-password"
 
-  br
-  = f.password_field :password_confirmation, autocomplete: "new-password"
+      .mt-3
+        = f.submit "Registrieren", class: 'btn btn-success'
 
-  .actions
-    = f.submit "Sign up"
-
-= render "devise/shared/links"
+      .mt-3
+        = render "devise/shared/links"

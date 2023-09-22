@@ -1,25 +1,22 @@
-h2= "Log in"
+.row.mt-5
+  .col-4
+  .col-4
+    h2= "Anmelden"
 
-= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  .field
-    = f.label :email
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .field= f.label :email
+      = f.email_field :email, autofocus: true, autocomplete: "email"
 
-  br
+      .field= f.label :password
+      = f.password_field :password, autocomplete: "current-password"
 
-  = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
+      - if devise_mapping.rememberable?
+        .field
+          = f.check_box :remember_me
+          = f.label :remember_me
 
-  br
+      .mt-3
+        = f.submit "Anmelden", class: 'btn btn-success'
 
-  = f.password_field :password, autocomplete: "current-password"
-
-  - if devise_mapping.rememberable?
-    .field
-      = f.check_box :remember_me
-      = f.label :remember_me
-
-  .actions
-    = f.submit "Log in"
-
-= render "devise/shared/links"
+      .mt-3
+        = render "devise/shared/links"
