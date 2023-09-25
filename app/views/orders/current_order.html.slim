@@ -14,8 +14,11 @@ h1= "Warenkorb"
       = form.submit "Änderung Speichern"
     = button_to "Entfernen", line_item_path(line_item), method: :delete
   = form_with(model: @current_order) do |form|
-    = "Tisch wählen: "
-    = form.select :table_id, options_for_select(Table.all.pluck(:name, :id))
+    - if @table
+      = form.hidden_field :table.id
+    - else
+      = "Tisch wählen: "
+      = form.select :table_id, options_for_select(Table.all.pluck(:name, :id))
     = form.submit "Änderung Speichern"
   hr
   = "Der Gesamtpreis beträgt sagenumwobene : "
