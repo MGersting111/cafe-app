@@ -3,14 +3,12 @@ h1= "Warenkorb"
 #orders
   - @current_order.line_items.sort_by { |li| li.article.name }.each do |line_item|
     = line_item.article.name
-    = "Anzahl: "
-    = line_item.count
     = "Preis: "
     = format_money(line_item.total)
     br
     = form_with(model: line_item) do |form|
       = "Anzahl ändern: "
-      = form.select :count, options_for_select(1..10)
+      = form.select :count, options_for_select(1..10, selected: line_item.count)
       = form.submit "Änderung Speichern"
     = button_to "Entfernen", line_item_path(line_item), method: :delete
   = form_with(model: @current_order) do |form|
