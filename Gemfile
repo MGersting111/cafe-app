@@ -14,6 +14,7 @@ gem 'pg', '~> 1.1' # Postgres. Our beloved database.
 gem 'pry', '~> 0.14.2'
 gem 'puma', '~> 5.0' # The Webserver.
 gem 'rails', '~> 7.0.7', '>= 7.0.7.2' # So rails. much wow. Many bugs.
+gem 'rqrcode'
 gem 'slim-rails'
 gem 'sprockets-rails' # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 

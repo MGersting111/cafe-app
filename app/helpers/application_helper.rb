@@ -12,4 +12,18 @@ module ApplicationHelper
     formatted = format('%.2f', value)
     "#{formatted} €"
   end
+
+  def render_qr_code(url)
+    qrcode = RQRCode::QRCode.new(url)
+
+    svg_data = qrcode.as_svg(
+      color: '000',
+      shape_rendering: 'crispEdges',
+      module_size: 11,
+      standalone: true,
+      use_path: true
+    )
+
+    raw svg_data
+  end
 end

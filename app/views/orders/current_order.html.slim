@@ -11,18 +11,25 @@ h1= "Warenkorb"
       = form.select :count, options_for_select(1..10, selected: line_item.count)
       = form.submit "Änderung Speichern"
     = button_to "Entfernen", line_item_path(line_item), method: :delete
+
   = form_with(model: @current_order) do |form|
-    - if @table
-      = form.hidden_field :table.id
+    - if @current_order.table
+      = "Lieferung: #{@current_order.table.name}"
+      = link_to url_for(clear_table: 't'), class: 'btn btn-outline-danger btn-sm ms-3 btn-outline'
+        i.bi-x-lg
     - else
       = "Tisch wählen: "
-      = form.select :table_id, options_for_select(Table.all.pluck(:name, :id))
-    = form.submit "Änderung Speichern"
+      br
+      = form.select :table_id, options_for_select(['kein Tisch', ''] + Table.all.pluck(:name, :id))
+      br
+      = form.submit "Übernehmen", class: 'btn btn-primary btn-sm'
+
   hr
   = "Der Gesamtpreis beträgt sagenumwobene : "
   = format_money(@current_order.grand_total)
+
   hr
-  = button_to "Bestellung abschließen", basket_path,method: :post
+  = button_to "Bestellung abschließen", basket_path, method: :post, class: 'btn btn-lg btn-success'
 
   br
   = link_to 'Warenkorb leeren', url_for(clear_order_id: 't')

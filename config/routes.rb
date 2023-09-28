@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   resources :articles, only: %i[new create]
   resources :orders
   resources :line_items, only: %i[create update delete destroy]
-  resources :tables
 
   get 'basket', to: 'orders#current_order'
   post 'basket', to: 'orders#order_complete'
@@ -22,6 +21,12 @@ Rails.application.routes.draw do
   # requests to namespaces controllers.
   namespace :management do
     resource :dashboard, only: [:show]
+    resources :tables do
+      member do
+        get 'qr_code'
+      end
+    end
+
     root 'dashboards#show'
   end
 

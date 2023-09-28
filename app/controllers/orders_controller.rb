@@ -18,7 +18,7 @@ class OrdersController < ApplicationController
   def create
     @order = Order.new(order_params)
     if @order.save
-      redirect_to order_url(@order), notice: 'Order was successfully created.'
+      redirect_to order_url(@order)
     else
       render :new
     end
@@ -26,11 +26,11 @@ class OrdersController < ApplicationController
 
   def update
     table_id = order_params.delete(:table_id)
-    table = table_id ? Table.find(table_id) : nil
+    table = Table.find_by(id: table_id)
     update_params = order_params.merge(table: table)
 
     if @order.update(update_params)
-      redirect_to basket_path, notice: 'Order was successfully updated.'
+      redirect_to basket_path
     else
       render :edit
     end
@@ -38,7 +38,7 @@ class OrdersController < ApplicationController
 
   def destroy
     @order.destroy
-    redirect_to orders_url, notice: 'Order was successfully destroyed.'
+    redirect_to orders_url
   end
 
   def order_complete
