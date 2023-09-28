@@ -31,7 +31,11 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'capybara'
   gem 'database_cleaner'
+  gem 'shoulda-matchers', '~> 5.0'
+
 end
+
+
 
 gem "dockerfile-rails", ">= 1.5", :group => :development
 >>>>>>> 2c452e1 (added Rspecs)
