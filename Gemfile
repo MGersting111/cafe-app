@@ -22,6 +22,13 @@ group :development do
   gem 'rubocop', require: false
 end
 
+group :development, :test do
+  gem 'database_cleaner'
+  gem 'factory_bot'
+  gem 'rspec-rails', '~> 3.5'
+  gem 'shoulda-matchers', '~> 5.0'
+end
+
 gem 'dockerfile-rails', '>= 1.5', group: :development
 
 gem 'sentry-ruby', '~> 5.11'
