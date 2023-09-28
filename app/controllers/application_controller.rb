@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
 
   before_action :discard_current_order
   before_action :setup_current_order
+  before_action :clear_table
+  before_action :bind_table
 
   private
 
@@ -22,5 +24,21 @@ class ApplicationController < ActionController::Base
   def spawn_new_current_order
     session[:order_id] = nil
     setup_current_order
+  end
+
+  def clear_table
+    if params[:clear_table] == 't'
+      @current_order.update(table: nil)
+    end
+  end
+
+  def bind_table
+    order_table_id = params[:bind_table]
+    return if order_table_id.nil?
+
+    table = Table.find_by(id: order_table_id)
+    return if table.nil?
+
+    @current_order.update(table: table)
   end
 end
