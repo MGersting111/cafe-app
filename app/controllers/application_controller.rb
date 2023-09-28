@@ -27,9 +27,9 @@ class ApplicationController < ActionController::Base
   end
 
   def clear_table
-    if params[:clear_table] == 't'
-      @current_order.update(table: nil)
-    end
+    return unless params[:clear_table] == 't'
+
+    @current_order.update(table: nil)
   end
 
   def bind_table
