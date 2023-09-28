@@ -22,18 +22,14 @@ group :development do
   gem 'rubocop', require: false
 end
 
-<<<<<<< HEAD
-gem 'dockerfile-rails', '>= 1.5', group: :development
-=======
 group :development, :test do
-  gem 'rspec-rails', '~> 3.5'
-  gem 'factory_bot'
   gem 'database_cleaner'
+  gem 'factory_bot'
+  gem 'rspec-rails', '~> 3.5'
   gem 'shoulda-matchers', '~> 5.0'
 end
 
-gem "dockerfile-rails", ">= 1.5", :group => :development
->>>>>>> 2c452e1 (added Rspecs)
+gem 'dockerfile-rails', '>= 1.5', group: :development
 
 gem 'sentry-ruby', '~> 5.11'
 
