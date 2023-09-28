@@ -1,4 +1,4 @@
-- path = category.id ? category_path(category) : categories_path
+- path = category.id ? management_category_path(category) : management_categories_path
 - http_method = category.id ? :patch : :post
 = form_for(category, url: path, method: http_method) do |form|
   div

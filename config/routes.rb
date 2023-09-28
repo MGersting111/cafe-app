@@ -2,11 +2,7 @@
 
 Rails.application.routes.draw do
   devise_for :users
-  resources :categories do
-    resources :articles
-  end
-  get 'categories/:id/articles', to: 'articles#add', as: 'add'
-  resources :articles, only: %i[new create]
+
   resources :orders
   resources :line_items, only: %i[create update delete destroy]
 
@@ -26,9 +22,13 @@ Rails.application.routes.draw do
         get 'qr_code'
       end
     end
+    resources :categories do
+      resources :articles
+    end
+    resources :articles, only: %i[new create]
 
     root 'dashboards#show'
   end
 
-  root 'categories#index'
+  root 'management/categories#index'
 end
