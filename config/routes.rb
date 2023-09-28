@@ -18,5 +18,12 @@ Rails.application.routes.draw do
   get 'served', to: 'orders#orders_served'
   get 'payed', to: 'orders#orders_payed'
 
+  # this introduces a fragement in the routes called /management and routes all
+  # requests to namespaces controllers.
+  namespace :management do
+    resource :dashboard, only: [:show]
+    root 'dashboards#show'
+  end
+
   root 'categories#index'
 end

@@ -49,6 +49,11 @@ nav.navbar.navbar-expand-lg.bg-body-tertiary
                 = link_to payed_path, class: 'dropdown-item' do
                   = 'Abgeschlossenen Bestellungen'
 
+          li.nav-item
+            = link_to management_dashboard_path, class: 'nav-link'
+              i.bi-gear.me-1
+              = 'Verwaltung'
+
       - if user_signed_in?
         = button_to destroy_user_session_path, method: :delete, class: 'btn btn-link' do
           i.bi-box-arrow-right.me-1
