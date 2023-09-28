@@ -26,6 +26,13 @@ nav.navbar.navbar-expand-lg.bg-body-tertiary
               i.bi-person.me-1
               = 'Benutzerkonto'
 
+        - if user_signed_in?
+          li.nav-item
+            = link_to tables_path, class: 'nav-link'
+              i.bi-person-wheelchair
+              i.bi-signpost
+              = 'Tische'
+
           li.nav-item.dropdown
             a.nav-link.dropdown-toggle[href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"]
               i.bi-list.me-1

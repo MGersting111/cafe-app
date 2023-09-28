@@ -1,7 +1,7 @@
 h1
   = "Kategorien"
 
-- @categories.each do |category|
+- @categories.sort_by { |cat| cat.name }.each do |category|
   = render category
   p
     = link_to "Hier ... Artikel", category_articles_path(category)
