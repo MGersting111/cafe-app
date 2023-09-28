@@ -22,7 +22,19 @@ group :development do
   gem 'rubocop', require: false
 end
 
+<<<<<<< HEAD
 gem 'dockerfile-rails', '>= 1.5', group: :development
+=======
+group :development, :test do
+  gem 'byebug', platform: :mri
+  gem 'rspec-rails', '~> 3.5'
+  gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'database_cleaner'
+end
+
+gem "dockerfile-rails", ">= 1.5", :group => :development
+>>>>>>> 2c452e1 (added Rspecs)
 
 gem 'sentry-ruby', '~> 5.11'
 
