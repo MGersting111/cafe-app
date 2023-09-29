@@ -20,6 +20,12 @@ table.table.table-striped.table-hover
         br
 
       td
+        - line_item = LineItem.new(count: 1, article: article)
+        = form_with(model: line_item) do |form|
+          = form.hidden_field :article_id
+          = form.select :count, options_for_select(1..10)
+          = form.submit "Zum Warenkorb hinzufügen"
+
         = button_to management_category_article_path(@category, article), method: :delete, class: 'btn btn-secondary float-end ms-1' do
           i.bi-trash.me-1
 
