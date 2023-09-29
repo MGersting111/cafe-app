@@ -1,0 +1,6 @@
+= render "article", article: @article, category: @category
+= render "articlecat", category: @category
+
+div
+  = link_to "Bearbeiten", edit_management_category_article_path(@category, @article)
+  = button_to "Löschen", management_category_article_path(@category, @article), method: :delete

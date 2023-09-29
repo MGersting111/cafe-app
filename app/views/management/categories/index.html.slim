@@ -1,0 +1,16 @@
+h1
+  = "Kategorien"
+
+- @categories.sort_by { |cat| cat.name }.each do |category|
+  = render category
+  p
+    = link_to "Hier ... Artikel", management_category_articles_path(category)
+    - if user_signed_in?
+      = " |  "
+      = link_to "Editieren", edit_management_category_path(category)
+      = button_to "Löschen", management_category_path(category), method: :delete
+
+- if user_signed_in?
+  = link_to "Neue Artikelkategorie", new_management_category_path
+  = " | "
+  = link_to "Neuer Artikel", new_management_article_path
