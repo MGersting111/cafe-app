@@ -1,0 +1,26 @@
+h1
+  = "Artikel"
+
+#articles
+
+table.table.table-striped.table-hover
+  tr
+    th= 'Name'
+    th= 'Preis'
+    th
+    th
+  - @articles.each do |article|
+    tr
+      td
+        = article.name
+      td
+        = format_money(article.price)
+      td
+        - line_item = LineItem.new(count: 1, article: article)
+        = form_with(model: line_item) do |form|
+          = form.hidden_field :article_id
+          = form.select :count, options_for_select(1..10)
+          = form.submit "Zum Warenkorb hinzufügen"
+      td
+        = link_to category_article_path(@category, article), class: 'btn btn-secondary float-end ms-1' do
+          i.bi-eye.me-1
