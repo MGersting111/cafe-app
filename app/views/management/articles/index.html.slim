@@ -10,6 +10,7 @@ table.table.table-striped.table-hover
     th= 'Name'
     th= 'Preis'
     th
+    th
   - @articles.each do |article|
     tr
       td
@@ -25,7 +26,7 @@ table.table.table-striped.table-hover
           = form.hidden_field :article_id
           = form.select :count, options_for_select(1..10)
           = form.submit "Zum Warenkorb hinzufügen"
-
+      td
         = button_to management_category_article_path(@category, article), method: :delete, class: 'btn btn-secondary float-end ms-1' do
           i.bi-trash.me-1
 

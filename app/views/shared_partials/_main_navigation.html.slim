@@ -1,9 +1,14 @@
 nav.navbar.navbar-expand-lg.bg-body-tertiary
   .container
 
-    = link_to root_path, class: 'navbar-brand' do
-      i.bi-cup-hot.me-2
-      = 'CafeApp'
+    - if user_signed_in?
+      = link_to management_dashboard_path, class: 'navbar-brand' do
+        i.bi-cup-hot.me-2
+        = 'CafeApp'
+    - else
+      = link_to root_path, class: 'navbar-brand' do
+        i.bi-cup-hot.me-2
+        = 'CafeApp'
 
     button.navbar-toggler[type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"]
       span.navbar-toggler-icon
@@ -40,13 +45,13 @@ nav.navbar.navbar-expand-lg.bg-body-tertiary
 
             ul.dropdown-menu
               li
-                = link_to orders_path, class: 'dropdown-item' do
+                = link_to management_orders_path, class: 'dropdown-item' do
                   = 'Aktiven Bestellungen'
               li
-                = link_to served_path, class: 'dropdown-item' do
+                = link_to management_served_path, class: 'dropdown-item' do
                   = 'Unbezahlten Bestellungen'
               li
-                = link_to payed_path, class: 'dropdown-item' do
+                = link_to management_payed_path, class: 'dropdown-item' do
                   = 'Abgeschlossenen Bestellungen'
 
           li.nav-item
