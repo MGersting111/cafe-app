@@ -2,8 +2,7 @@ h1
 - orderState = state
 #orders
   - @orders.each do |order|
-    - if order.state == orderState && show_time(order.created_at.day) == show_time(Time.now.day)
-      = render order
-      p
-        = link_to "Bestellung Anzeigen", order
-      hr
+    = render order
+    p
+      = link_to "Bestellung Anzeigen", order
+    hr
