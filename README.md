@@ -98,17 +98,22 @@ See all commands [here](https://fly.io/docs/flyctl).
 The most important ones for us are:
 
 ```
-   flyctl list apps             # see your current projects
-   flyctl deploy                # deploys the current state of the app
-   flyctl machine list          # gives overview over the "virtualized machines"
-   flyctl console -a cafe-app   # starts an temporary (ephemeral) machine and runs rails c
-   flyctl status                # Shows meta info on the app - including the current URL!
+  flyctl list apps             # see your current projects
+  flyctl deploy                # deploys the current state of the app
+  flyctl machine list          # gives overview over the "virtualized machines"
+  flyctl console -a cafe-app   # starts an temporary (ephemeral) machine and runs rails c
+  flyctl status                # Shows meta info on the app - including the current URL!
 
-   # Arbitrary commands work like this:
-   fly ssh console -a your-app-name -C "your command goes here"
+  # Arbitrary commands work like this:
+  fly ssh console -a your-app-name -C "your command goes here"
 
-   fly ssh console -a cafe-app -C "bin/rails db:seed"              # seeding
-   fly ssh console -a cafe-app -C "bin/rails db:migrate"           # migrate
-   fly ssh console -a cafe-app -C "bin/rails db:rollback"          # rollback
-   fly ssh console -a cafe-app -C "bin/rails db:migrate:status"    # migrate status
+  fly ssh console -a cafe-app -C "bin/rails db:seed"              # seeding
+  fly ssh console -a cafe-app -C "bin/rails db:migrate"           # migrate
+  fly ssh console -a cafe-app -C "bin/rails db:rollback"          # rollback
+  fly ssh console -a cafe-app -C "bin/rails db:migrate:status"    # migrate status
+
+  # ENV management:
+  fly secrets list
+  fly secrets set VAR_NAME=<value>
+  fly secrets unset VAR_NAME
 ```

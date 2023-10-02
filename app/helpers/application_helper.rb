@@ -32,4 +32,7 @@ module ApplicationHelper
     time.in_time_zone(zone).to_s
   end
 
+  def nav_bar_main_link_target
+    user_signed_in? ? management_dashboard_path : root_path
+  end
 end

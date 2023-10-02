@@ -1,0 +1,6 @@
+.row.mt-3
+  .col
+    h2= 'Super Admin - Management console'
+
+    = form_tag(management_superadmin_errors_url, method: :post) do
+      = submit_tag 'TestError', class: 'btn btn-danger'

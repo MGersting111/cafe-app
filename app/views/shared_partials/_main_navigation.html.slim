@@ -1,14 +1,8 @@
 nav.navbar.navbar-expand-lg.bg-body-tertiary
   .container
-
-    - if user_signed_in?
-      = link_to management_dashboard_path, class: 'navbar-brand' do
-        i.bi-cup-hot.me-2
-        = 'CafeApp'
-    - else
-      = link_to root_path, class: 'navbar-brand' do
-        i.bi-cup-hot.me-2
-        = 'CafeApp'
+    = link_to nav_bar_main_link_target, class: 'navbar-brand' do
+      i.bi-cup-hot.me-2
+      = 'CafeApp'
 
     button.navbar-toggler[type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"]
       span.navbar-toggler-icon
@@ -58,6 +52,12 @@ nav.navbar.navbar-expand-lg.bg-body-tertiary
             = link_to management_dashboard_path, class: 'nav-link'
               i.bi-gear.me-1
               = 'Verwaltung'
+
+        - if current_user&.super_admin?
+          li.nav-item
+            = link_to management_superadmin_dashboard_path, class: 'nav-link'
+              i.bi-shield-check.me-1
+              = 'Management Console'
 
       - if user_signed_in?
         = button_to destroy_user_session_path, method: :delete, class: 'btn btn-link' do
