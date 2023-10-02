@@ -41,4 +41,8 @@ class ApplicationController < ActionController::Base
 
     @current_order.update(table: table)
   end
+
+  def after_sign_in_path_for(_resource)
+    management_dashboard_path
+  end
 end
