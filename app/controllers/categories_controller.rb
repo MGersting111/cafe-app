@@ -2,13 +2,11 @@
 
 
 class CategoriesController < ApplicationController
-  before_action :set_category, only: %i[show articles]
+  before_action :set_category, only: %i[articles]
 
   def index
     @categories = Category.all
   end
-
-  def show; end
 
   def articles
     @articles = @category.articles

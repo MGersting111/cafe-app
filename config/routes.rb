@@ -3,6 +3,9 @@
 Rails.application.routes.draw do
   devise_for :users
 
+  resources :categories, only: %i[index] do
+    resources :articles, only: %i[index show]
+  end
   resources :orders
   resources :line_items, only: %i[create update delete destroy]
 
@@ -27,8 +30,8 @@ Rails.application.routes.draw do
     end
     resources :articles, only: %i[new create]
 
-    root 'dashboards#show'
+    root 'management/dashboards#show'
   end
 
-  root 'management/categories#index'
+  root 'categories#index'
 end
