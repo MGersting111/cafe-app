@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   namespace :management do
     namespace :superadmin do
       resource :dashboard, only: [:show]
+      resource :errors, only: [:create]
     end
 
     resource :dashboard, only: [:show]
