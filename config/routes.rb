@@ -11,10 +11,6 @@ Rails.application.routes.draw do
 
   get 'basket', to: 'orders#current_order'
   post 'basket', to: 'orders#order_complete'
-  post 'order_payed/:id', to: 'orders#order_payed', as: :order_payed
-  post 'order_served/:id', to: 'orders#order_served', as: :order_served
-  get 'served', to: 'orders#orders_served'
-  get 'payed', to: 'orders#orders_payed'
 
   # this introduces a fragement in the routes called /management and routes all
   # requests to namespaces controllers.
@@ -28,7 +24,12 @@ Rails.application.routes.draw do
     resources :categories do
       resources :articles
     end
-    resources :articles, only: %i[new create]
+
+    resources :orders
+    post 'order_payed/:id', to: 'orders#order_payed', as: :order_payed
+    post 'order_served/:id', to: 'orders#order_served', as: :order_served
+    get 'served', to: 'orders#orders_served'
+    get 'payed', to: 'orders#orders_payed'
 
     root 'management/dashboards#show'
   end
