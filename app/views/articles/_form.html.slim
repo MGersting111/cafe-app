@@ -1,0 +1,26 @@
+ruby:
+  if category
+    path = article.id ? management_category_article_path(category, article) : management_category_articles_path(category)
+    http_method = article.id ? :patch : :post
+  else
+    path = management_articles_path
+    http_method = :post
+  end
+
+= form_for(article, url: path, method: http_method) do |fb|
+  -  if category
+    = fb.hidden_field :category_id
+  -  else
+    -  data = Category.all.pluck(:name, :id)
+    =  fb.select :category_id, options_for_select(data)
+
+  div
+    = fb.label :name, style: "display: block"
+    = fb.text_field :name
+
+  div
+    = fb.label :preis, style: "display: block"
+    = fb.number_field :price, step: :any
+
+  div
+    = fb.submit
