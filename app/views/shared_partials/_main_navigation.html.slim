@@ -53,6 +53,12 @@ nav.navbar.navbar-expand-lg.bg-body-tertiary
               i.bi-gear.me-1
               = 'Verwaltung'
 
+        - if current_user&.super_admin?
+          li.nav-item
+            = link_to management_superadmin_dashboard_path, class: 'nav-link'
+              i.bi-shield-check.me-1
+              = 'Management Console'
+
       - if user_signed_in?
         = button_to destroy_user_session_path, method: :delete, class: 'btn btn-link' do
           i.bi-box-arrow-right.me-1

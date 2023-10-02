@@ -15,6 +15,10 @@ Rails.application.routes.draw do
   # this introduces a fragement in the routes called /management and routes all
   # requests to namespaces controllers.
   namespace :management do
+    namespace :superadmin do
+      resource :dashboard, only: [:show]
+    end
+
     resource :dashboard, only: [:show]
     resources :tables do
       member do
