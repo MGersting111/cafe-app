@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-
 class ArticlesController < ApplicationController
   before_action :set_category
   before_action :set_article, only: %i[show]
@@ -10,7 +9,6 @@ class ArticlesController < ApplicationController
   end
 
   def show; end
-
 
   private
 

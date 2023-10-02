@@ -4,13 +4,10 @@ h1
 table.table.table-striped.table-hover
   tr
     th= 'Name'
-    th
   - @categories.each do |cat|
     tr
       td
         = cat.name
-
-        br
 
         = link_to category_articles_path(cat), class: 'btn btn-secondary float-end ms-1' do
           i.bi-eye.me-1
