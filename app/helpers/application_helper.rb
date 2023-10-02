@@ -26,4 +26,10 @@ module ApplicationHelper
 
     raw svg_data
   end
+
+  def show_time (time, time_zone = 'Europe/Berlin')
+    zone = ActiveSupport::TimeZone[time_zone]
+    time.in_time_zone(zone).to_s
+  end
+
 end
