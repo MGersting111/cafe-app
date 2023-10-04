@@ -2,7 +2,7 @@ nav.navbar.navbar-expand-lg.bg-body-tertiary
   .container
     = link_to nav_bar_main_link_target, class: 'navbar-brand' do
       i.bi-cup-hot.me-2
-      = 'CafeApp'
+      = t('app_name')
 
     button.navbar-toggler[type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"]
       span.navbar-toggler-icon
@@ -13,7 +13,7 @@ nav.navbar.navbar-expand-lg.bg-body-tertiary
         li.nav-item
           = link_to basket_url, class: 'nav-link position-relative pe-3'
             i.bi-basket.me-1
-            = 'Warenkorb'
+            = t('.basket')
             - if @current_order.item_count > 0
               span.badge.rounded-pill.bg-danger[style="position:absolute; top:0px; right:0px;"]
                 .small
@@ -23,47 +23,47 @@ nav.navbar.navbar-expand-lg.bg-body-tertiary
           li.nav-item
             = link_to edit_user_registration_path, class: 'nav-link'
               i.bi-person.me-1
-              = 'Benutzerkonto'
+              = t('.user_account')
 
         - if user_signed_in?
           li.nav-item
             = link_to management_tables_path, class: 'nav-link'
               i.bi-person-wheelchair
               i.bi-signpost
-              = 'Tische'
+              = t('.tables')
 
           li.nav-item.dropdown
             a.nav-link.dropdown-toggle[href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"]
               i.bi-list.me-1
-              = 'Bestellungen'
+              = t('.orders')
 
             ul.dropdown-menu
               li
                 = link_to management_orders_path, class: 'dropdown-item' do
-                  = 'Aktiven Bestellungen'
+                  = t('.active_orders')
               li
                 = link_to management_served_path, class: 'dropdown-item' do
-                  = 'Unbezahlten Bestellungen'
+                  = t('.served_and_unpayed_orders')
               li
                 = link_to management_payed_path, class: 'dropdown-item' do
-                  = 'Abgeschlossenen Bestellungen'
+                  = t('.completed_orders')
 
           li.nav-item
             = link_to management_dashboard_path, class: 'nav-link'
               i.bi-gear.me-1
-              = 'Verwaltung'
+              = t('.management')
 
         - if current_user&.super_admin?
           li.nav-item
             = link_to management_superadmin_dashboard_path, class: 'nav-link'
               i.bi-shield-check.me-1
-              = 'Management Console'
+              = t('.management_console')
 
       - if user_signed_in?
         = button_to destroy_user_session_path, method: :delete, class: 'btn btn-link' do
           i.bi-box-arrow-right.me-1
-          = 'Abmelden'
+          = t('.log_out')
       - else
         = link_to new_user_session_path, class: 'btn btn-primary' do
           i.bi-box-arrow-right.me-1
-          = 'Anmelden'
+          = t('.log_in')
