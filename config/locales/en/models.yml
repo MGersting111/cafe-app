@@ -1,0 +1,21 @@
+en:
+  model:
+    article: Article
+    articles: Articles
+    category: Category
+    categories: Categories
+    table: Table
+    tables: Tables
+    user: User
+    users: Users
+    attribute:
+      name: 'Name: '
+      price: 'Price: '
+  basket:
+    basket: Basket
+    delete: Delete
+    select: Select
+    save_changes: Save
+    complete_order: Complete Order
+    confirm_order: Comfirm Order
+    clear_basket: Clear Basket

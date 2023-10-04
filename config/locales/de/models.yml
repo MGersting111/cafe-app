@@ -1,0 +1,22 @@
+de:
+  model:
+    article: Artikel
+    articles: Artikel
+    category: Kategorie
+    categories: Kategorien
+    table: Tisch
+    tables: Tische
+    user: Benutzer
+    users: Benutzer
+    attribute:
+      name: Name
+      price: Preis
+      count: Anzahl
+  basket:
+    basket: Warenkorb
+    delete: Entfernen
+    select: Übernehmen
+    save_changes: Änderung Speichern
+    complete_order: Bestellung Abschließen
+    confirm_order: Bestellung Bestätigen
+    clear_basket: Warenkorb leeren
