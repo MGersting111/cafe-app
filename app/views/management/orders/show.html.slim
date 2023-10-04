@@ -11,7 +11,7 @@
 hr
 div
   p
-    = link_to "Zurück zu offenen Bestellungen", orders_path
-  = button_to "Bestellung serviert", order_served_path
-  = button_to "Bestellung Bezahlt", order_payed_path
-  = button_to "Destroy this order", @order, method: :delete
+    = link_to "Zurück zu offenen Bestellungen", management_orders_path
+  = button_to "Bestellung serviert", management_order_served_path
+  = button_to "Bestellung Bezahlt", management_order_payed_path
+  = button_to "Destroy this order", management_order_path(@order), method: :delete
