@@ -1,12 +1,10 @@
 h1
-  = "Artikel"
-
-#articles
+  = t('.article')
 
 table.table.table-striped.table-hover
   tr
-    th= 'Name'
-    th= 'Preis'
+    th= t('.name')
+    th= t('.price')
     th
     th
   - @articles.each do |article|
@@ -20,7 +18,7 @@ table.table.table-striped.table-hover
         = form_with(model: line_item) do |form|
           = form.hidden_field :article_id
           = form.select :count, options_for_select(1..10)
-          = form.submit "Zum Warenkorb hinzufügen"
+          = form.submit t('.add_to_basket')
       td
         = link_to category_article_path(@category, article), class: 'btn btn-secondary float-end ms-1' do
           i.bi-eye.me-1

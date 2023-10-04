@@ -1,9 +1,9 @@
 h1
-  = "Kategorien"
+  = t('.head')
 
 table.table.table-striped.table-hover
   tr
-    th= 'Name'
+    th= t('.name')
   - @categories.each do |cat|
     tr
       td

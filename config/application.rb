@@ -20,5 +20,7 @@ module CafeApp
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    I18n.available_locales = [:de, :en]
+    I18n.default_locale = :de
   end
 end

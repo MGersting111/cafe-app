@@ -1,2 +1,9 @@
-= render "article", article: @article, category: @category
-= render "articlecat", category: @category
+p
+  strong= t('.name') + t('.colon') + t('.space')
+  = @article.name
+p
+  strong= t('.price') + t('.colon') + t('.space')
+  = format_money(@article.price)
+p
+  strong= t('.category') + t('.colon') + t('.space')
+  = @category.name

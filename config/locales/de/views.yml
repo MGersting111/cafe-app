@@ -1,0 +1,15 @@
+de:
+  categories:
+    index:
+      head: Kategorien
+      name: Name
+  articles:
+    index:
+      article: Artikel
+      name: Name
+      price: Preis
+      add_to_basket: In den Warenkorb
+    show:
+      category: Kategorie
+      space: ' '
+      colon: ':'
