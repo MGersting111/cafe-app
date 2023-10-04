@@ -39,12 +39,12 @@ module Management
 
     def destroy
       @order.destroy
-      redirect_to orders_url
+      redirect_to management_orders_url
     end
 
     def order_served
       @order.update(state: 'served')
-      redirect_to orders_url
+      redirect_to management_orders_url
     end
 
     def orders_served
@@ -53,7 +53,7 @@ module Management
 
     def order_payed
       @order.update(state: 'payed')
-      redirect_to orders_url
+      redirect_to management_orders_url
     end
 
     def orders_payed
