@@ -3,3 +3,13 @@ en:
     index:
       head: Categories
       name: Name
+  articles:
+    index:
+      article: Article
+      name: Name
+      price: Price
+      add_to_basket: Add to basket
+    show:
+      category: category
+      space: ' '
+      colon: ':'
