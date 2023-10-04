@@ -1,4 +1,17 @@
 en:
+  app_name: CafeApp
+  shared_partials:
+    main_navigation:
+      basket: Warenkorb
+      user_account: Benutzerkonto
+      tables: Tische
+      orders: Bestellungen
+      active_orders: Laufend
+      served_and_unpayed_orders: Serviert und Unbezahlt
+      completed_orders: Abgeschlossen
+      management: Verwaltung
+      log_out: Abmelden
+      log_in: Anmelden
   categories:
     index:
       head: Categories
