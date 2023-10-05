@@ -1,5 +1,7 @@
 de:
   app_name: CafeApp
+  generics:
+    categories: Kategorien
   shared_partials:
     main_navigation:
       basket: Warenkorb
@@ -26,3 +28,4 @@ de:
       category: Kategorie
       space: ' '
       colon: ':'
+
