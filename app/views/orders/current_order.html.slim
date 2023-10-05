@@ -7,6 +7,8 @@ h1= "Warenkorb"
     = format_money(line_item.total)
     br
     = form_with(model: line_item) do |form|
+      = form.label :main_image
+      = form.file_field :main_image
       = "Anzahl ändern: "
       = form.select :count, options_for_select(1..10, selected: line_item.count)
       = form.submit "Änderung Speichern"
@@ -33,3 +35,4 @@ h1= "Warenkorb"
 
   br
   = link_to 'Warenkorb leeren', url_for(clear_order_id: 't')
+
