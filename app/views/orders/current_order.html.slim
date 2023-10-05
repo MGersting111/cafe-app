@@ -2,15 +2,17 @@ h1= "Warenkorb"
 
 #orders
   - @current_order.line_items.sort_by { |li| li.article.name }.each do |line_item|
-    = line_item.article.name
-    = "Preis: "
-    = format_money(line_item.total)
+    div style='display: flex; justify-content: left'
+      = line_item.article.name
+      = "Preis: "
+      = format_money(line_item.total)
+      = button_to line_item_path(line_item), method: :delete, class: 'btn btn-default ms-1' do
+        i.bi-trash
     br
     = form_with(model: line_item) do |form|
       = "Anzahl ändern: "
       = form.select :count, options_for_select(1..10, selected: line_item.count)
       = form.submit "Änderung Speichern"
-    = button_to "Entfernen", line_item_path(line_item), method: :delete
 
   = form_with(model: @current_order) do |form|
     - if @current_order.table

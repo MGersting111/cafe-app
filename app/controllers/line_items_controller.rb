@@ -15,7 +15,7 @@ class LineItemsController < ApplicationController
 
   def update
     if @line_item.update(line_update_params)
-      redirect_to basket_path, notice: 'Line item was successfully updated.'
+      redirect_to basket_path, notice: 'Die Anzahl wurde erfolgreich geändert.'
     else
       render :edit
     end
@@ -23,7 +23,7 @@ class LineItemsController < ApplicationController
 
   def destroy
     @line_item.destroy
-    redirect_to basket_path, notice: 'Line item was successfully destroyed.'
+    redirect_to basket_path, notice: 'Der Artikel wurde erfolgreich aus dem Warenkorb entfernt!'
   end
 
   private
