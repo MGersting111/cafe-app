@@ -14,6 +14,7 @@ class ApplicationController < ActionController::Base
 
   def set_company
     if !session[:company]
+      session[:company] = 1
       redirect_to companies_url
     end
   end
