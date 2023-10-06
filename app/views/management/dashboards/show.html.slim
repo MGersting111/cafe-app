@@ -1,6 +1,12 @@
-.row.mt-3
-  .col
-    .alert.alert-danger
-      = "Whohoo this is the admin space."
+
 
 = link_to t('generics.categories'), management_categories_path
+hr
+="Anzahl offene Bestellungen: "
+= @amountOrders
+br
+="Anzahl servierte & unbezahlte Bestellungen: "
+= @amountOrdersServed
+br
+="Anzahl abgeschlossene Bestellungen: "
+= @amountOrdersPayed
