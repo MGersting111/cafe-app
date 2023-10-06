@@ -2,6 +2,7 @@
 
 class LineItem < ApplicationRecord
   belongs_to :article
+  belongs_to :company
 
 
   def total
