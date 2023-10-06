@@ -1,7 +1,7 @@
 div id="#{dom_id company}"
   p
-    strong Name:
+    strong = t('generics.name' + ':')
     =< company.name
   p
-    strong Description:
+    strong = t('company.description' +':')
     =< company.description

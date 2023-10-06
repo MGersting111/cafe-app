@@ -2,6 +2,14 @@ de:
   app_name: CafeApp
   generics:
     categories: Kategorien
+    category: Kategorie
+    name: Name
+    edit: Bearbeiten
+    show: Mehr Informationen
+    back: Zurück
+    delete: Löschen
+    price: Preis
+    changeNumber: Anzahl ändern
   shared_partials:
     main_navigation:
       basket: Warenkorb
@@ -14,18 +22,16 @@ de:
       management: Verwaltung
       log_out: Abmelden
       log_in: Anmelden
-  categories:
-    index:
-      head: Kategorien
-      name: Name
-  articles:
+  article:
     index:
       article: Artikel
-      name: Name
-      price: Preis
       add_to_basket: In den Warenkorb
-    show:
-      category: Kategorie
-      space: ' '
-      colon: ':'
-
+  company:
+    description: Beschreibung
+    company: Unternehmen
+    new: Neues Unternehmen
+  order:
+    chooseTable: Tisch wählen
+    total: Der Gesamtpreis beträgt
+    order: Bestellung abschließen
+    clear: Warenkorb leeren

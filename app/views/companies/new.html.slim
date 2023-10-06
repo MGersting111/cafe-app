@@ -1,8 +1,8 @@
-h1 New company
+h1 =t('company.new')
 
 == render "form", company: @company
 
 br
 
 div
-  = link_to "Back to companies", companies_path
+  = link_to t('generics.back'), companies_path
