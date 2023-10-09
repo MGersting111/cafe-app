@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_10_06_111623) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_09_123900) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -48,12 +48,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_06_111623) do
     t.integer "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "company_id"
   end
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "company_id"
   end
 
   create_table "companies", force: :cascade do |t|
@@ -69,6 +71,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_06_111623) do
     t.integer "count", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "company_id"
   end
 
   create_table "orders", force: :cascade do |t|
@@ -77,6 +80,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_06_111623) do
     t.string "order_id", null: false
     t.string "state", default: "running"
     t.integer "table_id"
+    t.integer "company_id"
     t.index ["order_id"], name: "index_orders_on_order_id"
   end
 
@@ -84,6 +88,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_06_111623) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name", default: "", null: false
+    t.integer "company_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -99,6 +104,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_06_111623) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "super_admin", default: false, null: false
+    t.integer "company_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
