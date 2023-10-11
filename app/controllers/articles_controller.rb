@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class ArticlesController < ApplicationController
+class ArticlesController < CustomerController
   before_action :set_category
   before_action :set_article, only: %i[show]
 

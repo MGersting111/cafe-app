@@ -3,7 +3,6 @@
 class ApplicationController < ActionController::Base
   add_flash_types :error, :notice, :success
 
-  before_action :set_company
   before_action :set_locale
   before_action :discard_current_order
   before_action :setup_current_order
@@ -11,13 +10,6 @@ class ApplicationController < ActionController::Base
   before_action :bind_table
 
   private
-
-  def set_company
-  #  if !session[:company]
-  #    session[:company] = 1
-  #    redirect_to companies_url
-  #  end
-  end
 
   def set_locale
     session[:locale] ||= I18n.default_locale.to_s

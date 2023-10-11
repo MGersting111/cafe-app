@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class LineItemsController < ApplicationController
+class LineItemsController < CustomerController
   before_action :set_line_item, only: %i[update destroy]
 
   def create
