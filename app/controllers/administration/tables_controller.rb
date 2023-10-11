@@ -23,7 +23,7 @@ module Administration
     def create
       @table = Table.new(table_params)
       if @table.save
-        redirect_to management_tables_path, notice: 'Table was successfully created.'
+        redirect_to administration_tables_path, notice: 'Table was successfully created.'
       else
         render :new
       end
@@ -31,7 +31,7 @@ module Administration
 
     def update
       if @table.update(table_params)
-        redirect_to management_table_path(@table), notice: 'Table was successfully updated.'
+        redirect_to administration_table_path(@table), notice: 'Table was successfully updated.'
       else
         render :edit
       end
@@ -39,7 +39,7 @@ module Administration
 
     def destroy
       @table.destroy
-      redirect_to management_tables_path, notice: 'Table was successfully destroyed.'
+      redirect_to administration_tables_path, notice: 'Table was successfully destroyed.'
     end
 
     private

@@ -2,7 +2,7 @@ h1
   = "Artikel"
 
 #articles
-= link_to new_management_category_path, class: 'btn btn-primary float-end mb-5' do
+= link_to new_administration_category_path, class: 'btn btn-primary float-end mb-5' do
   = "Neuer Artikel"
 
 table.table.table-striped.table-hover
@@ -27,8 +27,8 @@ table.table.table-striped.table-hover
           = form.select :count, options_for_select(1..10)
           = form.submit "Zum Warenkorb hinzufügen"
       td
-        = button_to management_category_article_path(@category, article), method: :delete, class: 'btn btn-secondary float-end ms-1' do
+        = button_to administration_category_article_path(@category, article), method: :delete, class: 'btn btn-secondary float-end ms-1' do
           i.bi-trash.me-1
 
-        = link_to management_category_article_path(@category, article), class: 'btn btn-secondary float-end ms-1' do
+        = link_to administration_category_article_path(@category, article), class: 'btn btn-secondary float-end ms-1' do
           i.bi-eye.me-1

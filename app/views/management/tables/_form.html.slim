@@ -1,5 +1,5 @@
 ruby:
-  path = table.id ? management_table_path(table) : management_tables_path
+  path = table.id ? administration_table_path(table) : administration_tables_path
   http_method = table.id ? :patch : :post
 
 = form_for(table, url: path, method: http_method) do |form|

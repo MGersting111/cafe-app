@@ -70,6 +70,6 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(_resource)
-    management_dashboard_path
+    administration_dashboard_path
   end
 end

@@ -1,9 +1,9 @@
 ruby:
   if category
-    path = article.id ? management_category_article_path(category, article) : management_category_articles_path(category)
+    path = article.id ? administration_category_article_path(category, article) : administration_category_articles_path(category)
     http_method = article.id ? :patch : :post
   else
-    path = management_articles_path
+    path = administration_articles_path
     http_method = :post
   end
 

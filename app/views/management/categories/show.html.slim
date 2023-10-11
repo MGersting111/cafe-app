@@ -1,7 +1,7 @@
 = render @category
 
 div
-  = link_to "Editieren", edit_management_category_path(@category)
+  = link_to "Editieren", edit_administration_category_path(@category)
   = " | "
-  = link_to "Anzeigen", management_category_articles_path(@category)
-  = button_to "Löschen", management_category_path(@category), method: :delete
+  = link_to "Anzeigen", administration_category_articles_path(@category)
+  = button_to "Löschen", administration_category_path(@category), method: :delete
