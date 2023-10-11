@@ -51,11 +51,11 @@ nav.navbar.navbar-expand-lg.bg-body-tertiary
           li.nav-item
             = link_to administration_dashboard_path, class: 'nav-link'
               i.bi-gear.me-1
-              = t('.management')
+              = t('.administration')
 
         - if current_user&.super_admin?
           li.nav-item
-            = link_to administration_dashboard_path, class: 'nav-link'
+            = link_to management_dashboard_path, class: 'nav-link'
               i.bi-shield-check.me-1
               = t('.management_console')
 

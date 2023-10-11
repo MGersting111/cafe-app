@@ -9,7 +9,7 @@ en:
       active_orders: Laufend
       served_and_unpayed_orders: Serviert und Unbezahlt
       completed_orders: Abgeschlossen
-      management: Verwaltung
+      administration: Verwaltung
       log_out: Abmelden
       log_in: Anmelden
   categories:
