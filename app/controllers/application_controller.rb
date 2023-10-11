@@ -13,10 +13,10 @@ class ApplicationController < ActionController::Base
   private
 
   def set_company
-    if !session[:company]
-      session[:company] = 1
-      redirect_to companies_url
-    end
+  #  if !session[:company]
+  #    session[:company] = 1
+  #    redirect_to companies_url
+  #  end
   end
 
   def set_locale
