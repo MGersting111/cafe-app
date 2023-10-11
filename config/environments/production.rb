@@ -98,18 +98,6 @@ Rails.application.configure do
     port: 80
   }
 
-  if ENV['SENDGRID_API_KEY'].blank?
-    puts 'WARNING! SENDGRID_API_KEY IS MISSING! MAILS WILL NOT WORK! PLEASE SET THIS UP!'
-  else
-    puts "Using ENV[SENDGRID_API_KEY] **********#{ENV['SENDGRID_API_KEY'].last(3)} for sending mails via Sendgrid"
-  end
-
-  if ENV['BUGSNAG_API_KEY'].blank?
-    puts 'WARNING! BUGSNAG_API_KEY IS MISSING! EXCEPTION TRACKING WILL NOT WORK! PLEASE SET THIS UP!'
-  else
-    puts "Using ENV[BUGSNAG_API_KEY] **********#{ENV['BUGSNAG_API_KEY'].last(3)} for reporting errors to Bugsnag"
-  end
-
   ActionMailer::Base.smtp_settings = {
     :user_name            => 'apikey', # This is the string literal 'apikey', NOT the ID of your API key
     :password             => ENV['SENDGRID_API_KEY'], # This is the secret sendgrid API key which was issued during API key creation
