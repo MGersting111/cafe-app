@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Management
+module Administration
   class TablesController < BaseController
     before_action :set_table, only: %i[show edit update destroy qr_code]
 

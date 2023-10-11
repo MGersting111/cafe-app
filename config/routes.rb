@@ -13,14 +13,12 @@ Rails.application.routes.draw do
   get 'basket', to: 'orders#current_order'
   post 'basket', to: 'orders#order_complete'
 
-  # this introduces a fragement in the routes called /management and routes all
-  # requests to namespaces controllers.
   namespace :management do
-    namespace :superadmin do
-      resource :dashboard, only: [:show]
-      resource :errors, only: [:create]
-    end
+    resource :dashboard, only: [:show]
+    resource :errors, only: [:create]
+  end
 
+  namespace :administration do
     resource :dashboard, only: [:show]
     resources :tables do
       member do

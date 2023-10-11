@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Management
+module Administration
   class OrdersController < BaseController
     before_action :set_order, only: %i[show edit update destroy order_payed order_served]
 

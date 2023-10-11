@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Management
+module Administration
   class CategoriesController < BaseController
     before_action :set_category, only: %i[show edit update destroy articles]
 
