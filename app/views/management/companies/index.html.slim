@@ -1,0 +1,27 @@
+p style="color: green" = notice
+
+h1 =t('company.company')
+
+
+table.table.table-striped.table-hover
+  tr
+    th= t('.name')
+    th= t('.description')
+    th
+  - @companies.each do |company|
+    tr
+      td
+        = company.name
+      td
+        = company.description[0..60] + '...'
+      td
+        = link_to management_company_path(company), class: 'btn btn-secondary float-end ms-1' do
+          i.bi-eye.me-1
+
+= link_to t('company.new'), new_management_company_path
+
+
+
+
+
+

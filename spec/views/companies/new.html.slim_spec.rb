@@ -11,7 +11,7 @@ RSpec.describe "companies/new", type: :view do
   it "renders new company form" do
     render
 
-    assert_select "form[action=?][method=?]", companies_path, "post" do
+    assert_select "form[action=?][method=?]", management_companies_path, "post" do
 
       assert_select "input[name=?]", "company[name]"
 

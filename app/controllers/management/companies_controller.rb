@@ -20,7 +20,7 @@ module Management
       @company = Company.new(company_params)
 
       if @company.save
-        redirect_to @company, notice: "Company was successfully created."
+        redirect_to management_companies_path, notice: "Company was successfully created."
       else
         render :new, status: :unprocessable_entity
       end
@@ -28,7 +28,7 @@ module Management
 
     def update
       if @company.update(company_params)
-        redirect_to @company, notice: "Company was successfully updated.", status: :see_other
+        redirect_to management_companies_path, notice: "Company was successfully updated.", status: :see_other
       else
         render :edit, status: :unprocessable_entity
       end
@@ -36,7 +36,7 @@ module Management
 
     def destroy
       @company.destroy
-      redirect_to companies_url, notice: "Company was successfully destroyed.", status: :see_other
+      redirect_to management_companies_url, notice: "Company was successfully destroyed.", status: :see_other
     end
 
     private

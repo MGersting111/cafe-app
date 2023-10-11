@@ -1,0 +1,10 @@
+h1 =t('generics.edit')
+
+== render "form", company: @company
+
+br
+
+div
+  => link_to "Show this company", management_company_path(@company)
+  '|
+  =< link_to "Back to companies", management_companies_path
