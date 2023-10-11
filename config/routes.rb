@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :companies
   devise_for :users
 
   resources :categories, only: %i[index] do
@@ -14,8 +13,11 @@ Rails.application.routes.draw do
   post 'basket', to: 'orders#order_complete'
 
   namespace :management do
+    resources :companies
     resource :dashboard, only: [:show]
     resource :errors, only: [:create]
+
+    root 'dashboards#show'
   end
 
   namespace :administration do
@@ -35,7 +37,7 @@ Rails.application.routes.draw do
     get 'served', to: 'orders#orders_served'
     get 'payed', to: 'orders#orders_payed'
 
-    root 'management/dashboards#show'
+    root 'dashboards#show'
   end
 
   root 'categories#index'
