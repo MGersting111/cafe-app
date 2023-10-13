@@ -3,15 +3,6 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  resources :categories, only: %i[index] do
-    resources :articles, only: %i[index show]
-  end
-  resources :orders
-  resources :line_items, only: %i[create update delete destroy]
-
-  get 'basket', to: 'orders#current_order'
-  post 'basket', to: 'orders#order_complete'
-
   namespace :management do
     resources :companies
     resource :dashboard, only: [:show]
@@ -40,5 +31,20 @@ Rails.application.routes.draw do
     root 'dashboards#show'
   end
 
-  root 'categories#index'
+  namespace :shop do
+    resources :categories, only: %i[index] do
+      resources :articles, only: %i[index show]
+    end
+    resources :orders
+    resources :line_items, only: %i[create update delete destroy]
+
+    get 'basket', to: 'orders#current_order'
+    post 'basket', to: 'orders#order_complete'
+
+    root 'categories#index'
+  end
+
+  get 'select_companies', to: 'companies#select_company'
+
+  root 'companies#shop'
 end

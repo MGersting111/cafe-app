@@ -22,16 +22,23 @@ de:
       administration: Verwaltung
       log_out: Abmelden
       log_in: Anmelden
-  article:
-    index:
-      article: Artikel
-      add_to_basket: In den Warenkorb
-  company:
-    description: Beschreibung
-    company: Unternehmen
-    new: Neues Unternehmen
-  order:
-    chooseTable: Tisch wählen
-    total: Der Gesamtpreis beträgt
-    order: Bestellung abschließen
-    clear: Warenkorb leeren
+  shop:
+    categories:
+      index:
+        head: Kategorien
+        name: Name
+    articles:
+      index:
+        article: Artikel
+        name: Name
+        price: Preis
+        add_to_basket: In den Warenkorb
+    companies:
+      description: Beschreibung
+      company: Unternehmen
+      new: Neues Unternehmen
+    orders:
+      chooseTable: Tisch wählen
+      total: Der Gesamtpreis beträgt
+      order: Bestellung abschließen
+      clear: Warenkorb leeren

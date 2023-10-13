@@ -2,7 +2,7 @@
 
 module Administration
   class BaseController < ::ApplicationController
-    include EnsureCompany
+    include EnsureCurrentCompany
     include EnsureLogin
   end
 end

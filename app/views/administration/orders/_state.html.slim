@@ -2,6 +2,7 @@ h1
 - orderState = state
 #orders
   - @orders.each do |order|
+    - next unless order.state == orderState
     = render order
     p
       = link_to "Bestellung Anzeigen", administration_order_path(order)

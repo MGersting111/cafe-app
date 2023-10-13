@@ -15,10 +15,10 @@ table.table.table-striped.table-hover
         = format_money(article.price)
       td
         - line_item = LineItem.new(count: 1, article: article)
-        = form_with(model: line_item) do |form|
+        = form_for(line_item, url: shop_line_items_path, method: :post) do |form|
           = form.hidden_field :article_id
           = form.select :count, options_for_select(1..10)
           = form.submit t('.add_to_basket')
       td
-        = link_to category_article_path(@category, article), class: 'btn btn-secondary float-end ms-1' do
+        = link_to shop_category_article_path(@category, article), class: 'btn btn-secondary float-end ms-1' do
           i.bi-eye.me-1

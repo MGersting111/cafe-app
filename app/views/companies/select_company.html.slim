@@ -1,0 +1,11 @@
+h1 =t('company.company')
+
+- @companies.sort_by { |co| co.name }.each do |company|
+  div style="display: flex; justify-content: left;"
+    div style="margin-top: 7px;"
+    tr
+      td
+        = company.name
+      td
+        small.text-muted
+          = link_to company.name, shop_categories_url(switch_company: company.id)
