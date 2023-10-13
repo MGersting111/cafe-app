@@ -1,0 +1,21 @@
+- path = @company.id ? management_company_path(@company) : management_companies_path
+- http_method = @company.id ? :patch : :post
+
+= form_for(@company, url: path, method: http_method) do |form|
+  - if @company.errors.any?
+    div style="color: red"
+      h2 = "#{pluralize(@company.errors.count, "error")} prohibited this company from being saved:"
+      ul
+        - @company.errors.each do |error|
+          li = error.full_message
+
+  div
+    = form.label :name, style: "display: block"
+    = form.text_field :name
+
+  div
+    = form.label :description, style: "display: block"
+    = form.text_field :description
+
+  div
+    = form.submit

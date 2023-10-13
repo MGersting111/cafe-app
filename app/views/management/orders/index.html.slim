@@ -1,8 +1,0 @@
-h1= "Alle offenen Bestellungen"
-
-#orders
-  - @orders.each do |order|
-    = render order
-    p
-      = link_to "Bestellung Anzeigen", management_order_path(order)
-    hr

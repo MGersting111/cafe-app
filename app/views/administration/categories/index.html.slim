@@ -1,0 +1,23 @@
+h1
+  = "Kategorien"
+
+= link_to new_administration_category_path, class: 'btn btn-primary float-end mb-5' do
+  = "Neue Kategorie"
+
+table.table.table-striped.table-hover
+  tr
+    th= 'Name'
+    th
+  - @categories.each do |cat|
+    tr
+      td
+        = cat.name
+
+        br
+
+      td
+        = button_to administration_category_articles_path(cat), method: :delete, class: 'btn btn-secondary float-end ms-1' do
+          i.bi-trash.me-1
+
+        = link_to administration_category_articles_path(cat), class: 'btn btn-secondary float-end ms-1' do
+          i.bi-eye.me-1

@@ -1,0 +1,34 @@
+h1
+  = "Artikel"
+
+#articles
+= link_to new_administration_category_path, class: 'btn btn-primary float-end mb-5' do
+  = "Neuer Artikel"
+
+table.table.table-striped.table-hover
+  tr
+    th= 'Name'
+    th= 'Preis'
+    th
+    th
+  - @articles.each do |article|
+    tr
+      td
+        = article.name
+      td
+        = format_money(article.price)
+
+        br
+
+      td
+        - line_item = LineItem.new(count: 1, article: article)
+        = form_with(model: line_item) do |form|
+          = form.hidden_field :article_id
+          = form.select :count, options_for_select(1..10)
+          = form.submit "Zum Warenkorb hinzufügen"
+      td
+        = button_to administration_category_article_path(@category, article), method: :delete, class: 'btn btn-secondary float-end ms-1' do
+          i.bi-trash.me-1
+
+        = link_to administration_category_article_path(@category, article), class: 'btn btn-secondary float-end ms-1' do
+          i.bi-eye.me-1

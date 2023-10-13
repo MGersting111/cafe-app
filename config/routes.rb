@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :companies
   devise_for :users
 
   resources :categories, only: %i[index] do
@@ -13,14 +12,15 @@ Rails.application.routes.draw do
   get 'basket', to: 'orders#current_order'
   post 'basket', to: 'orders#order_complete'
 
-  # this introduces a fragement in the routes called /management and routes all
-  # requests to namespaces controllers.
   namespace :management do
-    namespace :superadmin do
-      resource :dashboard, only: [:show]
-      resource :errors, only: [:create]
-    end
+    resources :companies
+    resource :dashboard, only: [:show]
+    resource :errors, only: [:create]
 
+    root 'dashboards#show'
+  end
+
+  namespace :administration do
     resource :dashboard, only: [:show]
     resources :tables do
       member do
@@ -37,7 +37,7 @@ Rails.application.routes.draw do
     get 'served', to: 'orders#orders_served'
     get 'payed', to: 'orders#orders_payed'
 
-    root 'management/dashboards#show'
+    root 'dashboards#show'
   end
 
   root 'categories#index'

@@ -33,6 +33,6 @@ module ApplicationHelper
   end
 
   def nav_bar_main_link_target
-    user_signed_in? ? management_dashboard_path : root_path
+    user_signed_in? ? administration_dashboard_path : root_path
   end
 end

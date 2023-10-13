@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class OrdersController < ApplicationController
+class OrdersController < CustomerController
   before_action :set_order, only: %i[update]
 
   def order_complete

@@ -1,0 +1,17 @@
+= render @order
+
+- @order.line_items.each do |line_item|
+  strong = "Artikel: "
+  = line_item.article.name
+  strong = " Anzahl: "
+  = line_item.count
+  strong = " Preis: "
+  = format_money(line_item.article.price * line_item.count)
+  br
+hr
+div
+  p
+    = link_to "Zurück zu offenen Bestellungen", administration_orders_path
+  = button_to "Bestellung serviert", administration_order_served_path
+  = button_to "Bestellung Bezahlt", administration_order_payed_path
+  = button_to "Destroy this order", administration_order_path(@order), method: :delete

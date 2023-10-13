@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-module Management
+module Administration
   class BaseController < ::ApplicationController
+    include EnsureCompany
     include EnsureLogin
-    include EnsureSuperAdmin
   end
 end

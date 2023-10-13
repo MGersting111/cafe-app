@@ -1,0 +1,9 @@
+ruby:
+  path = table.id ? administration_table_path(table) : administration_tables_path
+  http_method = table.id ? :patch : :post
+
+= form_for(table, url: path, method: http_method) do |form|
+  = form.label :Name, style: "display: block"
+  = form.text_field :name
+  = form.submit
+

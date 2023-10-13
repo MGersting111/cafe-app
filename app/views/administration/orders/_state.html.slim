@@ -1,0 +1,8 @@
+h1
+- orderState = state
+#orders
+  - @orders.each do |order|
+    = render order
+    p
+      = link_to "Bestellung Anzeigen", administration_order_path(order)
+    hr
