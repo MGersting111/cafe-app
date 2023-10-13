@@ -22,5 +22,17 @@ module CafeApp
     # config.eager_load_paths << Rails.root.join("extras")
     I18n.available_locales = [:de, :en]
     I18n.default_locale = :de
+
+    if ENV['SENDGRID_API_KEY'].blank?
+      puts 'WARNING! SENDGRID_API_KEY IS MISSING! MAILS WILL NOT WORK! PLEASE SET THIS UP!'
+    else
+      puts "Using ENV[SENDGRID_API_KEY] **********#{ENV['SENDGRID_API_KEY'].last(3)} for sending mails via Sendgrid"
+    end
+
+    if ENV['BUGSNAG_API_KEY'].blank?
+      puts 'WARNING! BUGSNAG_API_KEY IS MISSING! EXCEPTION TRACKING WILL NOT WORK! PLEASE SET THIS UP!'
+    else
+      puts "Using ENV[BUGSNAG_API_KEY] **********#{ENV['BUGSNAG_API_KEY'].last(3)} for reporting errors to Bugsnag"
+    end
   end
 end
