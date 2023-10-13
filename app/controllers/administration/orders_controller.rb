@@ -5,7 +5,17 @@ module Administration
     before_action :set_order, only: %i[show edit update destroy order_payed order_served]
 
     def index
-      @orders = Order.all
+      orders_scope = current_company.orders
+      case params[:filter]
+      when 'served'
+        orders_scope = orders_scope.where(state: 'served')
+      when 'paid'
+        orders_scope = orders_scope.where(state: 'paid')
+      else
+        orders_scope = orders_scope.where(state: 'placed')
+      end
+
+      @orders = orders_scope
     end
 
     def show; end
@@ -38,26 +48,18 @@ module Administration
     end
 
     def destroy
-      @order.destroy
-      redirect_to management_orders_url
+      @order.destroy!
+      redirect_to administration_orders_url
     end
 
     def order_served
-      @order.update(state: 'served')
-      redirect_to management_orders_url
-    end
-
-    def orders_served
-      @orders = Order.all
+      @order.update!(state: 'served')
+      redirect_to administration_orders_url
     end
 
     def order_payed
-      @order.update(state: 'payed')
-      redirect_to management_orders_url
-    end
-
-    def orders_payed
-      @orders = Order.all
+      @order.update!(state: 'paid')
+      redirect_to administration_orders_url
     end
 
     private

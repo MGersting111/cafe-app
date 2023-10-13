@@ -17,8 +17,8 @@ de:
       tables: Tische
       orders: Bestellungen
       active_orders: Laufend
-      served_and_unpayed_orders: Serviert und Unbezahlt
-      completed_orders: Abgeschlossen
+      served_orders: Serviert
+      paid_orders: Abgeschlossen
       administration: Verwaltung
       log_out: Abmelden
       log_in: Anmelden

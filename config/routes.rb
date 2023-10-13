@@ -25,8 +25,6 @@ Rails.application.routes.draw do
     resources :orders
     post 'order_payed/:id', to: 'orders#order_payed', as: :order_payed
     post 'order_served/:id', to: 'orders#order_served', as: :order_served
-    get 'served', to: 'orders#orders_served'
-    get 'payed', to: 'orders#orders_payed'
 
     root 'dashboards#show'
   end

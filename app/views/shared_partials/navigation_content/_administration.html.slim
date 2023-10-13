@@ -19,11 +19,11 @@ li.nav-item.dropdown
       = link_to administration_orders_path, class: 'dropdown-item' do
         = t('.active_orders')
     li
-      = link_to administration_served_path, class: 'dropdown-item' do
-        = t('.served_and_unpayed_orders')
+      = link_to administration_orders_path(filter: 'served'), class: 'dropdown-item' do
+        = t('.served_orders')
     li
-      = link_to administration_payed_path, class: 'dropdown-item' do
-        = t('.completed_orders')
+      = link_to administration_orders_path(filter: 'paid'), class: 'dropdown-item' do
+        = t('.paid_orders')
 
 li.nav-item
   = link_to administration_dashboard_path, class: 'nav-link'

@@ -1,8 +1,8 @@
 class Company < ApplicationRecord
-  has_many :article
-  has_many :category
-  has_many :line_item
-  has_many :order
-  has_many :table
-  has_many :user
+  has_many :articles
+  has_many :categories
+  has_many :line_items
+  has_many :orders
+  has_many :tables
+  has_many :users
 end

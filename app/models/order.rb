@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Order < ApplicationRecord
-  ALLOWED_STATES = %w[running placed served payed].freeze
+  ALLOWED_STATES = %w[running placed served paid].freeze
   has_many :line_items
   belongs_to :table, optional: true
   belongs_to :company

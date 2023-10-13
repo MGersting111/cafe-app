@@ -6,6 +6,9 @@ h1= "Alle offenen Bestellungen"
       strong= "Table: "
       = order.table&.name || "-/-"
     p
+      strong= "Status: "
+      = order.state
+    p
       strong= "Gesamtpreis: "
       = format_money(order.grand_total)
     p
