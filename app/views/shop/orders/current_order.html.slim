@@ -8,10 +8,10 @@ h1= "Warenkorb"
         = t('generics.price') + ':'
         = format_money(line_item.total)
       div
-        = button_to line_item_path(line_item), method: :delete, class: 'btn btn-default ms-1' do
+        = button_to shop_line_item_path(line_item), method: :delete, class: 'btn btn-default ms-1' do
           i.bi-trash
 
-    = form_with(model: line_item) do |form|
+    = form_for(line_item, url: shop_line_item_path(line_item), method: :patch) do |form|
 
       = t('generics.changeNumber')
       = form.select :count, options_for_select(1..10, selected: line_item.count)
@@ -19,12 +19,12 @@ h1= "Warenkorb"
       =button_tag(type: 'submit', class: "btn btn-default") do
         i.bi-floppy2
 
-  = form_with(model: @current_order) do |form|
-    - if @current_order.table
-      = "Lieferung: #{@current_order.table.name}"
-      = link_to url_for(clear_table: 't'), class: 'btn btn-outline-danger btn-sm ms-3 btn-outline'
-        i.bi-x-lg
-    - else
+  - if @current_order.table
+    = "Lieferung: #{@current_order.table.name}"
+    = link_to url_for(clear_table: 't'), class: 'btn btn-outline-danger btn-sm ms-3 btn-outline'
+      i.bi-x-lg
+  - else
+    = form_for(@current_order, url: shop_order_path(@current_order), method: :patch) do |form|
       = t('order.chooseTable') + " "
       = form.select :table_id, options_for_select(['kein Tisch', ''] + Table.all.pluck(:name, :id))
       = form.submit "Übernehmen", class: 'btn btn-primary btn-sm'
@@ -34,9 +34,9 @@ h1= "Warenkorb"
   = format_money(@current_order.grand_total)
 
   hr
-  = button_to t('order.order'), basket_path, method: :post, class: 'btn btn-lg btn-success'
+  = button_to t('shop.orders.order'), shop_basket_path, method: :post, class: 'btn btn-lg btn-success'
 
   br
-  = link_to t('order.clear'), url_for(clear_order_id: 't')
+  = link_to t('shop.orders.clear'), url_for(clear_order_id: 't')
 
 

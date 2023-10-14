@@ -1,4 +1,12 @@
-= render @order
+p
+  strong= "Table: "
+  = @order.table&.name || "-/-"
+p
+  strong= "Gesamtpreis: "
+  = format_money(@order.grand_total)
+p
+  strong= "Erstellt am: "
+  = @order.created_at
 
 - @order.line_items.each do |line_item|
   strong = "Artikel: "

@@ -35,4 +35,8 @@ module ApplicationHelper
   def nav_bar_main_link_target
     user_signed_in? ? administration_dashboard_path : root_path
   end
+
+  def shop_and_table_link(company, table)
+    shop_root_url(switch_company: company, bind_table: table)
+  end
 end

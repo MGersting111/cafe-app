@@ -20,8 +20,8 @@ table.table.table-striped.table-hover
         br
 
         small.text-muted
-          = link_to root_url(bind_table: table.id) do
-            = root_url(bind_table: table.id)
+          = link_to shop_and_table_link(@current_company, table) do
+            = shop_and_table_link(@current_company, table)
 
       td
         = button_to administration_table_path(table), method: :delete, class: 'btn btn-secondary float-end ms-1' do

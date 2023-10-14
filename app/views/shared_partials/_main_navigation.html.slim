@@ -13,10 +13,11 @@ nav.navbar.navbar-expand-lg.bg-body-tertiary
           = render 'shared_partials/navigation_content/management'
         - elsif controller_path.starts_with?('administration/')
           = render 'shared_partials/navigation_content/administration'
+        - elsif controller_path.starts_with?('shop/')
+          = render 'shared_partials/navigation_content/shop'
         - else
-          = render 'shared_partials/navigation_content/customer'
 
-      - if user_signed_in?
+      - if Rails.env.development? && user_signed_in?
         = button_to destroy_user_session_path, method: :delete, class: 'btn btn-link' do
           i.bi-box-arrow-right.me-1
           = t('.log_out')

@@ -2,7 +2,18 @@ h1= "Alle offenen Bestellungen"
 
 #orders
   - @orders.each do |order|
-    = render order
+    p
+      strong= "Table: "
+      = order.table&.name || "-/-"
+    p
+      strong= "Status: "
+      = order.state
+    p
+      strong= "Gesamtpreis: "
+      = format_money(order.grand_total)
+    p
+      strong= "Erstellt am: "
+      = order.created_at
     p
       = link_to "Bestellung Anzeigen", administration_order_path(order)
     hr

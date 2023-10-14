@@ -1,0 +1,19 @@
+li.nav-item
+  = link_to shop_categories_url, class: 'nav-link position-relative pe-3'
+    i.bi-list.me-1
+    = t('.categories')
+
+li.nav-item
+  = link_to shop_basket_url, class: 'nav-link position-relative pe-3'
+    i.bi-basket.me-1
+    = t('.basket')
+    - if @current_order.item_count > 0
+      span.badge.rounded-pill.bg-danger[style="position:absolute; top:0px; right:0px;"]
+        .small
+          = @current_order.item_count
+
+- if current_user
+  li.nav-item
+    = link_to administration_dashboard_path, class: 'nav-link'
+      i.bi-shield-check.me-1
+      = t('.administration')
